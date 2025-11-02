@@ -1,0 +1,752 @@
+[
+    {
+        "title": "Question 1 （16 Points）",
+        "question": "Which of the following commands can be used to view the background tasks of the current shell?",
+        "choices": [
+            "A. cat",
+            "B. vim",
+            "C. jobs",
+            "D. bg"
+        ],
+        "answer": "C",
+        "explanation": "In Linux/Unix OSs, the \"jobs\" command lists the background processes of the current terminal session or shell.\nAfter starting a command or program in a terminal or shell, you can press \"Ctrl+Z\" to pause it and move to the background. You can then run \"jobs\" to view the list of background tasks.\n- Option A: \"cat\" is used to concatenate or display file content and is not related to background tasks.\n- Option B: \"vim\" is a popular text editor and is not related to background tasks, either.\n- Option D: \"bg\" is used to resume paused background tasks, not to view them.\n\"jobs\" typically displays a list of background tasks, including their job IDs, status (running or stopped), and associated commands. This information allows you to decide whether to resume a background task using the \"fg\" command or terminate it using the \"kill\" command.\nTherefore, C is the correct answer. The \"jobs\" command is the most suitable option for viewing background tasks of the current shell. It is a valuable tool for managing and controlling these background processes.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （16 Points）",
+        "question": "When creating a user in openEuler, which of the following options can be used to specify the home directory for the user?",
+        "choices": [
+            "A. -d",
+            "B. -p",
+            "C. -u",
+            "D. -c"
+        ],
+        "answer": "A",
+        "explanation": "When a user is created in openEuler, the \"-d\" option is used to specify the home directory.\nThe \"useradd\" command is the standard command for creating a user in Linux with various options for configuring user attributes, including the \"-d\" and \"--home-dir\" options that explicitly specify the home directory of the new user.\nExample:\nuseradd -d /home/newuser newuser\nThis command creates \"newuser\" and sets the home directory to \"/home/newuser\". If the \"-d\" option is not specified, \"useradd\" will create a home directory for the new user based on the system-wide default home base path (usually \"/home\").\n- Option B: \"-p\" sets the initial password for the new user.\n- Option C: \"-u\" specifies the user ID for the new user.\n- Option D: \"-c\" adds a descriptive comment for the new user.\nTherefore, the correct answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （16 Points）",
+        "question": "Which of the following tools is used to check whether the environment meets the installation requirements before openGauss installation?",
+        "choices": [
+            "A. gs_checkos",
+            "B. gs_check",
+            "C. gs_checkperf",
+            "D. gs_collector"
+        ],
+        "answer": "A",
+        "explanation": "Before installing openGauss, you need to use a dedicated tool to check the environment to ensure that the OS environment and configuration are proper. gs_checkos is used to check the OS. It provides the following functions:\nChecking the OS version: Ensure that the OS version is compatible with openGauss.\nChecking kernel parameters: Some kernel parameters are critical to the performance and stability of a database. This tool checks whether these parameters are properly set.\nChecking the disk space and I/O configuration: A database requires a large amount of disk space and efficient I/O operations. This tool can be used to check whether the disk space is sufficient and whether the I/O configuration is optimal.\nChecking the network configuration: A database requires a stable network connection. This tool checks the network configuration to ensure that no firewall or other network settings interfere with the normal running of the database.\nChecking other dependent software: openGauss may depend on other software packages or libraries. gs_checkos can ensure that these dependencies are correctly installed.\nTherefore, the answer is A. Although other options such as gs_check, gs_checkperf, and gs_collector are also tools provided by openGauss, they are not as direct and comprehensive as gs_checkos in terms of environment check before installation.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （16 Points）",
+        "question": "Which of the following statements is true about the logical replication feature of openGauss?",
+        "choices": [
+            "A. It supports primary-primary deployment and table-level replication.",
+            "B. It converts binary logs to logical SQL statements and supports table-level replication.",
+            "C. It supports primary-primary deployment and converts binary logs to logical SQL statements.",
+            "D. It supports primary-primary deployment and table-level replication, and converts binary logs to logical SQL statements."
+        ],
+        "answer": "D",
+        "explanation": "The logical replication features of openGauss are described as follows:\n(1) Primary-primary deployment is supported. Logical replication allows two-way synchronization between primary and standby instances. Any node can function as the primary node to provide services or function as the standby node to receive data from other primary node.\n(2) Binary logs are converted into logical SQL statements. Logical replication parses binary WALs of the primary node, converts them into logical SQL statements, and replays these logical SQL statements on the standby node to implement data synchronization.\n(3) Table-level replication is supported. Different from traditional instance-level or database-level replication, logical replication of openGauss implements table-level data replication and synchronizes only data changes in specified tables.\nBased on the three characteristics, the answer is D. Logical replication is more flexible than physical replication and can implement data synchronization between cross-platform database instances.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （16 Points）",
+        "question": "The openEuler administrator needs to set the permissions on a file as follows: the file owner has all permissions, the user group of the file owner has read and write permissions, and other users have read permission. Which of the following is the correct permission value?",
+        "choices": [
+            "A. 467",
+            "B. 674",
+            "C. 476",
+            "D. 764"
+        ],
+        "answer": "D",
+        "explanation": "In a Linux/Unix OS, the permission value on a file usually consists of three digits, representing the permissions of the file owner, owner group, and others (users outside the owner group) from left to right.\nEach digit ranges from 0 to 7. The meanings are as follows:\n\t7 = 4 (read) + 2 (write) + 1 (execute)\n\t6 = 4 (read) + 2 (write)\n\t5 = 4 (read) + 1 (execute)\n\t4 = 4 (read)\nThe permission value of 764 means:\n\tThe owner (7) has all permissions (read, write, and execute).\n\tUsers in the owner group (6) have the read and write permissions.\n\tUsers outside the owner group (4) have only the read permission.\nTherefore, the correct answer is D.\n-\tA. 467: The file owner has the read permission. Users in the owner group have the read and write permissions. Users outside the owner group have the read, write, and execute permissions.\n-\tB. 674: The file owner has the read and write permissions. Users in the owner group have the read, write, and execute permissions. Users outside the owner group have the read permission.\n-\tC. 476: The file owner has the read permission. Users in the owner group have the read, write, and execute permissions. Users outside the owner group have the read and write permissions.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （16 Points）",
+        "question": "When you create or update a user account in openGauss, which of the following options can improve account security?",
+        "choices": [
+            "A. Setting a simple password",
+            "B. Allowing any IP address to log in",
+            "C. Enabling SSL/TLS encrypted connection",
+            "D. Disabling password policy check"
+        ],
+        "answer": "C",
+        "explanation": "When creating or updating a user account in openGauss, you should select the options that enhance authentication and communication security to improve account security. The above options are analyzed as follows:\n- Option A: A simple password is easy to crack and insecure. Do not use simple passwords. Instead, set a complex password that is difficult to guess.\n- Option B: Allowing any IP address to log in is actually insecure because it allows access from anywhere without proper restrictions. Attackers may use this to attempt unauthorized access.\n- Option C: Enabling SSL/TLS encrypted connection significantly improves security. The SSL/TLS protocol is used to ensure that the communication between a client and a server is encrypted, thereby protecting transmitted data from being stolen or tampered with. This is an important measure to ensure network communication security.\n- Option D: Disabling password policy check weakens account security. A password policy ensures that a strong password is set. The password policy helps users set passwords that are difficult to guess and prevent the use of simple passwords.\nTherefore, the answer is C. This option enhances communication security between a client and a server and protects transmitted data from being stolen or tampered with.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （16 Points）",
+        "question": "After an application is started in openEuler, which of the following commands can be used to set a priority for the corresponding process?",
+        "choices": [
+            "A. priority",
+            "B. nice",
+            "C. renice",
+            "D. setpri"
+        ],
+        "answer": "B",
+        "explanation": "- Option A: The \"priority\" command does not exist in openEuler.\n- Option B: This is the correct answer.\n- Option C: The \"renice\" command is used to change the priority of a running process, not to set the initial priority of a newly started process.\n- Option D: The \"setpri\" command does not exist in openEuler.\nNote that the \"nice\" command can only be used by regular users to decrease the priority of new pro-cesses. It cannot be used to increase priority (unless used with root privileges). This is a security measure to prevent processes of regular users from affecting the operation of critical system processes.I2",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （16 Points）",
+        "question": "Which of the following commands can be executed only by the root user?",
+        "choices": [
+            "A. gs_checkperf",
+            "B. gs_checkos",
+            "C. gs_check",
+            "D. gs_ssh"
+        ],
+        "answer": "B",
+        "explanation": "The requirements for using each tool are as follows:\n- Option A: gs_checkperf is used to check the openGauss performance, including the SSD performance. Although the \"root\" user is mentioned in the example command for checking SSD performance, it is not specified that the \"root\" user must be used to perform all gs_checkperf functions. Only specific functions (such as checking SSD performance) may require the \"root\" permission.\n- Option B: gs_checkos provided by openGauss is used to check the OS status. Only the \"root\" user can run the gs_checkos command.\n- Option C: gs_check is used to unify various check tools in the current system and help users check the cluster operating environment, OS environment, network environment, and database operating environment. Only the \"root\" user is authorized to check new nodes. Other checks must be performed by the \"omm\" user.\n- Option D: gs_ssh is a tool used to synchronously execute commands in the openGauss cluster environment. It is based on the SSH protocol but provides more convenient cluster management functions. You can use gs_ssh to run the same command on each node in a cluster, simplifying cluster management and maintenance. You need to use gs_ssh as a specific OS user (for example, the \"omm\" user) to ensure that you have sufficient permissions to run the command on each node in the cluster. Therefore, the answer is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （16 Points）",
+        "question": "When the gs_checkperf tool is used, which of the following items can be viewed only by the \"root\" user?",
+        "choices": [
+            "A. Node level",
+            "B. Session/Process level",
+            "C. SSD performance",
+            "D. openGauss level"
+        ],
+        "answer": "C",
+        "explanation": "When gs_checkperf is used, only the \"root\" user can view the SSD performance. Specifically, gs_checkperf routinely checks openGauss-level performance (host CPU usage, GaussDB CPU usage, and I/O usage), node-level performance (CPU, memory, and I/O usage), session-/process-level performance (CPU, memory, and I/O usage), and SSD performance (read and write performance). However, to check the SSD performance, you must be the \"root\" user.\nThe reference command is as follows:\n\tgs_checkperf -U USER [-o OUTPUT] -I SSD [-l LOGFILE]\nThe \"-I SSD\" parameter specifies the SSD performance check. This operation requires the \"root\" user permission.\nTherefore, the answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （16 Points）",
+        "question": "Which of the following is not a necessary component of the default SSH service of openEuler?",
+        "choices": [
+            "A. openssh",
+            "B. openssh-askpass",
+            "C. openssh-server",
+            "D. openssh-clients"
+        ],
+        "answer": "B",
+        "explanation": "openssh-askpass in option B is not a necessary component of the default SSH service of openEuler. Other options are SSH-related software packages installed with openEuler by default.\n- Option A: openssh is the main program package of OpenSSH and contains core components such as the sshd server and ssh client.\n- Option C: The openssh-server package includes the sshd daemon that provides the SSH server function.\n- Option D: The openssh-clients package includes SSH client tools such as ssh and scp.\nThe openssh-askpass package is not a necessary component of the SSH service. It provides the askpass assistant program for SSH password input in graphical environments.\nIn a command line environment, the SSH service requires only the openssh and openssh-server packages. In a desktop environment, the openssh-clients package is also required to provide the SSH client tool.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （16 Points）",
+        "question": "Which of the following statements about periodic tasks is correct?",
+        "choices": [
+            "A. The \"at\" command can be used to set periodic tasks.",
+            "B. The \"crontab\" command can be used to set periodic tasks.",
+            "C. The \"kill\" command cannot be used to kill periodic tasks.",
+            "D. The \"job\" command can be used to set periodic tasks."
+        ],
+        "answer": "B",
+        "explanation": "In Linux/Unix OSs, the \"crontab\" command is widely used to schedule periodic tasks. It enables users to schedule commands or scripts to run automatically at specific times or intervals as cron jobs.\n\"crontab\" is commonly used to schedule periodic OS maintenance and management tasks, such as data backup temporary file cleanup. It accepts syntax for minutes, hours, days, months, and weekdays to schedule task execution.\n- Option A: The \"at\" command can be used to schedule tasks, but it is more suitable for one-off scheduled tasks than periodic tasks.\n- Option C: The statement is incorrect. Cron jobs are managed by the crond daemon. You can run the \"kill\" command to terminate crond and stop all cron jobs.\n- Option D: The statement is incorrect. The \"job\" command is used to manage tasks within the Bash shell, not system-level scheduled tasks (cron jobs).\nThe \"crontab\" command is the most common and appropriate choice for setting periodic tasks in Linux/Unix OSs. B is the correct answer.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （16 Points）",
+        "question": "Permissions of a file in Linux consist of four parts. Which of the following is represented by the third part?",
+        "choices": [
+            "A. File Type",
+            "B. Permissions of the file owner",
+            "C. Permissions of the group to which the file owner belongs",
+            "D. Permissions of other users"
+        ],
+        "answer": "C",
+        "explanation": "In the permissions of a file in Linux, the third part is the permissions of the group to which the file owner belongs. The permissions on a file are presented in the following order:\n1.\tFile type\n2.\tPermissions of the file owner\n3.\tPermissions of the group to which the file owner belongs\n4.\tPermissions of other users\nThe third part is usually represented by a 3-bit octal value, where each bit represents the read (r), write (w), and execute (x) permission of the file owner group.\nExample: \"rwxr-xr-\"\nIn this example, the third part is \"r-x\", corresponding to the octal value 5, indicating that the file owner group has the read and execute permissions on the file. Therefore, C is the correct answer.\n- Option A: File type is the first part.\n- Option B: Permissions of the file owner is the second part.\n- Option D: Permissions of other users is the fourth part.\nIn conclusion, the third part represents the permissions of users in the group to which the file owner belongs. Understanding the four parts helps properly control file permissions.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （16 Points）",
+        "question": "Which of the following is the first step of the openEuler startup process?",
+        "choices": [
+            "A. System boot",
+            "B. Hardware self-check",
+            "C. Kernel start",
+            "D. System initialization"
+        ],
+        "answer": "B",
+        "explanation": "When a computer starts up, the first step is the hardware self-test, also known as Power-on self-test (POST). This step is performed under the control of the BIOS or UEFI firmware.\nThe POST verifies the functionality of essential computer hardware, including the memory, CPU, drives, and graphics card. Subsequent startup steps require the successful completion of the POST.\n- Option A: System boot occurs after the hardware self-check, loading the boot program into memory.\n- Option C: Kernel start occurs after system boot.\n- Option D: System initialization is the last step of system startup and occurs after the kernel is loaded.\nTherefore, B is the correct answer. Regardless of whether in openEuler or other Linux distributions, the first step of system startup is for the BIOS or UEFI to perform a hardware self-check. This ensures that the computer hardware is normal, paving the way for subsequent startup steps. If the hardware self-check fails, the computer cannot be started.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （16 Points）",
+        "question": "Which of the following is not a table of iptables?",
+        "choices": [
+            "A. filter",
+            "B. nat",
+            "C. mangle",
+            "D. INPUT"
+        ],
+        "answer": "D",
+        "explanation": "\"INPUT\" is not a table of iptables. iptables is a firewall utility in Linux used to manage network packet filtering and Network Address Translation (NAT) rules. It mainly operates on the following tables:\n- Option A: The \"filter\" table controls network packet filtering.\n- Option B: The \"nat\" table is used for NAT operations, including both source NAT (SNAT) and destination NAT (DNAT).\n- Option C: The \"mangle\" table is used to modify headers of specific packets.\n\"INPUT\", \"OUTPUT\", and \"FORWARD\" are not tables but chains defined within the tables. These chains are used to filter packets in different scenarios:\n- \"INPUT\" is used to filter incoming packets to the host.\n- \"OUTPUT\" is used to filter outgoing packets from the host.\n- \"FORWARD\" is used to filter packets that need to be forwarded through the host.\nIn the given options, \"INPUT\" is not a table of iptables, but an important chain defined in the \"filter\" table. Therefore, the correct answer is D.\niptables combines these tables and chains to implement refined control over incoming and outgoing packets. This powerful tool is crucial to network security in Linux.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （16 Points）",
+        "question": "Which of the following drivers is used by the client connection tool Data Studio to communicate with the openGauss database?",
+        "choices": [
+            "A. JDBC",
+            "B. ODBC",
+            "C. Libpq",
+            "D. Psycopg"
+        ],
+        "answer": "A",
+        "explanation": "Data Studio uses the client/server (C/S) structure and communicates with the Data Warehouse Service (DWS) through the JDBC driver. Although openGauss is not mentioned here, it can be inferred that Data Studio may use JDBC to communicate with openGauss because JDBC is a common Java database connection API and openGauss also supports JDBC connections.\n-\tOption B: ODBC is another common database connection API, but it is not used in Data Studio to communicate with openGauss.\n-\tOption C: Libpq is the C API of PostgreSQL (from which openGauss derives), but Data Studio does not use Libpq.\n-\tOption D: Psycopg is the PostgreSQL adapter of Python and is not directly associated with Da-ta Studio.\nTherefore, the answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （16 Points）",
+        "question": "Which of the following statements is true about the fully-encrypted equality query capability of the openGauss database?",
+        "choices": [
+            "A. Data is encrypted during storage and decrypted during computing.",
+            "B. Data is encrypted during storage and computing and decrypted when it is returned to the client.",
+            "C. Data is encrypted during transmission, storage, and computing and cannot be decrypted.",
+            "D. Data is encrypted during storage and decrypted using the dynamic key provided by the application during computing."
+        ],
+        "answer": "C",
+        "explanation": "Fully homomorphic encryption (FHE) is an encryption technology that allows computation to be performed directly on ciphertext without decryption. This means that data remains encrypted throughout the lifecycle (including transmission, storage, and computing), and no one can obtain plaintext data unless they have permissions to access the key.\nopenGauss supports FHE-based fully-encrypted equality query. Equality comparison operations can be directly performed on ciphertext data without decryption. This ensures that data is encrypted at any stage, greatly improving data security.\n- Option A: This traditional encryption mode exposes plaintext at the computing stage, which poses security risks.\n- Option B: The result returned to the client is also encrypted.\n- Option D: The fully-encrypted data can be computed without decryption.\nTherefore, the answer is C. The key to fully-encrypted equality query is that the entire process is performed in the ciphertext domain and the data has never been decrypted. This is the core of openGauss implementation.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （16 Points）",
+        "question": "Which of the following directories or files determines the boot mode of openEuler?",
+        "choices": [
+            "A. /boot/efi/EFI/openEuler/",
+            "B. /etc/grub2",
+            "C. /sys/firmware/efi",
+            "D. /etc/default/grub"
+        ],
+        "answer": "C",
+        "explanation": "The presence or absence of \"/sys/firmware/efi\" (option C) determines whether openEuler is booted using UEFI or the traditional BIOS:\nIf \"/sys/firmware/efi\" exists, the UEFI mode is supported and enabled in the current system.\nIf not, the system uses the traditional BIOS mode.\n- Option A: \"/boot/efi/EFI/openEuler/\" stores the boot files required by UEFI but does not determine the boot mode.\n- Option B: \"/etc/grub2\" is the configuration directory of the GRUB2 boot program. It is used to configure boot options but does not determine the boot mode.\n- Option D: \"/etc/default/grub\" is a GRUB2 configuration file. It is used to specify the default settings of GRUB and does not determine the boot mode.\nTherefore, the correct answer is C. The presence of the \"/sys/firmware/efi\" directory is a definitive indicator that the openEuler system is booted using UEFI and the hardware supports UEFI.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （16 Points）",
+        "question": "What open-source protocol does openGauss use?",
+        "choices": [
+            "A. MIT License",
+            "B. GNU General Public License",
+            "C. BSD License",
+            "D. Mulan PSL"
+        ],
+        "answer": "D",
+        "explanation": "The open-source protocol used by openGauss is Mulan Permissive Software License (Mulan PSL). Specifically, openGauss is an open-source, monolithic, elastic, HA, fault-tolerant relational database that supports row store, column store, and in-memory storage. On June 30, 2020, Huawei officially opened the source of openGauss and used the Mulan PSL v2 as its open-source protocol. This protocol is more user-friendly than Apache License, meaning that small- and medium-sized enterprises can use it freely without worrying about any business issues. In addition, the protocol ensures code openness and transparency, making it easier for developers to collaborate and share code.\nThe openGauss kernel is derived from PostgreSQL. It deeply integrates Huawei's years of experience in the database field and continuously builds competitive features based on enterprise-level scenario requirements. openGauss is also an open-source database platform that encourages community contributions and cooperation.\nTherefore, the answer is D.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （16 Points）",
+        "question": "Which of the following statements is false about the ACID feature of database transactions?",
+        "choices": [
+            "A. A refers to atomicity. Operations in a transaction are either all successful or all failed.",
+            "B. C refers to consistency. The system status can only be the status before the transaction or after the transaction is successful. No inconsistent intermediate status can occur.",
+            "C. I refers to availability. The database system must provide the highest availability for database execution to ensure that most transactions can be successfully executed.",
+            "D. D refers to durability. The status of a successful transaction can be maintained even if the machine is powered off."
+        ],
+        "answer": "C",
+        "explanation": "The ACID feature of database transactions is analyzed as follows:\nA refers to atomicity. Operations in a transaction are either all successful or all failed. This is true. Atomicity ensures that all operations within a transaction are either successful or failed. If operations are failed, the transaction is rolled back to the state before it starts.\nC refers to consistency. The system status can only be the status before the transaction or after the transaction is successful. No inconsistent intermediate status can occur. This is also true. Consistency requires that a transaction must change a database from one consistent state to another consistent state. Before and after a transaction, the database integrity is not damaged.\nI refers to availability. The database system must provide the highest availability for database execution to ensure that most transactions can be successfully executed. This is false. In the ACID feature, I refers to isolation instead of availability. Isolation requires that concurrent transactions be isolated from each other. Operations within a transaction and data being operated must be blocked and cannot be viewed by other transactions.\nD refers to durability. The status of a successful transaction can be maintained even if the machine is powered off. This is true. Durability ensures that once a transaction is committed, the result is permanent. Even if the system breaks down or fails, the database can restore the data to the state when the transaction ends.\nTherefore, the answer is C. Actually, I in the ACID feature represents isolation.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 20 （16 Points）",
+        "question": "Which of the following statements is true about the separation of duties of openGauss?",
+        "choices": [
+            "A. Database administrators (DBAs), application developers, and system administrators have the same permissions and responsibilities.",
+            "B. The responsibilities of database management, data security, and database audit log viewing and management are assigned to different roles or users.",
+            "C. The responsibilities between database instances, databases, and tablespaces are separated.",
+            "D. Database read, write, and management operations are performed by different roles or users."
+        ],
+        "answer": "B",
+        "explanation": "About the separation of duties in openGauss:\n- Option A: Database administrators (DBAs), application developers, and system administrators have the same permissions and responsibilities. This is false. Based on the separation of duties, permissions and responsibilities should be assigned to different roles or users to prevent a single role or user from having excessive permissions.\n- Option B: The responsibilities of database management, data security, and database audit log viewing and management are assigned to different roles or users. This is true. The separation of duties in openGauss clearly proposes three key roles: system administrator, security administrator, and audit administrator. A system administrator grants permissions to created users. A security administrator creates data management users. An audit administrator audits the operations performed by the security administrator, system administrator, and common users. In this way, the responsibilities of database management, data security, and audit log viewing and management are clearly assigned to different roles or users.\n- Option C: The responsibilities between database instances, databases, and tablespaces are separated. Although this statement describes a good database management practice, it does not directly correspond to the separation of duties in openGauss. Separation of duties focuses more on the separation of permissions and responsibilities between different roles or users than the separation of responsibilities between database instances, databases, and tablespaces.\n- Option D: Database read, write, and management operations are performed by different roles or users. This is false, because it does not cover all the contents of the separation of duties. Separation of duties involves not only the separation of read/write operations and management operations, but also the separation of responsibilities of database management, data security, and audit log viewing and management.\nTherefore, the answer is B. This principle ensures the security, manageability, and transparency of database management.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 21 （16 Points）",
+        "question": "In openEuler, which of the following characters is used to start a background process?",
+        "choices": [
+            "A. @",
+            "B. &",
+            "C. |",
+            "D. $"
+        ],
+        "answer": "B",
+        "explanation": "\"&\" is used to start a background process in openEuler.\nIn the shell of a Linux/Unix OS, you can add \"&\" after a command to start and run it in the background.\nExample:\nsomeprogram &\nThe preceding command starts the \"someprogram\" process in the background. The shell will output the job number of the process so that you can use the \"jobs\" command to view or control it.\nIf \"&\" is not added, \"someprogram\" runs in the foreground and occupies the current terminal window until it exits.\n- Option A: \"@\" is not used to create background processes in the shell.\n- Option C: \"|\" is the pipe symbol, which redirects the output of one command to another as its input.\n- Option D: \"$\" is a common element in shell prompts and is not used to create background processes.\nWhile running processes in the background can be helpful, it is important to note that there is a limit to how many processes a user can create. This limit is set at the system level and varies depending on the system configuration.\nIn conclusion, within openEuler, adding \"&\" to a command is the standard method for running it as a background process.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 22 （16 Points）",
+        "question": "How often is the openGauss WDR snapshot executed by default?",
+        "choices": [
+            "A. 30 minutes",
+            "B. 60 minutes",
+            "C. 120 minutes",
+            "D. 360 minutes"
+        ],
+        "answer": "B",
+        "explanation": "By default, openGauss WDR snapshot data is collected every hour (wdr_snapshot_interval=1h). The default value of wdr_snapshot_interval is 1h (that is, 60 minutes).\nTherefore, we can determine that the answer is 60 minutes, that is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 23 （16 Points）",
+        "question": "Which of the following is not an SSH client tool?",
+        "choices": [
+            "A. ssh",
+            "B. scp",
+            "C. rsync",
+            "D. sftp"
+        ],
+        "answer": "C",
+        "explanation": "rsync is not an SSH client tool.\nThe other options are:\n- Option A: ssh: remote login and command execution between hosts\n- Option B: scp: secure file copy between local and remote hosts\n- Option D: sftp: secure file transfer between hosts\nWhile rsync can utilize SSH for secure data transfer, it is not inherently an SSH tool. It is primarily a fast incremental file transfer tool.\nrsync excels at mirroring and synchronizing files between local and remote systems by efficiently transferring only the differences between files. Its compression and recursive transfer features make it a popular choice for backups and mirroring tasks.\nrsync can leverage SSH for secure data transfer, but it operates with its own distinct protocols and algorithms, independent of SSH.\nTherefore, C is the correct answer.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 24 （16 Points）",
+        "question": "Which of the following tools is used to help users understand the database workload of openGauss?",
+        "choices": [
+            "A. gs_checkos",
+            "B. gs_check",
+            "C. gs_checkperf",
+            "D. gs_collector"
+        ],
+        "answer": "C",
+        "explanation": "The tool functions are as follows:\n- Option A: gs_checkos checks whether the OS configuration meets the openGauss deployment requirements.\n- Option B: gs_check checks the overall status and configuration of an openGauss instance.\n- Option C: gs_checkperf is a performance diagnosis tool provided by openGauss. It collects various database performance metrics, including CPU, memory, I/O, sessions, and locks, helping users comprehensively understand the real-time workload of the database.\n- Option D: gs_collector collects logs and running status of an openGauss instance for fault locating and analysis.\nTo view the real-time load and performance metrics of openGauss, use gs_checkperf. The answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 25 （16 Points）",
+        "question": "Which of the following functions is NOT provided by gs_guc?",
+        "choices": [
+            "A. Modify the client authentication policy.",
+            "B. Modify parameter values in the configuration file.",
+            "C. Check the parameters in the configuration file.",
+            "D. Check the openGauss running status."
+        ],
+        "answer": "D",
+        "explanation": "Checking the openGauss running status is not a function provided by gs_guc. gs_guc is a tool for managing GUC parameters of openGauss. It provides the following functions:\n- Option A: gs_guc can be used to modify client authentication parameters of a database, such as \"ssl\" and \"krb_server_keyfile\".\n- Option B: This is the core function of gs_guc. It can modify the GUC parameters of a database instance in real time without restarting the instance.\n- Option C: gs_guc can be used to view the current parameter settings in the configuration file.\ngs_guc does not check the overall running status of openGauss, including processes, sessions, locks, and transactions.\nopenGauss provides other tools to check the running status of a database. For example:\n\tgs_ctl query: views instance running information.\n\tgs_om -t status: checks the running status of each openGauss component.\n\tgs_checkperf: comprehensively checks current performance metrics.\nTherefore, checking the openGauss running status is not a function provided by gs_guc. The answer is D.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 26 （18 Points）",
+        "question": "Which of the following statements are true about the openGauss table design?",
+        "choices": [
+            "A. Planning the table structure design prevents the addition of columns and modification of column types or lengths.",
+            "B. For Astore tables that are frequently updated, a small fill factor needs to be specified.",
+            "C. COMMENT does not need to be added.",
+            "D. Clustering or partial clustering is used to implement continuous storage of hot data and convert random I/Os into continuous I/Os."
+        ],
+        "answer": "ABD",
+        "explanation": "For the openGauss table design, the options are analyzed as follows:\n- Option A: Planning the table structure design prevents the addition of columns and modification of column types or lengths. This is true. A good table structure is critical to database design. To maintain data stability and reduce maintenance costs, do not frequently add columns or modify the column types and lengths.\n- Option B: For Astore tables that are frequently updated, a small fill factor needs to be specified. This is true. The fillfactor attribute of a table specifies the percentage of space reserved when data is inserted into or updated in the table. For tables that are frequently updated, setting a small fill factor can reduce the frequency of page splitting and merging, thereby improving performance. Note that the value of fillfactor must be set based on the specific service scenario and performance requirements.\n- Option C: COMMENT does not need to be added. This is false. Comments are important for the maintenance and management of database objects. By adding comments, you can clearly describe the usage, functions, and restrictions of database objects, which helps other developers or database administrators better understand and use these objects.\n- Option D: Clustering or partial clustering is used to implement continuous storage of hot data and convert random I/Os into continuous I/Os. This is true. Hot data can be continuously stored through clustering or local clustering, reducing the I/O cost of scanning. Clustering is to store related data rows together so that disk I/O operations can be reduced when these rows are read, improving query performance.\nTherefore, the answers are A, B, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 27 （18 Points）",
+        "question": "Which of the following local file systems are supported by openEuler?",
+        "choices": [
+            "A. ext4",
+            "B. btrfs",
+            "C. XFS",
+            "D. NFS"
+        ],
+        "answer": "ABC",
+        "explanation": "- Options A, B, and C are correct answers.\n- Option D: Network File System (NFS) is a file system supported by openEuler. However, as the name suggests, it is not a local file system.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 28 （18 Points）",
+        "question": "Which of the following tools can be used to implement logical backup of the openGauss database?",
+        "choices": [
+            "A. LVM snapshot",
+            "B. PITR",
+            "C. gs_dump",
+            "D. gs_dumpall"
+        ],
+        "answer": "CD",
+        "explanation": "Which of the following tools can be used to implement logical backup of the openGauss database?\n- Option A: LVM snapshot. This is false. Logical Volume Manager (LVM) snapshots are usually used for physical backup instead of logical backup. Logical backup is to export the database structure and data to SQL scripts or archive files. LVM snapshots are to create data snapshots at the file system level for physical backup.\n- Option B: PITR. This is false. Point-in-time recovery (PITR) is a physical backup and restoration policy of openGauss. It allows a database to be restored to any point in time after a physical backup, instead of a logical backup tool.\n- Option C: gs_dump. This is true. gs_dump is a logical backup tool used by openGauss to export database information. You can export a database or its objects (such as schemas, tables, and views), except objects in the recycle bin. The database can be the default \"postgres\" database or a user-defined database. gs_dump can export complete and consistent data and export database information to SQL script files in plain-text format or other archive files.\n- Option D: gs_dumpall. This is true. gs_dumpall is a logical backup tool used by openGauss to export all database information. It exports all openGauss data, including data of the default database postgres, data of the user-defined database, and all global objects of openGauss.\nTherefore, the answers are C and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 29 （18 Points）",
+        "question": "Which of the following are configuration files of the SSH client?",
+        "choices": [
+            "A. /etc/ssh/sshd_config",
+            "B. /etc/ssh/ssh_config",
+            "C. ~/.ssh/config",
+            "D. Configuration files whose names end with \".conf\" in \"/etc/ssh/sshd_config.d/\""
+        ],
+        "answer": "BC",
+        "explanation": "The main configuration files for the SSH server include those that directly control server behavior and settings: \n-\tOption A: \"/etc/ssh/sshd_config\" is the main configuration file for the SSH server. It contains options for the SSH service.\n-\tOption B: \"/etc/ssh/ssh_config\" is an SSH client configuration file. It controls the behavior of the client instead of the server.\n-\tOption C: \"~/.ssh/config\" is an SSH configuration file of a user. It allows the user to personalize SSH behavior. It is not an SSH server configuration file.\n-\tOption D: Although the specific file names and their existence may vary depending on the distribution, generally speaking, the \"/etc/ssh/sshd_config.d/\" directory contains additional SSH server configuration files. These files usually end with \".conf\" and are used to provide extra configuration options or override settings in the main configuration file.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 30 （18 Points）",
+        "question": "In the openGauss fully-encrypted database, which of the following methods can be used to create an encrypted table?",
+        "choices": [
+            "A. Use the CREATE TABLE statement to specify the encryption algorithm and key.",
+            "B. Use the ALTER TABLE statement to specify the encryption algorithm and key.",
+            "C. Use the CREATE TABLESPACE statement to specify the encryption algorithm and key.",
+            "D. Run the pg_dump command to back up the existing encrypted table and specify the encryption algorithm and key."
+        ],
+        "answer": "AB",
+        "explanation": "In the openGauss fully-encrypted database, the method of creating encrypted tables mainly involves data table-level encryption settings, not backup tools or tablespace-level settings. The options are described as follows:\n- Option A: Use the CREATE TABLE statement to specify the encryption algorithm and key. This is true. This is the main way to create encrypted tables. In openGauss, you can use the CREATE TABLE statement to create a table and specify column-level encryption settings using specific syntax. For example, you can specify that a column is encrypted using a specific encryption algorithm and key. It involves using the ENCRYPTED WITH clause to specify encryption options.\n Option B: Use the ALTER TABLE statement to specify the encryption algorithm and key. This is true. Although the ALTER TABLE statement is usually used to modify the structure or attributes of a table, in openGauss, you can also directly use ALTER TABLE to change the encryption settings of existing columns.\n- Option C: Use the CREATE TABLESPACE statement to specify the encryption algorithm and key. This is false. The CREATE TABLESPACE statement is used to create a tablespace and does not directly involve table encryption settings. A tablespace is a physical storage area for database objects (such as tables and indexes) rather than a specified location for encryption settings.\n- Option D: Run the pg_dump command to back up the existing encrypted table and specify the encryption algorithm and key. This is false. pg_dump is a backup tool for PostgreSQL. Although openGauss is similar to PostgreSQL in some aspects, pg_dump is not a standard tool for openGauss. In addition, the backup tool is mainly used to export and restore the contents of a database or table, instead of creating an encrypted table or specifying an encryption algorithm and key.\nTherefore, the answers are A and B.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 31 （18 Points）",
+        "question": "Which of the following statements are true about the openGauss database auxiliary thread?",
+        "choices": [
+            "A. WAL writer is responsible for writing permanent records of committed transactions to WAL files.",
+            "B. Page writer is used for copying the dirty page data to the doublewrite area and flushing the data to disks.",
+            "C. Checkpointer is used to periodically check the points and flush dirty pages to disks to ensure database consistency.",
+            "D. AutoVacuum is used to collect statistics on objects, SQL statements, sessions, and locks and store the statistics in the pgstat.stat file."
+        ],
+        "answer": "ABC",
+        "explanation": "For the description of the openGauss database auxiliary thread, the options are analyzed as follows:\n- Option A: WAL writer is responsible for writing permanent records of committed transactions to WAL files. This is true. The WAL writer thread periodically synchronizes the contents in the log buffer to disks to ensure that committed transaction records are permanently stored.\n- Option B: Page writer is used for copying the dirty page data to the doublewrite area and flushing the data to disks. This is true. In the function description of a main page writer thread and a group of its worker threads, dirty pages are obtained from the global dirty page queue array in batches, written to the doublewrite file in batches, and finally written to the file system.\n- Option C: Checkpointer is used to periodically check the points and flush dirty pages to disks to ensure database consistency. This is true. The Checkpointer thread processes all checkpoints. Checkpoints are used to reduce crash recovery time and ensure database consistency.\n- Option D: AutoVacuum is used to collect statistics on objects, SQL statements, sessions, and locks and store the statistics in the \"pgstat.stat\" file. This is false. AutoVacuum is used to periodically delete outdated data from database tables, release storage space, and update table statistics to maintain database performance and stability. It does not involve storing statistics in the \"pgstat.stat\" file.\nTherefore, the answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 32 （18 Points）",
+        "question": "Which of the following statements about the commands are correct?",
+        "choices": [
+            "A. The \"cat /etc/os-release\" command is used to view the OS version.",
+            "B. The \"lscpu\" command is used to view the CPU model, quantity, and frequency.",
+            "C. The \"lscpi\" command is used to view system hardware information.",
+            "D. The \"cat /etc/fstab\" command is used to check the memory usage."
+        ],
+        "answer": "ABC",
+        "explanation": "- Option A: The \"/etc/os-release\" file stores the OS version information, and \"cat /etc/os-release\" displays the file content.\n- Option B: \"lscpu\" can be used to check detailed CPU information.\n- Option C: \"lspci\" command is used to check information about PCI devices in the system.\n- Option D: This statement is incorrect. \"/etc/fstab\" defines file systems to be mounted and is not related to memory.\nTherefore, the correct answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 33 （18 Points）",
+        "question": "Which of the following options can be configured on the openEuler installation page?",
+        "choices": [
+            "A. Network and host name",
+            "B. Time and date",
+            "C. Software selection",
+            "D. User environment variables"
+        ],
+        "answer": "ABC",
+        "explanation": "- Option A: This option is correct. The installation page usually provides options for configuring network settings (such as the IP address and gateway) and host name.\n- Option B: This option is correct. The installer asks the user to confirm and set the time and date of the system.\n- Option C: This option is correct. Most Linux distributions allow users to select the software package groups to be installed with the OS, such as the server environment and development tools.\n- Option D: This option is incorrect. User environment variables are set and managed by users after the OS is installed and started. They cannot be configured on the installation page.\nTherefore, the correct answers are A, B, and C.\nThe setup items of an installer usually involve low-level system configurations that ensure normal startup and running of the OS. Higher-level settings, such as environment variables, are configured by users as required after the OS starts.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 34 （18 Points）",
+        "question": "Which of the following are not the functions of the \"chgrp\" command?",
+        "choices": [
+            "A. Configuring file permissions",
+            "B. Changing the group to which a file or directory belongs",
+            "C. Changing the owner of a file",
+            "D. Configuring the user file-creation mode mask (umask)"
+        ],
+        "answer": "ACD",
+        "explanation": "- Option A: This statement is incorrect. \"chgrp\" does not directly set file permissions. It can indirectly change file permissions by changing the group to which a file belongs. \"chmod\" is used to configure file permissions.\n- Option B: This statement is correct. \"chgrp\" is used to change the group to which a file or directory belongs.\n- Option C: This statement is incorrect. The \"chown\" command is used to change the owner of a file, not the \"chgrp\" command.\n- Option D: This statement is incorrect. The \"umask\" command is used to specify the file-creation mode mask. \"chgrp\" is not related to this process.\nTherefore, the correct answers are A, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 35 （18 Points）",
+        "question": "In the openGauss database architecture design, what are the advantages of the primary/standby mode compared to the standalone mode?",
+        "choices": [
+            "A. The recovery point objective (RPO) and the recovery time objective (RTO) can be controlled.",
+            "B. Maximum reliability, performance, and availability can be achieved.",
+            "C. Multiple failover and switchover modes are supported.",
+            "D. Damaged pages can be automatically repaired."
+        ],
+        "answer": "ABCD",
+        "explanation": "In the openGauss architecture design, the primary/standby mode differs from the standalone mode in the following aspects:\n- Option A: The recovery point objective (RPO) and the recovery time objective (RTO) can be controlled. This is true. The primary/standby mode uses the data synchronization and fault recovery mechanisms to ensure that the recovery point objective (RPO) and the recovery time objective (RTO) are controllable when a fault occurs. For example, by using the streaming replication technology, the standby node can synchronize data from the primary node in real time or near real time, thereby minimizing the risk of data loss.\n- Option B: Maximum reliability, performance, and availability can be achieved. This is true. The primary/standby mode improves system reliability and availability because it allows a standby node to be promoted to primary to continue providing services when the primary node is faulty.\n- Option C: Multiple failover and switchover modes are supported. This is true. The primary/standby mode of openGauss supports manual failover and automatic switchover (triggered based on certain preset conditions). In addition, you can run the \"switchover\" command to switch roles between primary and standby nodes to support planned maintenance operations.\n- Option D: Damaged pages can be automatically repaired. This is true. The primary/standby mode of openGauss support data page CRC. When a damaged data page is detected, the standby node can automatically repair the damaged data page to ensure data integrity and consistency.\nTherefore, the answers are A, B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 36 （18 Points）",
+        "question": "Which of the following statements about the \"/etc/fstab\" configuration file are incorrect?",
+        "choices": [
+            "A. The file is automatically generated after the system is started.",
+            "B. The file is used to manage file system information.",
+            "C. The file is used to set naming rules and determines whether the tab character can be used to name a file.",
+            "D. The file holds hardware information."
+        ],
+        "answer": "ACD",
+        "explanation": "- Option A is incorrect. \"/etc/fstab\" is not automatically generated by the system. Instead, it is configured by the system administrator or users to set file systems to be mounted during startup.\n- Option B is correct. \"/etc/fstab\" is used to manage file system information. It stores information about file systems to be mounted automatically during startup. This information includes the device names, mount points, file system types, and mount options.\n- Option C is incorrect. \"/etc/fstab\" is not related to file naming rules, which are determined by the file system and OS together. In addition, file names cannot contain tab characters.\n- Option D is incorrect. Hardware information is stored in other configuration files, such as rule files in \"/etc/udev/rules.d/\" and virtual file systems in \"/proc\" and \"/sys\".\nTherefore, the correct answers are A, C, and D.G2",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 37 （18 Points）",
+        "question": "Which of the following are correct usage examples of the route command in openEuler?",
+        "choices": [
+            "A. route",
+            "B. route print",
+            "C. route add default gw 192.168.1.1",
+            "D. route del -net 192.168.0.1 netmask 255.255.255.0"
+        ],
+        "answer": "ACD",
+        "explanation": "- Option A: In Linux OSs including openEuler, when you enter the \"route\" command without any option, the help information of \"route\" or a brief summary of the current routing table is displayed. This behavior depends on the specific system implementation, but \"route\" is generally a valid command used to quickly check the status of the current routing table or obtain help information about the command itself.\n- Option B: \"route print\" is used to print the routing table in Windows. It is not a standard command in Linux OSs including openEuler. In Linux, the \"route -n\" and \"ip route\" commands are used to check the routing table. While some Linux distributions might offer aliases or extended support for \"route print\", it is not a standard Linux command.\n- Option C: \"route add default gw 192.168.1.1\" is a standard way use \"route\" to add a default gateway to the routing table, where 192.168.1.1 is the gateway IP address. This command instructs the system to send any packets with a destination IP address not in the local routing table to the gateway at 192.168.1.1.\n- Option D: \"route del -net 192.168.0.1 netmask 255.255.255.0\" is used to delete a specific route from the routing table, where \"-net\" specifies the network address to be deleted and \"netmask\" specifies the subnet mask. This command instructs the system to delete the route for the 192.168.0.1/24 network from the routing table.\nTherefore, the correct answers are A, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 38 （18 Points）",
+        "question": "Which of the following commands can be used to view information about the CPUs, swap partition, and drives of a Linux server?",
+        "choices": [
+            "A. cat /proc/cpuinfo",
+            "B. du",
+            "C. cat /proc/swaps",
+            "D. df -lh"
+        ],
+        "answer": "ACD",
+        "explanation": "- Option A: This option is correct. The command displays CPU information, including the model, cache size, and number of CPU cores.\n- Option B: This option is incorrect. The \"du\" command is used to view the drive space usage of directories and files.\n- Option C: This option is correct. The command displays information about the current swap partition, including the device file name, type, and size.\n- Option D: This option is correct. The \"df\" command reports the drive space usage of the file systems. The \"-l\" option displays only local file systems. The \"-h\" option uses human-readable units (for example, M and G) to display file system capacities. Therefore, the \"df -lh\" command allows you to view the drive partitions and usage conveniently.\nOther commonly used commands for viewing hardware information include \"lscpu\" and \"free\". These tools provide quick and efficient access to hardware information, making them indispensable for Linux system administrators.\nIn conclusion, the correct answers are A, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 39 （18 Points）",
+        "question": "Which of the following statements are true about the openGauss database?",
+        "choices": [
+            "A. OM, the cluster management module, provides cluster startup and stop, primary/standby switchover, and status query.",
+            "B. CM, the O&M management module, provides management APIs and tools for routine cluster O&M and configuration management.",
+            "C. Client driver receives the access requests from applications and returns the execution results to the applications.",
+            "D. openGauss primary/standby DNs store service data (by row-store tables, column-store tables, or MOTs), execute data query tasks, and return execution results to the client driver."
+        ],
+        "answer": "CD",
+        "explanation": "The four options are analyzed as follows:\n- Option A is false. In openGauss, the Operation Manager (OM) module provides management APIs and tools for routine database O&M and configuration management. The Cluster Manager (CM) module monitors the status of the primary and standby database nodes and performs automatic switchover.\n- Option B is false. The CM module monitors the status of the primary and standby database nodes and performs automatic switchover. OM is an O&M management module.\n- Option C: Client driver receives the access requests from applications and returns the execution results to the applications. This is true.\n- Option D: openGauss primary/standby DNs store service data (by row-store tables, column-store tables, or MOTs), execute data query tasks, and return execution results to the client driver. This is true. The primary and standby DNs of openGauss store service data and execute data query tasks. Usually, a client driver receives the execution result of a database instance, and a DN does not directly return the execution result to the client driver. However, it can be considered that after the DN executes a query, the result is received by the client driver in a certain way (such as a database instance). Therefore, this option is true in a broad sense.\nTherefore, the answers are C and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 40 （18 Points）",
+        "question": "Which of the following are health check scenarios?",
+        "choices": [
+            "A. Check before openGauss installation",
+            "B. Setting automatic WAL checkpoints",
+            "C. Pre-upgrade check",
+            "D. Check before important operations"
+        ],
+        "answer": "ACD",
+        "explanation": "Among the four options given above:\n- Option A: Check before openGauss installation. This is true. As a part of compiling and installing openGauss 5.0.0, the environment check includes checking the OS version, changing the host name, and checking the firewall and SELinux. These steps can be regarded as a health check before the installation.\n- Option B: Setting automatic WAL checkpoints. This is false. This is actually a part of the DR performance parameter setting in openGauss, not a health check.\n- Option C: Pre-upgrade check. This is true. The version requirements and precautions, including using a tool to check the current version and ensuring that the database and mutual trust are normal, are the health check before the openGauss upgrade.\n- Option D: Check before important operations. This is true. The gs_check tool of openGauss is used to comprehensively check various environments before major operations (such as upgrade and scale-out) to ensure that openGauss meets the environment and status requirements. This complies with the definition of health check before important operations.\nTherefore, the answers are A, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 41 （18 Points）",
+        "question": "In which of the following situations a WDR cannot be generated?",
+        "choices": [
+            "A. A node restarts between two snapshots.",
+            "B. A TRUNCATE TABLE operation is executed between two snapshots.",
+            "C. A switchover is performed between two snapshots.",
+            "D. A DROP DATABASE operation is executed between two snapshots."
+        ],
+        "answer": "ACD",
+        "explanation": "In openGauss, WDRs are generated based on two or more snapshots to diagnose and analyze database performance problems. The following analyzes situations a WDR cannot be generated:\n- Option A: A node restarts between two snapshots. Not supported. If a node is restarted between two snapshots, the snapshot continuity and data integrity may be affected because the node restart may cause data inconsistency or other unpredictable problems. In this case, the WDR generated based on the two snapshots may be inaccurate or invalid.\n- Option B: A TRUNCATE TABLE operation is executed between two snapshots. Supported. The TRUNCATE TABLE operation deletes all data from a table, but does not affect the generation of snapshots. A snapshot captures the status of a database at a certain point in time. Truncating a table only changes the data content of the table and does not directly damage the snapshot integrity.\n- Option C: A switchover is performed between two snapshots. Not supported. A switchover (or failover) will change the database role, which may affect the continuity and consistency of snapshots. In this case, the WDR generated based on the two snapshots may not provide accurate analysis results.\n- Option D: A DROP DATABASE operation is executed between two snapshots. Not supported. The DROP DATABASE operation deletes the entire database, which affects all snapshots related to the database. Therefore, if a DROP DATABASE operation is performed between two snapshots, the WDR generated based on the two snapshots is invalid.\nTherefore, the answers are A, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 42 （18 Points）",
+        "question": "Which of the following commands cannot be used to format the \"/dev/hdb6\" partition?",
+        "choices": [
+            "A. mkfs -t ext4 /dev/hdb6",
+            "B. format -t ext4 /dev/hdb6",
+            "C. mount -t ext4 /dev/hdb6",
+            "D. makefile -t ext4 /dev/hdb6"
+        ],
+        "answer": "BCD",
+        "explanation": "In Linux, mkfs (short for \"make filesystem\") is the standard command for formatting partitions. It is typically used with syntax \"mkfs -t <file system type> <device name>\".\nIn the command:\n\"-t\" specifies the type of the file system to be created, such as \"ext4\" and \"xfs\".\n\"<device name>\" indicates the device file name of the partition to be formatted, such as \"/dev/sda1\" or \"/dev/hdb6\". You can run \"mkfs -t ext4 /dev/hdb6\" to format the \"/dev/hdb6\" partition as an ext4 file system.\n-\t\"format\" in option B is a Windows command, not a Linux command.\n-\t\"mount\" in option C is used to mount a formatted partition and cannot be used to format the partition.\n-\t\"makefile\" in option D is not a Linux command either. It is a confusion with the Makefile file.\nTherefore, the correct answers are B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 43 （18 Points）",
+        "question": "Which of the following are the functions of the \"systemctl\" command?",
+        "choices": [
+            "A. Collecting serial port information of the OS",
+            "B. Enabling a service to run at system startup",
+            "C. Starting, restarting, and stopping services",
+            "D. Restarting and shutting down the system"
+        ],
+        "answer": "BCD",
+        "explanation": "systemctl is a Linux command line tool for managing the system and services.\n-\tOption A: \"systemctl\" cannot collect OS serial port information. This requires other command such as \"dmesg\".\n-\tOption B: The \"systemctl enable serviec_name\" command sets the \"service_name\" service to automatically start upon system startup.\n-\tOption C: The \"systemctl start/restart/stop service_name\" command starts, restarts, or stops the \"service_name\" service.\n-\tOption D: Although mainly used to manage system services, \"systemctl\" can be used to restart or shut down the system. The \"systemctl reboot\" and \"systemctl poweroff\" commands restart and shutdown the system, respectively.\nTherefore, the correct answers are B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 44 （18 Points）",
+        "question": "Which of the following statements about built-in variables in openEuler are true?",
+        "choices": [
+            "A. \"$0\" indicates all shell parameters.",
+            "B. \"$n\" ranges from 1 to 9 and indicates the value of the nth positional parameter of the shell program (or process).",
+            "C. \"$*\" indicates a character string consisting of all positional parameters of the shell program.",
+            "D. \"$#\" indicates the number of positional parameters of the shell program."
+        ],
+        "answer": "BCD",
+        "explanation": "- Option A: This statement is incorrect. \"$0\" indicates the name of the script or program being executed, not all parameters.\n- Option B: This statement is correct. \"$1\" indicates the first parameter, \"$2\" indicates the second parameter, and so on.\n- Option C: This statement is correct. \"$*\" treats all parameters as a single string.\n- Option D: This statement is correct. \"$#\" obtains the total number of parameters.\nTherefore, the correct answers are B, C, and D. These variables are widely used in shell programming to obtain and process parameters.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 45 （18 Points）",
+        "question": "Data Studio is an integrated development environment. Which of the following are features of Data Studio?",
+        "choices": [
+            "A. Creating and managing database objects",
+            "B. Executing SQL statements/scripts",
+            "C. Editing and executing PL/SQL statements",
+            "D. Viewing WDRs"
+        ],
+        "answer": "ABC",
+        "explanation": "Data Studio is an integrated development environment. The main features of Data Studio are as follows:\n\tData Studio allows you to create and manage various database objects, including databases, schemas, functions, stored procedures, tables, indexes, sequences, views, and triggers. It en-ables database developers to easily create and manage database objects on the GUI.\n\tData Studio supports execution of SQL statements or SQL scripts. This enables developers to write and run SQL queries directly in Data Studio, simplifying the database query process.\n\tData Studio allows you to edit and execute PL/SQL statements. PL/SQL is a procedural lan-guage extension to SQL provided by Oracle Database.\nTherefore, the answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 46 （16 Points）",
+        "question": "The difference between the primary/secondary mode and the primary/standby mode is that the standby node provides services for external systems in the primary/secondary mode.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "In primary/standby mode, the primary node is responsible for all read and write operations, and the standby node is responsible for backup. It synchronizes data from the primary node and does not provide services when the primary node is running properly.\nIn primary/secondary mode, the primary node is responsible for write operations (such as insertion, update, and deletion), and the secondary node is responsible for read operations. In addition to synchronizing data from the primary node, the secondary node also provides read services.\nThe main difference between the primary/secondary mode and the primary/standby mode lies in whether the standby node (or secondary node) provides services. In primary/secondary mode, the secondary node synchronizes data from the primary node and provides read services. In primary/standby mode, the standby node takes over services only when the primary node is faulty, but does not provide services when the primary node is running properly.\nTherefore, this is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 47 （16 Points）",
+        "question": "The file system structure of Linux is a directory tree.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "In Linux, file systems are organized into hierarchical structures of directory trees.\n1.\tThe root directory (\"/\") is the top level of a file system, the starting point of the entire hierarchy.\n2.\tSubdirectories can be created as branches under the root directory. Each directory can further contain subdirectories or files.\n3.\tA path can uniquely identify the location of a file or directory in the file system.\n4.\tPhysical devices and partitions can be mounted to different mount points on the root directory tree to form a unified hierarchy.\nThe hierarchical organization of Linux file systems provides several advantages:\n\tUnity: Multiple physical devices are seamlessly integrated through mounting, creating a single, logically unified namespace.\n\tFlexibility: Mount points can be adjusted as needed.\n\tClear structure: The clear hierarchical layout provides an easy way to manage and access files.\nOrganizing a file system into a directory tree not only aligns with user habits of file classification but also facilitates the organization and management of system resources. Linux inherited this design concept from the Unix file system.\nTherefore, the statement in the question is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 48 （16 Points）",
+        "question": "A transaction is atomic and is an inseparable whole. Its status can only be success or failure.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "A transaction can be rolled back, contain subtransactions, and have rollback points set.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 49 （16 Points）",
+        "question": "It is a significant challenge for application developers to ensure data security when data grows rapidly.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Ensuring data security is indeed one of the challenges that application developers need to face when data increases sharply. The following is the detailed analysis and summary of this question:\n1. Challenges brought by data growth: The rapid growth of data volume means that larger storage space, higher processing capability, and more complex management policies are required. As the data volume increases, the sensitivity, value, and potential risks of the data increase accordingly.\n2. Importance of data security: Data security is the key to protecting user privacy, enterprise se-crets, and compliance with related laws and regulations. Any data breach or abuse may have a serious impact on enterprise reputation, user trust, and legal compliance.\n3. Challenges faced by application developers: Advanced technologies, such as encryption, ac-cess control, and audit logs, are required to protect data integrity and confidentiality. In addition to en-suring data security, system performance and response speed must be ensured to provide good user experience. As the data volume increases, data management, backup, and restoration become more complex and time-consuming. Various data protection regulations and standards, such as GDPR and HIPAA, must be complied with to ensure data compliance. Employee awareness must be enhanced by training and education so that employees attach more importance to data security. The latest encryp-tion technologies, identity authentication, and access control mechanisms are required to protect data. Policies for data classification, backup, restoration, and emergency response must be formulated to ensure that data leakage or other security events can be quickly handled. Security audit and risk as-sessment are periodically performed on the system to detect potential security risks in time.\nTherefore, ensuring data security is one of the important challenges faced by application developers when data increases significantly.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 50 （16 Points）",
+        "question": "The order of precedence of logical operators is AND > OR > NOT.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "In most programming languages, the order of precedence of logical operators is as follows:\n\tNOT operator (!)\n\tAND operator (&&)\n\tOR operator (||)\nThe NOT operator has the highest priority, followed by AND and then OR. This is similar to the order of \"multiplication and division before addition and subtraction\" in mathematical operations.\nFor example, for a logical expression:\nA && !B || C\nThe order is as follows: First, !B is calculated first (because the NOT operator has the highest priority), A && the previous result is then calculated (because the AND operator has the second highest priority), and finally the result|| C is calculated (because the OR operator has the lowest priority).\nTherefore, the answer is false. The order of precedence of logical operators is NOT > AND > OR. According to this rule, we can correctly evaluate complex logical expressions.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 51 （16 Points）",
+        "question": "A database system refers to a database management system.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Database system and database management system (DBMS) are two different concepts, but they are closely related.\nA database system is a complex system that includes not only a DBMS, but also databases, database administrators, application programs, users, and software and hardware environments that support the running of database system. The main objective of a database system is to provide data storage, query, update, and management functions, and ensure data integrity, security, and consistency.\nA DBMS is the core software of a database system. It is responsible for establishing, using, and maintaining the database. The DBMS provides the data definition language (DDL), data manipulation language (DML), and data control language (DCL) to define database structures, operate data in a database, and control data access. The DBMS also provides functions such as data storage, backup, restoration, concurrency control, and security control.\nTherefore, the database system is a broader concept, which includes a DBMS and multiple other components. Therefore, the answer is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 52 （16 Points）",
+        "question": "When you run the \"mkdir\" command to create a directory, use the \"-p\" option to create any parent directory that does not already exist.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "When you run \"mkdir\" to create a directory in Linux but its parent directory does not exist, you need to use the \"-p\" or \"--parents\" option. These options automatically create any missing parent directories.\nAssume that you want to create the \"/path/to/new/dir\" directory.\nIf you run a command without the \"-p\" option:\nmkdir /path/to/new/dir\nThe system reports an error because the intermediate path \"/path/to/new\" does not exist.\nIf you run a command with the \"-p\" option:\nmkdir -p /path/to/new/dir\n\"mkdir\" automatically creates the missing parent directory \"/path/to/new\" and then creates \"dir\".\nThe \"-p\" option automatically detects and creates any missing parent directories, enabling recursive creation of directories at any level, adding a layer of convenience. It is one of the most commonly used options of \"mkdir\".\nTherefore, the statement in the question is true. It is exactly what the \"-p\" option is designed for.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 53 （16 Points）",
+        "question": "The \"cat f1.txt > f2.txt\" command copies \"f1.txt\" as \"f2.txt\".",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "This command essentially copies the contents of \"f1.txt\" to \"f2.txt.\" If \"f2.txt\" already exists, its contents are replaced with the contents of \"f1.txt.\" If \"f2.txt\" does not exist, it is created and populated with the contents of \"f1.txt.\"\nTherefore, the statement in the question is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 54 （16 Points）",
+        "question": "The \"mount\" command can be used only to mount a file system. It cannot be used to view the mounting status.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "The \"mount\" command can be used to mount file systems and view mounted file systems:\n1.\tMounting file systems: The most common use of \"mount\" is to mount a device or file system to a mount point, for example mount \"/dev/sda1 /mnt\".\n2.\tViewing mounted file systems: If \"mount\" is executed without any options or parameters, it lists all mounted file systems, including the device name, mount point, type, mount options.\nThe \"mount\" command can be used to both mount file systems and view mounted ones. It is a common tool for file system management.\nSome common \"mount\" commands include:\n\t\"mount -a\": mounts all file systems specified in \"/etc/fstab\".\n\t\"mount -t\": specifies the type of the file system to be mounted.\n\t\"mount -o options\": specifies mount options.\n\t\"mount device|dir\": lists mounted file systems when no option is specified.\nTherefore, the statement in the question is false. The \"mount\" command has both functions.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 55 （16 Points）",
+        "question": "Data management and development aim to reduce data redundancy, enhance data independence, and facilitate data operations.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "The development of data management, especially the evolution from file systems to database systems, aims to reduce data redundancy, enhance data independence, and facilitate data operations.\n1. Reduce data redundancy: In a database system, data is usually stored in a structured form, avoiding storing the same data in multiple places. This not only saves storage space, but also improves data accuracy because data needs to be updated only in one place.\n2. Enhance data independence: Data independence includes physical independence and logical independence. Physical independence means an application is not affected when the physical storage structure (such as the storage location and storage mode) of data changes. Logical independence means that an application does not need to be modified when the logical structure (such as the table structure and column type) of the database changes. This independence makes the database system more flexible and maintainable.\n3. Facilitate data operations: A database system provides various data operation functions, such as query, insertion, update, and deletion. These operations can be performed using high-level languages such as SQL, eliminating the need for users to directly operate underlying data. In addition, a database system supports functions such as transaction processing and concurrency control, making data operations more reliable and secure.\nTherefore, this is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 56 （16 Points）",
+        "question": "The Vim editor is an improved version of vi. Vim includes the normal mode, insert mode, and command-line mode.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "The Vim (Vi IMproved) editor is indeed a more powerful text editor developed from the vi editor. Vim was launched by Bram Moolenaar in 1991 as an improvement and extension of vi.\nVim operates in various modes, with the following being the most basic and frequently used:\n-\tNormal mode: In this mode, you can press shortcut keys to copy, paste, cut, search, replace text and enter other modes.\n-\tInsert mode: In this mode, you can insert and edit text. You enter insert mode from normal mode by pressing \"i\" or other designated keys.\n-\tCommand-line mode: This mode enables you to enter commands to save files, quit the editor, and search and replace text strings. It is typically accessed by typing \":\" in normal mode.\nTherefore, the statement in the question is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 57 （16 Points）",
+        "question": "You cannot specify a Yum repository by modifying the Yum configuration file.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Yum is a commonly used package manager in Linux. It relies on Yum repositories (software repositories) to provide information about software packages and their dependencies. Yum repositories can be remote or local (such as those built within an internal network).\nYou can specify a Yum repository by modifying the Yum configuration file. The configuration files are usually located in the \"/etc/yum.repos.d/\" directory, with each file representing the configuration of a single Yum repository. You can open a configuration file using a text editor (such as vi or nano) and modify parameters within it, such as \"baseurl\" (URL of the repository), \"enabled\" (whether the repository is enabled), and \"gpgcheck\" (whether to perform GPG verification).\nAfter modifying a configuration file, you need to clear the Yum cache (\"yum clean all\") and regenerate it (\"yum makecache\") for the new Yum repository to take effect.\nTherefore, the statement in the question is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 58 （16 Points）",
+        "question": "The advantage of the primary/standby database deployment mode is that the application does not need to increase the development workload for database faults.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "In the primary/standby architecture, the standby database backs up data and does not directly participate in read and write operations of services. Clients or application systems can interact with the primary database without being aware of the existence of the standby database. Therefore, during application development, developers do not need to write additional code or logic for possible database faults.\nIn addition, the primary/standby architecture has other advantages, such as improved data fault tolerance. Data is backed up on the standby database. Therefore, even if the primary database is faulty, data will not be lost and can be restored from the standby database.\nHowever, the primary/standby architecture also has some disadvantages, such as resource waste and performance pressure concentrated on a single server. Although the standby database backs up data, it does not participate in service operations in normal cases, which wastes resources. In addition, all read and write operations are performed on the primary database, which may cause performance bottlenecks.\nTherefore, this is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 59 （16 Points）",
+        "question": "openEuler is a single-user, multi-tasking operating system.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "In a \"single-user\" system, only one user can directly use the computer system and has control over all system resources. However, openEuler allows multiple users to log in simultaneously and supports indirect access by sharing system resources.\n\"Multi-tasking\" refers to the ability of an OS to run multiple processes or threads simultaneously, achieving concurrent execution of multiple tasks. Through task scheduling by the kernel, openEuler can executable multiple processes concurrently on a single-core CPU or in parallel on a multi-core CPU. In this way, openEuler fully utilizes CPU resources and improves efficiency.\nTherefore, the statement in the question is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 60 （16 Points）",
+        "question": "A database management system is an interface between a database and a user. It allows the user to manage, monitor, and control the database.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "A database management system (DBMS) is an interface between databases and users. It provides users with methods of accessing and operating data in a database, and allows users to perform multiple database management tasks, such as creating, updating, querying, and deleting data. In addition, the DBMS provides functions such as data integrity, security, and concurrency control to ensure database stability and performance.\nTherefore, the answer is true.",
+        "questionType": "true_false"
+    }
+]

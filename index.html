@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Training</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A simple class to hide elements */
+        .hidden {
+            display: none;
+        }
+
+        /* Custom scrollbar for sidebars and main content */
+        .sidebar-scroll::-webkit-scrollbar,
+        .main-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar-scroll::-webkit-scrollbar-track,
+        .main-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            /* gray-100 */
+            border-radius: 10px;
+        }
+
+        .sidebar-scroll::-webkit-scrollbar-thumb,
+        .main-scroll::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            /* gray-400 */
+            border-radius: 10px;
+        }
+
+        .sidebar-scroll::-webkit-scrollbar-thumb:hover,
+        .main-scroll::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+            /* gray-500 */
+        }
+
+        /* Styles for correct/incorrect choices after submission */
+        .choice-correct {
+            border-color: #22c55e;
+            /* green-500 */
+            background-color: #f0fdf4;
+            /* green-50 */
+        }
+
+        .choice-correct label,
+        .choice-correct input {
+            color: #166534;
+            /* green-800 */
+        }
+
+        .choice-incorrect {
+            border-color: #ef4444;
+            /* red-500 */
+            background-color: #fef2f2;
+            /* red-50 */
+        }
+
+        .choice-incorrect label,
+        .choice-incorrect input {
+            color: #991b1b;
+            /* red-800 */
+        }
+
+        /* Styles for feedback box */
+        .feedback-correct {
+            border-left-color: #22c55e;
+            /* green-500 */
+            background-color: #f0fdf4;
+            /* green-50 */
+        }
+
+        .feedback-correct #feedback-text {
+            color: #166534;
+            /* green-800 */
+        }
+
+        .feedback-incorrect {
+            border-left-color: #ef4444;
+            /* red-500 */
+            background-color: #fef2f2;
+            /* red-50 */
+        }
+
+        .feedback-incorrect #feedback-text {
+            color: #991b1b;
+            /* red-800 */
+        }
+
+        .feedback-unanswered {
+            border-left-color: #64748b;
+            /* gray-500 */
+            background-color: #f8fafc;
+            /* gray-50 */
+        }
+
+        .feedback-unanswered #feedback-text {
+            color: #334155;
+            /* gray-700 */
+        }
+    </style>
+    <script src="app.js" defer></script>
+</head>
+
+<body class="font-sans bg-gray-100 h-screen flex">
+
+    <!-- Mobile Header -->
+    <div class="md:hidden flex justify-between items-center w-full p-4 bg-white shadow-md absolute top-0 left-0 z-10">
+        <span class="text-xl font-bold text-indigo-600">ICT Training</span>
+        <button id="toggle-sidebar-btn" class="p-2 text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <!-- Add a button for the right sidebar on mobile if needed -->
+    </div>
+
+    <!-- Main Container -->
+    <div class="flex h-full w-full pt-16 md:pt-0">
+
+        <!-- Left Sidebar (Question List) -->
+        <nav id="sidebar" class="bg-white w-72 h-full border-r border-gray-200 
+                md:flex flex-col shadow-lg
+                absolute md:relative inset-y-0 left-0 z-20 transform -translate-x-full md:translate-x-0
+                transition duration-300 ease-in-out md:h-full pb-32">
+
+            <div class="flex justify-between items-center p-4 border-b">
+                <h2 class="text-xl font-bold text-indigo-600">ICT Training</h2>
+                <button id="close-sidebar-btn" class="md:hidden p-2 text-gray-600 ml-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Scrollable list of questions -->
+            <ul id="question-list" class="space-y-1 overflow-y-auto sidebar-scroll flex-1 px-4 py-2">
+                <!-- Question links will be dynamically inserted here -->
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-4 md:p-8 lg:p-12 overflow-y-auto main-scroll pb-32">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 w-full max-w-4xl mx-auto">
+
+                <!-- Test Content Area -->
+                <div id="test-container" class="hidden">
+                    <!-- Question Header -->
+                    <div class="mb-4 border-b pb-4">
+                        <h2 id="question-title" class="text-xl md:text-2xl font-bold text-gray-800 mb-2"></h2>
+                        <p id="question-counter" class="text-sm font-medium text-gray-500"></p>
+                    </div>
+
+                    <!-- Question Text -->
+                    <p id="question-text" class="text-lg text-gray-900 mb-6"></p>
+
+                    <!-- Choices -->
+                    <div id="choices-container" class="space-y-3 mb-6">
+                        <!-- Choices will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Feedback & Answer Section (Initially Hidden) -->
+                    <div id="answer-container" class="hidden border-l-4 p-4 rounded-md mt-6">
+                        <!-- Correct/Incorrect Feedback -->
+                        <h3 id="feedback-text" class="text-lg font-semibold mb-2"></h3>
+                        <p id="feedback-detail" class="text-base font-medium text-gray-900 mb-3"></p>
+
+                        <!-- Explanation -->
+                        <div class="border-t pt-3">
+                            <h4 class="font-semibold text-gray-800 mb-1">Explanation:</h4>
+                            <p id="explanation-text" class="text-base text-gray-700"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading/Error State -->
+                <div id="message-container" class="text-center p-6">
+                    <p id="message-text" class="text-lg text-gray-600">Loading questions...</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Question Grid) -->
+        <nav id="right-sidebar" class="bg-white w-64 h-full border-l border-gray-200
+                hidden md:flex flex-col shadow-lg
+                md:h-full pb-32">
+
+            <div class="p-4 border-b">
+                <h3 class="text-lg font-bold text-gray-800">All Questions</h3>
+            </div>
+
+            <!-- Scrollable grid of questions -->
+            <div id="question-grid"
+                class="flex-1 overflow-y-auto sidebar-scroll p-4 grid grid-cols-4 gap-2 content-start">
+                <!-- Question grid buttons will be dynamically inserted here -->
+            </div>
+        </nav>
+    </div>
+
+    <!-- Bottom Bar Area -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),_0_-2px_4px_-2px_rgba(0,0,0,0.1)] z-30 p-4">
+        <div class="w-full max-w-7xl mx-auto">
+            <!-- Stats (Mobile) -->
+            <div id="test-stats-mobile" class="text-sm text-gray-600 mb-2 text-center font-medium md:hidden hidden">
+                <!-- Score shown here -->
+            </div>
+
+            <div class="relative flex items-center justify-between">
+                <!-- Left: Question Bank Select -->
+                <div class="flex-1 max-w-xs">
+                    <select id="question-bank-select"
+                        class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 p-2.5 appearance-none bg-no-repeat bg-[position:right_0.5rem_center] pr-8 bg-[url('data:image/svg+xml;charset=utf-8,<svg xmlns="
+                        http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="%236b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M6 8l4 4 4-4" /></svg>')]">
+                        <option>Loading tests...</option>
+                    </select>
+                </div>
+
+                <!-- Center: All 3 Buttons -->
+                <div class="flex justify-center space-x-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <button id="prev-btn"
+                        class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-sm disabled:bg-gray-300 disabled:cursor-not-allowed">
+                        Prev
+                    </button>
+                    <button id="next-btn"
+                        class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-sm disabled:bg-gray-300 disabled:cursor-not-allowed">
+                        Next
+                    </button>
+                    <button id="submit-test-btn"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">
+                        Submit Test
+                    </button>
+                </div>
+
+                <!-- Right: Stats (Desktop) -->
+                <div class="flex-1 text-right">
+                    <div id="test-stats" class="text-sm text-gray-600 font-medium hidden md:block">
+                        <!-- Score shown here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

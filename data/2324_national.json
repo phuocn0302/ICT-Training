@@ -1,0 +1,1132 @@
+[
+    {
+        "title": "Question 1 （11 Points）",
+        "question": "Which of the following scenarios is most suitable for distributed striped volumes of GlusterFS?",
+        "choices": [
+            "A. Scenario that involves a great number of large files and requires high read and write performance.",
+            "B. Scenario that involves a great number of large files and requires high read performance and reliability.",
+            "C. Scenario that requires flexible data access control.",
+            "D. Scenario that requires fast data recovery."
+        ],
+        "answer": "A",
+        "explanation": "In GlusterFS distributed striped volumes, multiple files are stored on multiple nodes in hash mode, and each file is striped and stored on multiple bricks. Those volumes inherit the advantages of distributed volumes and striped volumes and provide high read/write performance, which is applicable to scenarios with many large files.\nDistributed striped volumes support high concurrency, but their reliability is poor due to lack of redundancy.\nThe detailed analysis is as follows:\nOption B describes the application scenario of distributed replication volumes. It focuses more on high reliability and read performance.\nOption C describes the flexible data access control, which is not the main feature of GlusterFS distributed striped volumes.\nOption D describes the fast data recovery, which is related to the data recovery capability of GlusterFS, but not the direct application scenario of distributed striped volumes.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （11 Points）",
+        "question": "What is the execution effect of the \"revoke create on schema public from public;\" statement?",
+        "choices": [
+            "A. The create permission in the public schema is revoked from all users.",
+            "B. The create permission in the public schema is revoked from public users.",
+            "C. An error is reported when this statement is executed.",
+            "D. This statement can be executed but has no effect."
+        ],
+        "answer": "B",
+        "explanation": "This statement attempts to revoke the CREATE permission in the public schema from the \"PUBLIC\" role (or user, because user and role are the same concept in PostgreSQL).\n- Option A: This is not true because it only focuses on the \"PUBLIC\" role or user.\n- Option B: This is true, where \"PUBLIC\" is treated as a role or user.\n- Option C: This depends on the database system and context. In PostgreSQL, if \"PUBLIC\" is a role or user who has the CREATE permission on the public schema, this statement can be executed successfully.\n- Option D: If the \"PUBLIC\" role/user does not have such permissions, this command will not have any execution effect (because it has no permission to revoke), but it does not mean that it \"has no effect.\" It will be executed and can return a message indicating that no permission was revoked.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （11 Points）",
+        "question": "Which of the following commands is used to log out the \"iqn.2023-10.com.test:raid\" node during iSCSI client configuration?",
+        "choices": [
+            "A. iscsiadm -m node –T iqn.2023-10.com.test:raid -p 192.168.1.1:3260 -l",
+            "B. iscsiadm -m node –T iqn.2023-10.com.test:raid -p 192.168.1.1:3260 -u",
+            "C. iscsiadm -m node -o delete -T iqn.2023-10.com.test:raid -p 192.168.1.1:3260",
+            "D. iscsiadm -m node -o update -T iqn.2023-10.com.test:raid -p 192.168.1.1:3260"
+        ],
+        "answer": "B",
+        "explanation": "To log out an iSCSI node during iSCSI client configuration, use a command that can disconnect from a specified iSCSI target.\nOption A: This command is used to log in to the specified iSCSI target, not log out. The \"-l\" parameter indicates login.\nOption B: This command is used to log out of the specified iSCSI target. The \"-u\" parameter indicates logout (unlogin). This command answers the question.\nOption C: This command is used to delete the configuration of the iSCSI node instead of logging out the current connection. The \"-o delete\" parameter indicates the delete operation.\nOption D: This command is used to update the configuration of the iSCSI node, not to log out the iSCSI node. The \"-o update\" parameter indicates the update operation.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （11 Points）",
+        "question": "Which of the following is the default configuration file of Keepalived?",
+        "choices": [
+            "A. /usr/keepalived/keepalived.conf",
+            "B. /var/keepalived/keepalived.conf",
+            "C. /usr/etc/keepalived/keepalived.conf",
+            "D. /etc/keepalived/keepalived.conf"
+        ],
+        "answer": "D",
+        "explanation": "In Linux, the Keepalived configuration file is stored in the \"/etc/keepalived/\" directory and named \"keepalived.conf\". This file contains key configurations such as the global definition of Keepalived, VRRP instance definition, and virtual server definition. These configurations determine how Keepalived monitors and fails over services and how to handle network faults and redundancy problems. The detailed analysis is as follows:\n\tGlobal definition block: is used to set global parameters such as the Keepalived fault notification mechanism and router ID.\n\tVRRP instance definition block: defines the Virtual Router Redundancy Protocol (VRRP) instances, including the status, interface, virtual route identifier, and priority.\n\tVirtual server definition block: is optional and is used to define virtual servers and related health check scripts.\nNote that although the path and name of the configuration file may vary slightly depending on the system or installation mode, \"/etc/keepalived/keepalived.conf\" is the default location of the Keepalived configuration file in most Linux distributions.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （11 Points）",
+        "question": "Loop unrolling is an optimization technique that improves the performance of a program by reducing the number of loops. Which of the following options enables loop unrolling?",
+        "choices": [
+            "A. -O",
+            "B. -O1",
+            "C. -O2",
+            "D. -O3"
+        ],
+        "answer": "D",
+        "explanation": "Loop unrolling is a compiler optimization technique that improves the performance of a program by reducing the number of loops. This optimization is usually achieved by copying the loop body multiple times and inserting it into the loop, thereby reducing the overhead of the loop control logic.\nIn GNU Compiler Collection (GCC) and some other compilers, loop unrolling can be enabled with different optimization levels. These optimization levels are set through the compiler command line options \"-O\", \"-O1\", \"-O2\", and \"-O3\". \"-O\" indicates the basic optimization, and \"-O3\" indicates the highest level of optimization, which includes almost all optimization options, including loop unrolling.\nOption A: This is the basic optimization level, which includes optimizations that the compiler considers safe and almost always improves performance. But it usually does not include advanced optimizations such as loop unrolling.\nOption B: This is the first optimization level. It includes all optimizations at the \"-O\" level and adds some additional optimizations. However, loop unrolling is usually not included at this level.\nOption C: This is the second optimization level. It includes all optimizations at the \"-O1\" level and adds some more complex optimizations, such as dead code elimination and constant folding. However, loop unrolling is not included by default at this level.\nOption D: This is the highest level of optimization. It includes all optimizations at the \"-O2\" level and adds some optimizations that may further improve performance but can increase compilation time and/or size of the generated code. Loop unrolling is usually enabled at this level.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （11 Points）",
+        "question": "Which of the following statements about the ACID feature of database transactions is false?",
+        "choices": [
+            "A. A refers to atomicity. Operations in a transaction are either all successful or all failed.",
+            "B. C refers to consistency. The system status can only be the status before or after the transaction is successful. No inconsistent intermediate status can exist.",
+            "C. I refers to availability. The database system must provide the highest availability for database execution to ensure that most transactions can be successfully executed.",
+            "D. D refers to durability. The status of a successful transaction can be maintained even if the machine is powered off."
+        ],
+        "answer": "C",
+        "explanation": "- Option A: This is true because it complies with the atomicity definition of the ACID feature.\n- Option B: This is true because it complies with the consistency definition of the ACID feature.\n- Option C: I refers to isolation rather than availability. Isolation means that the execution of transactions is not interfered one another, and the execution result of one transaction must be transparent to other transactions. Therefore, this is false.\n- Option D: This is true because it complies with the durability definition of the ACID feature.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （11 Points）",
+        "question": "Which of the following statements about index design is false?",
+        "choices": [
+            "A. The number of indexes of a table involving frequent DML operations is recommended to be less than or equal to 5.",
+            "B. Indexes are built for columns with a large number of identical values.",
+            "C. Indexes are built for columns that are often used for query selection.",
+            "D. Indexes are built for attributes that are often used as table joins."
+        ],
+        "answer": "B",
+        "explanation": "Plan hints, a function provided by openGauss, allow users to directly affect the generation of execution plans. You can optimize the execution plan by specifying the join sequence, join method, scan method, and number of result rows to improve query performance.\n- Option A: This is true. Although the index improves the query efficiency, the insertion and update efficiency is reduced because the data in an indexed table is sorted and indexes can be rebuilt after each insert or update, which reduces the performance. Therefore, for a table with frequent DML operations, the number of indexes should be limited to five.\n- Option B: This is false. The number of indexes is not as large as possible. Instead, the index data should be as less as possible. If the value of an index is very long or there is a large number of repeated index values, the query speed will be affected. Therefore, it is not a good choice to create indexes on columns with a large number of identical values.\n- Option C: This is true. If a column is often used as a query condition, this column should be indexed to improve the query speed.\n- Option D: This is true. An attribute should be indexed if it is often used for table join to effectively avoid sorting operations and improve the query efficiency.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （11 Points）",
+        "question": "Which of the following tools is commonly used by openGauss to collect logs?",
+        "choices": [
+            "A. gs_check",
+            "B. gs_checkos",
+            "C. gs_checkperf",
+            "D. gs_collector"
+        ],
+        "answer": "D",
+        "explanation": "- Option A: gs_check is a tool used to check the openGauss running environment, OS environment, network environment, and database execution environment. This tool is mainly used for preventive checks instead of collecting logs.\n- Option B: gs_checkos is a tool of openGauss used to check the OS, control parameters, and disk configurations, and configures the system control parameters, I/O configuration, network configuration, and THP service. Also, it is not a tool for collecting logs.\n- Option C: gs_checkperf is a performance check tool provided by openGauss to periodically check the performance of openGauss, nodes, sessions/processes, and SSDs. This helps users understand the workload of openGauss. It focuses on performance monitoring, but not log collection.\n- Option D: gs_collector is an information collection tool provided by openGauss to collect OS information, log information, and configuration files and locate problems when openGauss is faulty. This tool clearly proposes the function of collecting logs and is consistent with the description in the question.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （11 Points）",
+        "question": "Which of the following drivers is used by Data Studio to communicate with openGauss?",
+        "choices": [
+            "A. JDBC",
+            "B. ODBC",
+            "C. Libpq",
+            "D. Psycopg"
+        ],
+        "answer": "A",
+        "explanation": "- Option A: Java Database Connectivity (JDBC) is a standard Java API used to connect to databases. It allows Java programs to interact with databases. Therefore, when Data Studio is used to communicate with the openGauss database, the JDBC driver is often used to implement this connection.\n- Option B: Open Database Connectivity (ODBC) is an API used to connect to databases. It is mainly used in the Windows OS and is not dedicated to Java.\n- Option C: Libpq is a C API library of the PostgreSQL database. Although openGauss is similar to PostgreSQL, libpq is not a standard mode for direct communication with openGauss.\n- Option D: Psycopg is an adapter of Python for communication between Python programs and PostgreSQL databases. It is not directly used in the Java environment or Data Studio.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （11 Points）",
+        "question": "Which of the following locks need to be held by openGauss during VACUUM?",
+        "choices": [
+            "A. EXCLUSIVE",
+            "B. ShareUpdateExclusiveLock",
+            "C. SHARE",
+            "D. ROW EXCLUSIVE"
+        ],
+        "answer": "B",
+        "explanation": "- Option A: EXCLUSIVE lock allows concurrent queries on the target table, but prohibits any other operations. The VACUUM operation modifies table metadata. Therefore, the VACUUM operation does not hold the EXCLUSIVE lock, which prevents other query operations.\n- Option B: ShareUpdateExclusiveLock is required for the VACUUM (without the \"FULL\" option) operation. It is used to protect the table from being modified by a concurrent schema or VACUUM operation.\n- Option C: SHARE lock allows concurrent queries but prohibits table modification. VACUUM modifies table data and therefore it does not hold the SHARE lock.\n- Option D: ROW EXCLUSIVE lock allows concurrent reading of tables, but prohibits modification of table data. Although VACUUM does not directly modify table data, it modifies table metadata and therefore it does not hold the ROW EXCLUSIVE lock.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （11 Points）",
+        "question": "During the installation of openEuler using the Anaconda GUI, which directory of the boot image are the Anaconda logs stored in?",
+        "choices": [
+            "A. /etc",
+            "B. /var",
+            "C. /tmp",
+            "D. /usr"
+        ],
+        "answer": "B",
+        "explanation": "During the installation of openEuler using the Anaconda GUI, the location of the Anaconda logs depends on the operating system and the Anaconda configurations. Based on the common log storage of the Linux system, the options can be analyzed as follows:\nOption A: This directory is used to store system configuration files instead of log files.\nOption B: In Linux, the \"/var\" directory is used to store files that change dynamically, such as log files, mail queues, and cache files. However, the Anaconda logs are not directly stored in the \"/var\" directory. Instead, they are stored in a subdirectory of the \"/var/log\" directory.\nOption C: This directory is used to store temporary files and is not used to store the Anaconda logs. However, if Anaconda uses a temporary directory to store logs during installation, these logs may appear in \"/tmp\". However, this is not a regular location for the Anaconda logs.\nOption D: This directory is used to store user-level applications and data, which is irrelevant to the storage of the Anaconda logs.\nAccording to the information about the location where Linux system logs are stored, the Anaconda logs are more likely to be stored in the \"/var/log\" directory. Specifically, the Anaconda logs may be stored in a file named \"/var/log/anaconda.log\". This file stores all installation information when Linux is installed.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （11 Points）",
+        "question": "What is the purpose of plan hints in openGauss?",
+        "choices": [
+            "A. To optimize query plans.",
+            "B. To control the transaction isolation level.",
+            "C. To control the size of a database connection pool.",
+            "D. To enable SQL statement tracing and analysis."
+        ],
+        "answer": "A",
+        "explanation": "Plan hints, a function provided by openGauss, allow users to directly affect the generation of execution plans. You can optimize the execution plan by specifying the join sequence, join method, scan method, and number of result rows to improve query performance.\n- Option A: According to the definition of plan hints, the main purpose is to provide additional information or instructions to affect the generation of execution plans, thereby optimizing query performance. Therefore, option A is true.\n- Option B: Plan hints are irrelevant to the transaction isolation level. The transaction isolation level is controlled by the transaction characteristics provided by the database management system, not by plan hints.\n- Option C: There is no direct connection between plan hints and database connection pools. The size of a connection pool is usually managed by a database configuration parameter or an external connection pool tool.\n- Option D: Although openGauss and other database systems can provide tools or functions for tracing and analyzing SQL statements, plan hints are not directly used to enable these functions. These functions are usually implemented through database configurations, monitoring tools, or specialized diagnosis tools.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （11 Points）",
+        "question": "Which of the following is the default value of search_path in openGauss?",
+        "choices": [
+            "A. \"\"postgres\"\",public",
+            "B. \"\"$user\"\",public",
+            "C. \"\"template0\"\",public",
+            "D. \"\"schema\"\",public"
+        ],
+        "answer": "B",
+        "explanation": "In PostgreSQL (from which openGauss derives), \"search_path\" specifies the location of the query objects (such as tables, views, and functions) without schemas specified. The default value of \"search_path\" usually includes the public schema, which is a default schema of PostgreSQL (and openGauss). All created objects (if no schema is specified) are placed in this schema. \n- Option A: \"postgres\" is a default system database, but not schema, in PostgreSQL (and openGauss). Therefore, this option is unlikely to be the default value of \"search_path\".\n- Option B: In PostgreSQL and openGauss, the default value of \"search_path\" includes the schema with the same name as the current user (if any) and the public schema. Here, \"user\" is actually a placeholder, indicating the username of the current user. Therefore, this is true.\n- Option C: \"template0\" is a default template database of PostgreSQL (and openGauss) and is used to create databases. It is not a schema. Therefore, this is false.\n- Option D: \"schema\" is a common schema name placeholder, but not a default value. Therefore, this is false.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （11 Points）",
+        "question": "Which of the following statements about the \"free -m\" command is true?",
+        "choices": [
+            "A. In the output, the unit is MB.",
+            "B. In the output, the unit is KB.",
+            "C. This command is used to check the free drive space.",
+            "D. This command is used to check the free CPUs."
+        ],
+        "answer": "A",
+        "explanation": "Option A: This is the true statement. \"free\" is used to display the usage of the physical memory and swap memory in the Linux system. The \"-m\" option is a common option that makes the output of the \"free\" command in MB (megabytes).\nOption B: This is incorrect. Although the default output of \"free\" may be in KB (kilobytes), the output will be in MB after the \"-m\" option is used.\nOption C: This is incorrect. \"free\" is used to view the usage of the system memory (RAM) and swap space instead of the drive space. To view the drive space, run the \"df\" command.\nOption D: This is incorrect. A CPU is a central processing unit. It does not have the concept of \"space\". Therefore, it cannot be described as \"idle CPU space\". To view the CPU usage, run \"top\", \"htop\", \"vmstat\", or \"mpstat\".",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （11 Points）",
+        "question": "To replace MySQL with GaussDB in an LNMP (Linux-Nginx-MySQL-PHP) software stack, which of the following operations needs to be performed?",
+        "choices": [
+            "A. Uninstall MySQL and install GaussDB.",
+            "B. Migrate data to GaussDB and update PHP configurations to support GaussDB.",
+            "C. Update Nginx configurations to support GaussDB.",
+            "D. Change the database connection string to point to GaussDB."
+        ],
+        "answer": "B",
+        "explanation": "When replacing MySQL with GaussDB in the LNMP architecture, analyze each option in detail and make a choice based on the differences between GaussDB and MySQL.\n- Option A: Although GaussDB and MySQL have many similarities in functions, directly uninstalling MySQL and installing GaussDB may not be the best choice. Doing so will lose all database configurations and data unless you already have a complete backup and restoration policy.\n- Option B: This is a more comprehensive and appropriate approach. First, you need to migrate data from MySQL to GaussDB. This usually involves steps such as data export, format conversion, and data import. Second, because GaussDB differs from MySQL in some data types and syntaxes, you may need to update your PHP code or configuration to ensure that they are compatible with the target database. Doing so ensures that your application continues to run properly after the database is replaced, while retaining the original data and configurations.\n- Option C: Nginx is a server used to process HTTP requests and static resources. It does not directly interact with the database. Therefore, you do not need to modify the Nginx configuration when replacing the database.\n- Option D: Although changing the database connection string is one of the necessary steps, doing so alone is not enough to complete the entire migration process. You also need to ensure that the target database can process the source data and that your application code is compatible with the target database.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （11 Points）",
+        "question": "Which of the following join types are supported by the openGauss join operator?",
+        "choices": [
+            "A. Hash join",
+            "B. Merge join",
+            "C. Nested loops",
+            "D. All of the above"
+        ],
+        "answer": "D",
+        "explanation": "- Option A: In openGauss, hash join is used as a join operator for join operations between big data sets. Hash join keys are stored in the memory and queried in the hash table to reduce I/O operations and improve join efficiency.\n- Option B: In openGauss, merge join is also used as a join operator to join two sorted tables. It compares the key values in two input data streams to determine which rows need to be joined, avoiding a complete scan on the entire table or data set.\n- Option C: Nested loops is a basic join method in the database system. openGauss also supports nested loop. This method goes through every row in the inner table and compares it with every row in the outer table to find rows that meet the join conditions. Although this method is inefficient in processing big data sets, it is effective in some special cases (such as a small table).\n- Option D: openGauss supports three join operators: hash join, merge join, and nested loops.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （11 Points）",
+        "question": "Which of the following statements about the openGauss HA enterprise deployment, RPO, and RTO is true?",
+        "choices": [
+            "A. openGauss does not support HA synchronization. As a result, the RPO value is high.",
+            "B. openGauss supports HA synchronization to ensure zero RPO and uses the ultimate RTO technology to ensure that the RTO is less than 10 seconds.",
+            "C. openGauss supports an RPO of less than 10 seconds and zero RTO only in the HA enterprise deployment.",
+            "D. openGauss supports an RTO of less than 10 seconds but cannot ensure zero RPO in the HA enterprise deployment."
+        ],
+        "answer": "B",
+        "explanation": "openGauss can be deployed in standalone or HA mode (one primary node and one or more standby nodes).\nRecovery point objective (RPO) indicates the point in time after data recovery, that is, the point in time to which data can be recovered. Data generated after the point in time will be lost. Recovery time objective (RTO) indicates the time spent in fault recovery, that is, the period from the time when the IT system stops providing services to the time when the IT service system recovers.\nopenGauss uses the write-ahead log (WAL)-based log synchronization technology to ensure data consistency between the primary and standby nodes. When the primary node is faulty, services can be quickly switched to the standby node, achieving second-level RPO. The ultimate RTO log processing process of openGauss improves the fault recovery speed by optimizing the replay speed and concurrency.\n- Option A: This is not true because openGauss supports HA (primary/standby) cluster synchronization.\n- Option B: The primary and standby synchronization technology of openGauss ensures that data is not lost (RPO is 0), and the ultimate RTO technology is used to optimize the fault recovery time. Therefore, considering its optimization objectives, this is true.\n- Option C: This is not true because the values of RPO and RTO depend not only on the deployment scenario, but also on the configuration and hardware environment.\n- Option D: This is not true because the primary and standby synchronization technology of openGauss can ensure that the RPO is 0.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （11 Points）",
+        "question": "Which of the following SQL statements grant all privileges to a user?",
+        "choices": [
+            "A. GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';",
+            "B. REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'localhost';",
+            "C. GRANT SELECT, INSERT, UPDATE ON dbname.* TO 'username'@'localhost';",
+            "D. REVOKE SELECT, INSERT, UPDATE ON dbname.* FROM 'username'@'localhost';"
+        ],
+        "answer": "A",
+        "explanation": "When dealing with questions about SQL permissions, make sure that you understand the basic usage of the \"GRANT\" and \"REVOKE\" commands and how they are used with required database permissions.\n- Option A: This command grants all privileges (ALL PRIVILEGES) on all databases (*.*) to the user (username) when it connects to the localhost. This is consistent with the description of \"granting all privileges to a user\" in the question.\n- Option B: This command revokes all privileges on all databases from the user (username) when connecting to the localhost. This is inconsistent with the operation described in the question.\n- Option C: This command grants the user (username) the SELECT, INSERT, and UPDATE privileges on the database (dbname.*) when connecting to the localhost. It grants some privileges, but not all privileges.\n- Option D: This command revokes the SELECT, INSERT, and UPDATE privileges on the database (dbname) from the user (username) when it connects to the localhost. This is inconsistent with the operation described in the question.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （11 Points）",
+        "question": "In Vim, which of the following commands is used to search for occurrences of \"2023\" backwards?",
+        "choices": [
+            "A. /2023",
+            "B. ?2023",
+            "C. #2023",
+            "D. %2023"
+        ],
+        "answer": "B",
+        "explanation": "When Vim is used to edit texts, either of the following commands can be used to search for character strings:\n1. Use \"/\" to search for a string forward (downward) starting from the current position.\n2. Use \"?\" to search for a string backwards (upwards) starting from the current position.\nNow let's parse each option.\nOption A: \"/2023\" searches for the character string \"2023\" forward (downward) from the current position.\nOption B: \"?2023\" searches for the character string \"2023\" backwards (upwards) from the current position. This is exactly what the question requires.\nOption C: \"#2023\" is in the standard command set of Vim. \"#\" is not used to search for character strings.\nOption D: In \"%2023\", \"%\" in Vim is usually used to match the content in the current brackets, not to search for a character string.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 20 （11 Points）",
+        "question": "Which of the following statements about zombie processes is true?",
+        "choices": [
+            "A. A zombie process does not exist in the process table.",
+            "B. You can kill a zombie process by running \"kill -9 <ID of zombie process>\".",
+            "C. You can kill a zombie process by running \"kill -15 <ID of zombie process>\".",
+            "D. You can kill a zombie process by running \"kill -9 <ID of parent process of zombie process>\"."
+        ],
+        "answer": "D",
+        "explanation": "Option A: This is a false statement. When a child process ends earlier than the parent process, and the parent process does not reclaim the child process and releases the resources occupied by the child process, the child process becomes a zombie process. In the UNIX system, even if a child process ends, its process descriptor (including the process ID and other information) remains in the system until the parent process invokes functions such as \"wait()\" or \"waitpid()\" to obtain its status information and release related resources. Therefore, zombie processes actually exist in the process table.\nOption B: False statement. The \"kill -9\" command is used to forcibly end a process, but it cannot directly kill a zombie process. A zombie process is a process that has been terminated but has not been reclaimed by its parent process. Therefore, it does not execute any code and cannot be terminated by \"kill\".\nOption C: False. Similar to \"kill -9\", \"kill -15\" is also used to terminate a process instead of directly killing a zombie process. The status of the zombie process is terminated already, so the process cannot be terminated again.\nOption D: True statement. Although zombie processes cannot be killed directly, the problem of zombie processes can be solved indirectly by killing their parent processes. After the parent process is terminated, its child processes (including zombie processes) are taken over by the init process (the process whose PID is 1). The init process periodically clears zombie processes to release resources such as process IDs occupied by them. Therefore, the zombie process can be cleared indirectly by killing its parent process.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 21 （11 Points）",
+        "question": "Which of the following table clearance operations support transaction rollback?",
+        "choices": [
+            "A. TRUNCATE",
+            "B. DROP",
+            "C. DELETE",
+            "D. VACUUM"
+        ],
+        "answer": "C",
+        "explanation": "In database operations, transaction rollback is not necessarily supported among different table clearance operations.\n- Option A: In MySQL, TRUNCATE is a data definition language (DDL) operation which does not support transaction rollback. However, in PostgreSQL, a transaction can be rolled back after the TRUNCATE operation. This means that whether TRUNCATE supports transaction rollback depends on the database system used. In MySQL, because TRUNCATE directly deletes all data in a table and resets any related auto-increment counters, the transaction cannot be rolled back after this operation.\n- Option B: The DROP TABLE statement is used to delete a table and is a DDL operation. In most database systems, DDL operations usually do not support transaction rollback. Therefore, the DROP TABLE operation does not support rollback.\n- Option C: The DELETE statement is used to delete rows that meet specific conditions from a table. In database systems that support transactions (such as MySQL that uses the InnoDB storage engine), a transaction can be rolled back after the DELETE operation. This means that if an error occurs after a DELETE operation is performed or the operation needs to be undone, you can use the ROLLBACK statement to restore the table to its previous state.\n- Option D: VACUUM is a command used in databases such as PostgreSQL to recycle and reorganize table space. It does not support transaction rollback.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 22 （11 Points）",
+        "question": "Which of the following is the fully-encrypted equality query capability provided by openGauss?",
+        "choices": [
+            "A. Data is encrypted during storage and decrypted during computing.",
+            "B. Data is encrypted during storage and computing and decrypted when it is returned to the client.",
+            "C. Data is encrypted during transmission, storage, and computing and cannot be decrypted.",
+            "D. Data is encrypted during storage and decrypted using the dynamic key provided by the application during computing."
+        ],
+        "answer": "C",
+        "explanation": "The fully-encrypted equality query capability provided by openGauss ensures that data is encrypted during the entire lifecycle, including transmission, storage, and computing, to ensure data security and privacy.\n- Option A: This option indicates that data is encrypted during storage but needs to be decrypted during computing. However, the fully-encrypted equality query function emphasizes that the data remains in an encrypted state throughout the lifecycle, including the computing phase. Therefore, this is false.\n- Option B: Although this option describes that data is encrypted during storage and computing, it is decrypted when it is returned to clients. However, it does not mention that data needs to be encrypted during data transmission. Therefore, this is false.\n- Option C: This option describes the core concept of fully-encrypted equality query. Data is kept in the encrypted state throughout its lifecycle (transmission, storage, and computing). The fully-encrypted database mechanism ensures that data is encrypted on clients and when being transmitted from clients to the database kernel, queried and calculated in the database kernel, and returned to clients. Therefore, this is true.\n- Option D: This option indicates that data is encrypted during storage but needs to be decrypted using a dynamic key during computing. This is different from the concept of fully-encrypted equality query, because fully-encrypted equality query emphasizes that data is kept in the encrypted state throughout the lifecycle, including the computing phase, and does not need to be decrypted. Therefore, this is false.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 23 （11 Points）",
+        "question": "An Nginx server uses port 80 to provide services for external systems. The test on the server is passed, but users cannot access the server through port 80. Which of the following is the possible cause?",
+        "choices": [
+            "A. Port 80 is not enabled on the firewall of the Nginx server.",
+            "B. Users should not use port 80 for access.",
+            "C. Nginx does not support direct access from a browser.",
+            "D. The \"curl\" command is used for the test on the server, but the command in not installed on the user side."
+        ],
+        "answer": "A",
+        "explanation": "When answering questions about Nginx server configuration and access, analyze the correlation between each option and the problem description and find out the most possible reason that users cannot access the Nginx server through port 80.\nOption A: It indicates a common cause of the problem. Even if the Nginx server can listen to port 80 and provide services during the local test, if the firewall configuration of the server does not allow external traffic to pass through port 80, users cannot access the service from external networks.\nOption B: The standard HTTP port is port 80. Generally, users access web services through this port. Unless there are special network policies or security requirements, users can use port 80 for access.\nOption C: Nginx is a popular web server and reverse proxy server. It is used to process HTTP requests and provide web services. The browser directly communicates with the Nginx server through HTTP. Therefore, Nginx supports direct access from the browser.\nOption D: This option is irrelevant to the problem. The \"curl\" command is a tool used to send HTTP requests. It is often used to test web services on the command line interface (CLI). However, whether users have installed \"curl\" does not affect their access to the Nginx server through a browser. Even if users do not install it, they can still use a browser to access the services.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 24 （11 Points）",
+        "question": "Which of the following methods can be used to create a task in SaltStack?",
+        "choices": [
+            "A. Create a task running a Python script.",
+            "B. Create a task from a YAML file.",
+            "C. Create a task from a ZML file.",
+            "D. Create a task running a shell script."
+        ],
+        "answer": "B",
+        "explanation": "Creating new tasks or configurations in SaltStack mainly depends on its powerful configuration management and status description functions. The detailed analysis of the options is as follows:\nOption A: Although the bottom layer of SaltStack is written with Python and supports remote execution of Python scripts, creating new tasks directly running Python is not a recommended or standard practice of SaltStack. It is advised to use descriptive configuration files to define and manage the state of the system in SaltStack.\nOption B: This is the correct practice. In SaltStack, status files (SLS files) are usually written in YAML format to describe the target status of the system. These files can be applied to Salt Minion to ensure that the system is in the described state. By compiling SLS files, various tasks, including file deployment, software package installation, and service management, can be defined.\nOption C: ZML is not a format supported by SaltStack. SaltStack mainly uses YAML (or SLS, Salt State file) as the format of the configuration file.\nOption D: Although SaltStack supports remote execution of shell scripts, this is not a standard method for creating new tasks. Shell scripts are usually used to execute specific commands or tasks instead of defining the target status of the system.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 25 （11 Points）",
+        "question": "Which of the following commands can be used to save all lines in a text file to another file in reverse order?",
+        "choices": [
+            "A. cat input.txt | sort -r > output.txt",
+            "B. cat input.txt | tac > output.txt",
+            "C. cat input.txt | rev output.txt",
+            "D. cat input.txt | awk 'BEGIN{OFS=ORS=\"\" \"\"};{for (i=NF;i>0;i--) print $i};' > output.txt"
+        ],
+        "answer": "B",
+        "explanation": "First, analyze each option and determine which command can be used to reverse all lines in a text file (that is, the content of each line remains unchanged, but the order of the lines is reverse), and save the reverse lines to another file.\nOption A: This command does not reverse the order of lines. Instead, it reverses the line content in lexicographical order (\"sort -r\"). This option does not answer the question, because the order of the lines, not the order of the characters in the lines, is to be reversed.\nOption B: This command is correct. \"tac\" is the reverse version of \"cat\". It starts from the last line of the input file and outputs data to the standard output in reverse order. This option answers the question.\nOption C: The syntax of this command is incorrect. The \"rev\" command is used to reverse the character order in a line, but it does not accept the output file name as a parameter. The correct way is to use the output redirection operator (>) to specify the output file. However, even if the syntax is corrected, \"rev\" does not reverse the order of lines, but reverses the order of characters in each line.\nOption D: The \"awk\" command attempts to reverse the fields (words or strings separated by spaces) in each line, rather than the order of the lines. In addition, 'OFS=ORS=\"\" \"\"' is redundant and can cause unpredictable behavior because both \"OFS\" (output field separator) and \"ORS\" (output record separator) are set to empty strings, which is usually not expected.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 26 （11 Points）",
+        "question": "Which of the following commands can be used to make \"myfile\" modifiable and executable for its owner, readable and executable for its owner group, and not accessible for other users?",
+        "choices": [
+            "A. chown 706 myfile",
+            "B. chmod 750 myfile",
+            "C. chown 705 myfile",
+            "D. chmod 777 myfile"
+        ],
+        "answer": "B",
+        "explanation": "Option A: The \"chown 706 myfile\" command is used to change the owner and/or owner group of a file. It does not directly modify file permissions.\nOption B: The \"chmod 750 myfile\" command is used to modify the file permission. \"7\" indicates that the file owner has the read, write, and execute permissions. \"5\" indicates that the owner group users have the read and execute permissions. \"0\" indicates that other users do not have any permission. Therefore, this option answers the question.\nOption C: The \"chown 705 myfile\" command is also used to change the owner and/or owner group of a file, but it does not directly change the file permission.\nOption D: The \"chmod 777 myfile\" command is used to grant the read, write, and execute permissions on \"myfile\" to all users, which does not answer the question.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 27 （11 Points）",
+        "question": "How many standby nodes does openGauss support?",
+        "choices": [
+            "A. 3",
+            "B. 8",
+            "C. 10",
+            "D. No limit"
+        ],
+        "answer": "B",
+        "explanation": "openGauss supports the HA deployment of one primary node and up to eight standby nodes. In addition, openGauss can be scaled from a standalone or HA system to one primary node with eight standby nodes. This further proves that openGauss supports a maximum of eight standby nodes.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 28 （11 Points）",
+        "question": "Which of the following statements about constraints are true?",
+        "choices": [
+            "A. There are column-level and table-level constraints, but openGauss supports only column-level constraints.",
+            "B. Constraints can be specified only when a table is created using the CREATE TABLE statement.",
+            "C. A PRIMARY KEY constraint is a combination of a NOT NULL constraint and a UNIQUE constraint.",
+            "D. None of the above"
+        ],
+        "answer": "C",
+        "explanation": "- Option A: This is false. Constraints can be column-level or table-level. Column-level constraints apply only to columns, while table-level constraints apply to the entire table. openGauss supports both column-level and table-level constraints.\n- Option B: This is false. It can be specified when a table is created (through the CREATE TABLE statement) or after a table is created and modified (through the ALTER TABLE statement).\n- Option C: This is true. The PRIMARY KEY constraint ensures that a column (or a combination of two or more columns) has a unique identifier, and these values cannot be NULL. This is indeed a combination of the NOT NULL and UNIQUE constraints.\n- Option D: Option C is correct, so option D is false.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 29 （11 Points）",
+        "question": "Which of the following tools is used to help users understand the database workload of openGauss?",
+        "choices": [
+            "A. gs_checkos",
+            "B. gs_check",
+            "C. gs_checkperf",
+            "D. gs_collector"
+        ],
+        "answer": "C",
+        "explanation": "openGauss provides multiple tools to help users manage and maintain databases.\n- Option A: gs_checkos is used to check the OS, control parameters, and disk configurations. It does not directly check the workload of openGauss.\n- Option B: gs_check is a comprehensive check tool used to check multiple environment parameters and configurations during the running of openGauss. It does not focus on workload monitoring.\n- Option C: gs_checkperf is used to periodically check the workload of openGauss. It provides information about the host CPU usage, openGauss CPU usage, and I/O usage, helping users understand the real-time workload status of openGauss.\n- Option D: gs_collector is used to collect related information when openGauss is faulty to help locate the fault. It is not directly used to solve the workload problem.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 30 （11 Points）",
+        "question": "When is openEuler 22.03 LTS planned for end-of-life?",
+        "choices": [
+            "A. 44986",
+            "B. 2024/03",
+            "C. 45717",
+            "D. 46082"
+        ],
+        "answer": "B",
+        "explanation": "To answer what the end-of-life (EOL) time of the openEuler 22.03 LTS version is, the understanding of the naming conventions of the openEuler version and the common support period of the Long-Term Support (LTS) version is necessary. openEuler is an open-source operating system oriented toward digital infrastructure. It uses version naming to identify different releases. In this question, 22.03 may indicate that the version was released in March 2022. An LTS version usually means that this version will receive longer support and maintenance cycles than a non-LTS version. For LTS versions, the common support period may be two to five years, but the specific period may vary depending on the project.\nOption A: This time is only one year after the version is released, which is too short for the LTS version. \nOption B: This is the second year after the release of the version, which is a reasonable answer for the LTS version. \nOption C: This is the third year after the release of the version. It is possible, but the support period of the LTS version is not so long (unless officially stated). \nOption D: This is the fourth year after the release of the version, which is too long for most LTS versions.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 31 （11 Points）",
+        "question": "Which of the following statements about Nginx is false?",
+        "choices": [
+            "A. Nginx features low memory usage, high concurrent connections, and fast response.",
+            "B. Nginx implements functions such as HTTP server, virtual host, and reverse proxy.",
+            "C. The configuration of Nginx is simple.",
+            "D. Nginx is good at handling both dynamic and static requests."
+        ],
+        "answer": "D",
+        "explanation": "Option A: This is a true statement. Nginx is a high-performance HTTP and reverse proxy server. It is famous for its high efficiency, lightweight, and high configurability. It can handle a large number of concurrent connections and has very low memory usage.\nOption B: It is also a true statement. Nginx was originally designed as an HTTP server and reverse proxy server, but it also supports virtual hosting, allowing users to host multiple websites or applications on the same server.\nOption C: A true statement. Although the Nginx configuration file (\"nginx.conf\") can look complex, it is intuitive and easy to understand if you re familiar with its syntax and instructions. In addition, Nginx provides a large number of documents and community support to help you configure and manage it more easily.\nOption D: This is the false statement. Although Nginx can handle dynamic and static requests, it is usually optimized to be better at handling static requests and serving as a reverse proxy server. For dynamic requests, Nginx usually transfers them to backend application servers (such as Apache, Tomcat, or Node.js) for processing, and then caches static resources to speed up response.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 32 （11 Points）",
+        "question": "Which of the following is NOT a function of the connection pool?",
+        "choices": [
+            "A. To connect to a database.",
+            "B. To optimize the database connection.",
+            "C. To share connections with different attributes.",
+            "D. To optimize clients."
+        ],
+        "answer": "C",
+        "explanation": "- Option A: This is a function of the connection pool. Connection pooling is a technique for creating and managing buffer pools of database connections that are ready to be used by any thread that needs them.\n- Option B: This is a function of the connection pool. The connection pool mechanism reduces the number of connection establishment and destruction times, improves the database access efficiency, and optimizes the database connection.\n- Option C: Generally, it is not a direct function of the connection pool. Each connection pool manages a group of connections with the same attributes (such as the database host, username, and password) and is usually created for a specific database configuration. Although some connection pools can allow a certain degree of flexibility, \"share connections with different attributes\" is not the core or general-purpose function of connection pools.\n- Option D: This can be regarded as an indirect function of the connection pool technology because the connection pool optimizes the performance of client applications by optimizing the database connection. However, this option does not directly describe the specific function of the connection pool, but describes its potential effect or application scenario in a broader sense.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 33 （11 Points）",
+        "question": "Which of the following statements about the FOR_LOOP statement in openGauss stored proce-dures is true?",
+        "choices": [
+            "A. FOR_LOOP supports integer variable loops.",
+            "B. FOR_LOOP supports query statements.",
+            "C. The target variable in FOR_LOOP does not need to be declared or defined in advance.",
+            "D. It must be used together with EXIT. Otherwise, an infinite loop may occur."
+        ],
+        "answer": "D",
+        "explanation": "- Option A: This option describes a common loop structure, that is, an integer variable is used to control the number of loops. However, in openGauss or similar databases, the implementation of loop control statements can be different.\n- Option B: The loop structure is often used to process a series of data and it is common to support query statements in a loop. However, whether query statements are supported in a loop depends on the implementation of the loop control statements and the syntax in the database.\n- Option C: In most programming languages, variables used in a loop must be declared and defined before being used. However, rules can vary depending on the syntax of the database or stored procedure.\n- Option D: This is true. The loop must be used together with EXIT. Otherwise, it will enter an infinite loop. When using loop control statements, you must be careful and ensure that the loop has a clear exit condition to avoid an infinite loop.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 34 （11 Points）",
+        "question": "Which of the following is the main function of DNS cache?",
+        "choices": [
+            "A. Accelerates domain name resolution.",
+            "B. Protects domain name from DDoS attacks.",
+            "C. Prevents DNS spoofing attacks.",
+            "D. Provides the domain name registration service."
+        ],
+        "answer": "A",
+        "explanation": "Option A: The DNS cache server can cache the IP address corresponding to the resolved domain name. When the user accesses the domain name again, the user can directly obtain the corresponding IP address from the cache. This avoids the time for DNS resolution again and significantly accelerates the network access.\nOption B: Although the DNS cache server itself does not directly provide the DDoS attack defense function, AAD DNS (a special DNS service) can protect domain name resolution from DDoS attacks. However, this is not the main function of DNS cache.\nOption C: The DNS cache server can use the cache blacklist and whitelist to filter out malicious domain names and websites. This can defend against DNS spoofing attacks to some extent, but is not the main function of the DNS cache server.\nOption D: The DNS cache server does not provide the domain name registration service. That service is provided by a dedicated domain name registrar.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 35 （11 Points）",
+        "question": "Which of the following Ansible modules can copy files from a managed node to a control node?",
+        "choices": [
+            "A. fetch",
+            "B. service",
+            "C. copy",
+            "D. cron"
+        ],
+        "answer": "A",
+        "explanation": "Option A: Correct option. The fetch module of Ansible is used to copy files from a remote host to a control host. It allows users to copy files or directories on a remote host and download them to a specified location on the control host. This can be used to download configuration files, log files, etc. from a remote host for analysis and troubleshooting.\nOption B: The service module is used to manage services (such as starting, stopping, and restarting services) and is irrelevant to file replication.\nOption C: The copy module is used to copy files or directories from the control host to the remote host, not from the remote host to the control host.\nOption D: The cron module is used to manage cron jobs and is irrelevant to file replication.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 36 （11 Points）",
+        "question": "Which of the following is the main difference between the CISC and RISC instruction sets?",
+        "choices": [
+            "A. RISC is more complex than CISC.",
+            "B. CISC is more complex than RISC.",
+            "C. CISC and RISC have the same complexity, but CISC processors are faster.",
+            "D. CISC and RISC have the same complexity, but RISC processors are faster."
+        ],
+        "answer": "B",
+        "explanation": "The main differences between CISC (complex instruction set computer) and RISC (reduced instruction set computer) need to be compared in detail. For options A and B, which directly involve the complexity of CISC and RISC instruction sets.\n\tThe CISC instruction set is complex and large. Generally, the number of instructions is more than 200. In addition, the length of the instructions is not fixed, and there are many instruction formats and addressing modes.\n\tThe RISC instruction set is relatively simplified, generally fewer than 100 instructions. The instruction length is fixed, and there are few instruction formats and addressing modes.\nTherefore, the CISC instruction set is more complex, while the RISC instruction set is simpler. Option B is correct.\nOptions C and D relate to the performance of CISC and RISC processors. Although RISC designs do tend to improve processor performance, this is not measured by the complexity of instruction sets. The main advantage of RISC is that its simple instruction set makes the processor design simpler and more efficient, which helps reduce execution time. However, the performance of the processor is also affected by other factors, such as the clock speed and cache size of the processor. Therefore, CISC or RISC processors cannot be simply said to be faster.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 37 （11 Points）",
+        "question": "Which of the following commands is used to rebuild openGauss standby nodes?",
+        "choices": [
+            "A. gsql",
+            "B. gs_expansion",
+            "C. gs_guc",
+            "D. gs_encrypt"
+        ],
+        "answer": "B",
+        "explanation": "- Option A: gsql is a database connection tool provided by openGauss. It is used to connect to, operate, and maintain the server, but is not used to rebuild standby nodes.\n- Option B: gs_expansion is used to scale out clusters, including adding standby nodes.\n- Option C: gs_guc is used to modify GUC parameters and is not relevant to rebuilding standby nodes.\n- Option D: gs_encrypt, an encryption tool, which is irrelevant to rebuilding standby nodes.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 38 （11 Points）",
+        "question": "Which of the following statements about gs_basebackup is false?",
+        "choices": [
+            "A. gs_basebackup uses the replication protocol to physically copy binary database files.",
+            "B. gs_basebackup can initiate a replication link from a client.",
+            "C. gs_basebackup supports incremental backup.",
+            "D. If the pg_xlog directory is a soft link, you need to move it to the target path after the backup."
+        ],
+        "answer": "C",
+        "explanation": "openGauss provides multiple tools to help users manage and maintain databases.\n- Option A: This is true. gs_basebackup uses the physical backup method based on the replication protocol. It replicates binary database files to complete backup operations.\n- Option B: This is true. gs_basebackup can be used to establish replication connections from PostgreSQL clients.\n- Option C: This is false. gs_basebackup does not support incremental backup. It can only perform full backup.\n- Option D: This is true. If the \"pg_xlog\" directory is a soft link, you need to manually move the backup files to the target path after the backup is complete.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 39 （11 Points）",
+        "question": "Which of the following Bash commands can be used to obtain the size of a file in bytes?",
+        "choices": [
+            "A. wc -l filename",
+            "B. stat %s  filename",
+            "C. ls -lh filename | awk '{print $5}'",
+            "D. du -h filename | awk '{print $1}'"
+        ],
+        "answer": "D",
+        "explanation": "Option A: This command is used to count the number of lines in a file instead of obtaining the file size.\nOption B: The syntax of this command is incorrect. The correct syntax is \"stat -c %s filename\". In this case, the \"-c\" option of the \"stat\" command is used to output the file size in the specified format (\"%s\" indicates the file size).\nOption C: This command lists the detailed information about the file and pipes the output to the \"awk\" command. The \"awk\" command extracts the fifth column (usually the file size). This method is valid only in some cases. It depends on the output format of the \"ls\" command. In addition, the output is not standard and the exact file size cannot be obtained.\nOption D: This command displays the size of a file or directory in a human-readable format and uses the \"awk\" command to extract the size information.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 40 （11 Points）",
+        "question": "If you mistakenly delete table data by using the delete command and insert new data, which of the following restoration methods can be used?",
+        "choices": [
+            "A. Flashback vacuum",
+            "B. Flashback drop",
+            "C. Flashback truncate",
+            "D. Flashback table"
+        ],
+        "answer": "D",
+        "explanation": "If table data is deleted by mistake by running the \"DELETE\" command and new data is inserted, you can restore data considering the functions and application scenarios of each method.\n- Option A: This is irrelevant to data restoration. Vacuum is usually related to clearing and recycling space in the database, rather than restoring deleted data.\n- Option B: Flashback drop is used to restore tables and their structures that are deleted unexpectedly. However, it does not process the data deleted by the \"DELETE\" command. Instead, it restores the entire table. Therefore, flashback drop is not suitable in this situation.\n- Option C: Flashback truncate is used to restore tables and indexes that are incorrectly operated or accidentally truncated by the \"TRUNCATE\" command. Similarly, it does not process the data deleted by the \"DELETE\" command.\n- Option D: Flashback table is an advanced function of the flashback technology. It allows you to restore the entire table to a certain time point. Considering that you have executed the \"DELETE\" command and new data is inserted, if you have sufficient undo space and the flashback function is enabled for the database, you can use the flashback table function to restore the entire table to the state before the \"DELETE\" command is executed.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 41 （12 Points）",
+        "question": "Which of the following statements about foreground and background processes are true?",
+        "choices": [
+            "A. Foreground processes have a lower priority than background processes.",
+            "B. Background processes have a lower priority than foreground processes.",
+            "C. A daemon process in Linux is a special background process that is independent of the terminal and periodically executes tasks or waits to be resumed.",
+            "D. A foreground process is a process with a control terminal to be used by a user."
+        ],
+        "answer": "BCD",
+        "explanation": "Option A is false. Foreground processes are processes with which users directly interact. They usually have a higher priority. If the system resources are insufficient, background processes may be stopped or paused to ensure the normal running of foreground processes.\nOption B is true. Background processes usually have a low priority because users do not directly interact with them so that they can be executed or paused when users do not pay attention to them.\nOption C is true. Daemon processes run in the background of the Linux system and are independent of the control terminal. They are usually started when the system boots and periodically execute tasks or wait to be resumed.\nOption D is true. Foreground processes are processes with a control terminal (such as a CLI or SSH session) for users to use.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 42 （12 Points）",
+        "question": "\"ipvsadm -a -t 192.168.1.100:80 -r 192.168.1.101:80 -m\" is a Linux virtual server administration command. What is the packet-forwarding method of this server, and what is the IP address of this server?",
+        "choices": [
+            "A. Network address translation",
+            "B. Direct routing",
+            "C. 192.168.1.100",
+            "D. 192.168.1.101"
+        ],
+        "answer": "AD",
+        "explanation": "The mode (such as NAT, DR, or IP TUN) used by the Linux virtual server (LVS) cannot be directly determined based on the command itself. The \"ipvsadm\" command is only a utility for configuring and managing IP Virtual Server (IPVS) in the Linux kernel, and the specific LVS mode is determined by the system and network settings.\nFrom the perspective of command options, the \"-m\" option is usually related to the NAT mode because it stands for masquerading or port forwarding in the NAT mode. However, this is not an absolute conclusion because the LVS configuration can be more complex and may use different forwarding modes.\nAlthough it is uncertain that LVS uses the NAT mode, we can assume that the NAT mode is relevant based on the \"-m\" option.\nAccording to \"-r 192.168.1.101:80\" in the command, the IP address of the real backend server is 192.168.1.101 and the server is listening on port 80.\n\nOption A: Although it is uncertain whether this is the exact mode of the LVS, the NAT mode is relevant based on the \"-m\" option.\nOption B: It cannot be determined from the command that the DR mode is used.\nOption C: This is the IP address of the virtual server, not the IP address of the real backend server.\nOption D: This is the IP address of the real backend server.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 43 （12 Points）",
+        "question": "Which of the following statements about the openGauss database auxiliary thread are true?",
+        "choices": [
+            "A. WAL writer is responsible for writing permanent records of committed transactions to WAL files.",
+            "B. Page writer is used to copy the dirty page data to the doublewrite area and flush the data to disks.",
+            "C. Checkpointer is used to periodically check the points and flush dirty pages to disks to ensure database consistency.",
+            "D. AutoVacuum is used to collect statistics on objects, SQL statements, sessions, and locks and store the statistics in the pgstat.stat file."
+        ],
+        "answer": "ABC",
+        "explanation": "- Option A: This is true. The WAL writer thread is mainly used to ensure that the committed transactions are stored permanently. This function is implemented by flushing page data in memory to a WAL file.\n- Option B: This is true. The page writer thread is used to copy dirty page data to the doublewrite area and flush the data to disks to ensure data durability and integrity.\n- Option C: This is true. The checkpointer thread processes all checkpoints and flushes dirty pages to disks at a proper time. This helps reduce the crash time and ensure database consistency.\n- Option D: This is false. AutoVacuum is mainly used to automatically clear outdated data in database tables, release storage space, and update table statistics to optimize database performance and stability. It is not directly responsible for storing statistics in the \"pgstat.stat\" file.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 44 （12 Points）",
+        "question": "Which of the following are the advantages of Apache over Nginx?",
+        "choices": [
+            "A. Apache is suitable for dynamic page requests.",
+            "B. The rewrite function of Apache is more powerful.",
+            "C. The functions of Apache are highly integrated.",
+            "D. Apache can adapt to higher concurrency."
+        ],
+        "answer": "ABC",
+        "explanation": "Option A is true. Apache performs well in processing dynamic page requests. It supports multiple programming languages and environments, such as PHP and Perl, enabling developers to easily run dynamic web page applications on Apache servers. However, Nginx does not support programming dynamic languages such as PHP. Generally, it needs to communicate with the backend language processor through FastCGI or other methods.\nOption B is true. The powerful and flexible rewrite module of Apache can perform redirection or rewriting based on different URL modes. Although Nginx also has the rewrite function, Apache's rewrite rules are more mature and stable and may provide more flexibility and control in complex scenarios.\nOption C is true. As a modular server, Apache integrates many functions, including but not limited to SSL support, virtual host configuration, and access control. Most of these functions can be implemented through configuration file modification without the need of installing or configuring other software. The functions of Apache are highly integrated, making Apache more convenient in specific scenarios.\nOption D is false. Nginx can adapt to higher concurrency than Apache. It works on an event-driven, asynchronous, and non-blocking architecture, which enables it to maintain high performance and stability when processing a large number of concurrent connections. However, when there are a large number of concurrent connections, Apache may be restricted by its thread- or process-based model, resulting in performance deterioration.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 45 （12 Points）",
+        "question": "Which of the following statements about Nginx are true?",
+        "choices": [
+            "A. By default, Nginx uses polling for load balancing.",
+            "B. If the performance of backend servers varies, weighted polling can be used for load balancing.",
+            "C. Nginx can separate dynamic and static resources. Static resources are maintained by the server, while dynamic resources are processed by the Nginx backend.",
+            "D. The reverse proxy of Nginx is used to forward client requests to backend servers."
+        ],
+        "answer": "ABD",
+        "explanation": "Option A is true. By default, Nginx uses the Round Robin method for load balancing. This means that Nginx allocates requests to each backend server in sequence.\nOption B is true. In Nginx, when the performance of backend servers varies, you can use Weighted Round Robin to allocate different weights to the servers. Servers with higher weights receive more requests to achieve load balancing.\nOption C is false. Nginx separates dynamic and static resources as follows: Static resources are directly processed and cached by Nginx, while dynamic requests are forwarded to backend application servers (such as Tomcat and Node.js) for processing. Nginx does not process dynamic resources. It only serves as a reverse proxy to forward requests to backend servers.\nOption D is true. Nginx can serve as a reverse proxy to forward client requests to multiple backend servers and select one to process the requests based on the configured load balancing policy. The client does not know which backend server it actually accesses, and is unaware of load balancing and cache acceleration.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 46 （12 Points）",
+        "question": "In the openGauss memory structure, which of the following are local memory buffers?",
+        "choices": [
+            "A. work_mem",
+            "B. OCK-RDMA",
+            "C. maintenance_work_mem",
+            "D. Storage"
+        ],
+        "answer": "AC",
+        "explanation": "In the memory structure of the openGauss database, the local memory is mainly used for background service process access to temporarily store data.\n- Option A: \"work_mem\" indicates the memory used for sorting and hash operations. When the database performs sorting or hash operations, it uses this part of memory to speed up processing. This is a form of local buffer used to store data temporarily to speed up operations.\n- Option B: OCK-RDMA does not seem to be a standard term in the memory structure of openGauss or other mainstream database management systems. Remote direct memory access (RDMA) is a network technology that allows a computer to directly access the memory of a computer without involving the network stack of the OS. Therefore, it is not a concept of the local buffer.\n- Option C: \"maintenance_work_mem\" is a parameter usually used for maintenance operations, such as VACUUM, CREATE INDEX, and ALTER TABLE. These operations often require a large amount of memory, especially when processing a large amount of data. This part of memory is also a kind of local buffer, used for speeding up database maintenance tasks.\n- Option D: This option usually refers to the storage layer or storage device, not a buffer. It involves persistent storage, such as hard disks or flash memory, not immediate storage in memory.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 47 （12 Points）",
+        "question": "The openGauss has two built-in tablespaces: pg_default and pg_global. Which of the following statements are true?",
+        "choices": [
+            "A. The pg_global tablespace stores system catalogs, user tables, user table indexes, temporary tables, temporary table indexes, and internal temporary tables. The directory is \"$GAUSS_DATA_HOME/base/\".",
+            "B. The pg_global tablespace stores system catalogs in \"$GAUSS_DATA_HOME/global/\".",
+            "C. The pg_default tablespace stores system catalogs, user tables, user table indexes, temporary tables, temporary table indexes, and internal temporary tables. The directory is \"$GAUSS_DATA_HOME/base/\".",
+            "D. The pg_default tablespace stores system catalogs in \"$GAUSS_DATA_HOME/global/\"."
+        ],
+        "answer": "BC",
+        "explanation": "- Option A: This is false. The pg_global tablespace is used to store shared system catalogs, not system catalogs or user tables. The corresponding storage directory is \"$GAUSS_DATA_HOME/global/\"instead of \"base/\".\n- Option B: This is true. The pg_global tablespace is used to store shared system catalogs (including system catalogs) in the \"$GAUSS_DATA_HOME/global/\" directory.\n- Option C: This is true. The pg_default tablespace is used to store non-shared system catalogs, user tables, user table indexes, temporary tables, temporary table indexes, and internal temporary tables, but not system catalogs. The corresponding storage directory is \"$GAUSS_DATA_HOME/base/\".\n- Option D: This is false. The pg_default tablespace is used to store non-shared system catalogs instead of system dictionary tables. The corresponding storage directory is \"$GAUSS_DATA_HOME/base/\" instead of \"global/\".",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 48 （12 Points）",
+        "question": "How do we clear the connection status if the connection pool mechanism is used during app de-velopment?",
+        "choices": [
+            "A. Restart the database.",
+            "B. Restart the application.",
+            "C. If GUC parameters are set in the connection, use \"SET SESSION AUTHORIZATION DEFAULT;RESET ALL;\" to clear the connection status before you return the connection to the connection pool.",
+            "D. If a temporary table is used, delete the temporary table before you return the connection to the connection pool."
+        ],
+        "answer": "CD",
+        "explanation": "- Option A: Restarting the database is an extreme method. It is used only when the database encounters serious problems or is maintained. It is not a common or recommended method to clear the connection status in the connection pool, because it may cause connection loss and can have a great impact on the running applications.\n- Option B: Similar to restarting the database, restarting the application is an aggressive measure and is used only when serious problems occur or version update is required. It's not a common method to clear the connection status in the connection pool, because it will interrupt the running of applications.\n- Option C: This is an effective method. After the use of a connection is complete, it is important to restore the connection to the initial state or to the default state after some specific settings or changes are made. This ensures that the next request for obtaining the connection from the connection pool will not be affected by previous operations.\n- Option D: This is an appropriate method. Temporary tables are created in specific sessions or connections. If temporary tables are not deleted, they can occupy system resources and affect subsequent connections. Therefore, it is a good practice to ensure that all created temporary tables are deleted before connections are released.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 49 （12 Points）",
+        "question": "Which of the following commands are used to set the NFS service to automatically start upon system startup?",
+        "choices": [
+            "A. systemctl start rpcbind.service",
+            "B. systemctl start nfs.service",
+            "C. systemctl enable rpcbind.service",
+            "D. systemctl enable nfs-server.service"
+        ],
+        "answer": "CD",
+        "explanation": "In Linux, configuring and starting the Network File System (NFS) service involves multiple steps, including starting the rpcbind service and the NFS service itself, and setting them to automatically start upon system startup.\nOption A: This command is used to start the rpcbind service. rpcbind is a server program running on the RPC system. It allows a client to query a specified RPC service and obtain the TCP or UDP port number used by the service. In Linux, NFS is based on RPC. Therefore, NFS must depend on the rpcbind service. However, this command only starts the rpcbind service and does not set it to automatically start upon system startup.\nOption B: This command is used to start the NFS service. Similarly, however, it only starts the service but does not set the service to start automatically upon system startup. Also, note that in some systems, the name of the NFS service may be nfs-server.service instead of nfs.service.\nOption C: This command is used to set the rpcbind service to automatically start upon system startup. This means that the rpcbind service is automatically started each time the system is started to ensure the normal running of the NFS service.\nOption D: This command is used to set the NFS service (the service name is nfs-server.service) to automatically start upon system startup. In this way, the NFS service is automatically started each time the system is started without manual intervention.\nIn conclusion, the commands for configuring the NFS service to automatically start upon system startup are C and D.\n\tC. systemctl enable rpcbind.service\n\tD. systemctl enable nfs-server.service\nThe two commands ensure that the rpcbind and NFS services can run automatically when the system is started, thus ensuring the normal running of the NFS service.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 50 （12 Points）",
+        "question": "In which of the following situations a WDR cannot be generated?",
+        "choices": [
+            "A. A node restarts between two snapshots.",
+            "B. TRUNCATE TABLE operation is executed between two snapshots.",
+            "C. A primary/standby switchover is performed between two snapshots.",
+            "D. DROP DATABASE operation is executed between two snapshots."
+        ],
+        "answer": "ACD",
+        "explanation": "During WDR generation, some specific conditions need to be met to ensure the accuracy and integrity of the reports.\n- Option A: This is one of the cases where WDRs cannot be generated. If a node is restarted, the database status may be inconsistent or data may be lost, affecting the integrity and accuracy of snapshots.\n- Option B: Although the TRUNCATE TABLE operation deletes all data in the table, it does not directly affect the data consistency between two snapshots. Therefore, this operation supports WDR generation.\n- Option C: This is one of the cases where WDRs cannot be generated. Switchover is a policy for ensuring database high availability. However, during the switchover, the database status may change, which may cause snapshot data inconsistency. As a result, accurate WDRs cannot be generated.\n- Option D: This operation deletes the entire database, including all tables, views, and indexes. This will lead to the change of the database status, making the previous snapshot invalid. Therefore, WDRs cannot be generated in this case.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 51 （12 Points）",
+        "question": "What state can PITR restore data to after backup and archive?",
+        "choices": [
+            "A. A restoration point created by pg_create_restore_point()",
+            "B. A specified timestamp",
+            "C. A transaction ID",
+            "D. A specified LSN of the logs"
+        ],
+        "answer": "ABCD",
+        "explanation": "Point-in-time recovery (PITR) can be used to restore data to a state after data backup and archiving.\n- Option A: This is true. In some database systems, such as PostgreSQL, you can use the pg_create_restore_point() function to create a restoration point. PITR can restore data based on this restoration point.\n- Option B: This is true. PITR allows you to restore a database to a specified timestamp to ensure that the database status is consistent with that at a certain time point.\n- Option C: This is also a recovery objective of PITR. By specifying a transaction ID, you can restore the database to the state before the transaction occurs.\n- Option D: Log sequence number (LSN) is an identifier used to identify write-ahead log (WAL) locations in the database system. PITR supports database restoration based on LSNs to ensure that the database is restored to a specific log location.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 52 （12 Points）",
+        "question": "Which of the following statements about user management commands are true?",
+        "choices": [
+            "A. \"useradd -b   /home/wangwu   zhaoliu\" adds a user and sets /home/wangwu as the user's home directory.",
+            "B. \"userdel -rf lisi\" deletes the lisi user as well as the user's group and home directory.",
+            "C. 'groupmod -c  \"Common user\" lisi' adds a remark for the lisi user.",
+            "D. \"cat  /etc/group\" displays the created groups and corresponding group IDs."
+        ],
+        "answer": "BD",
+        "explanation": "Option A is false. This command is incorrect. The \"-b\" option specifies the base directory of the new user, but not the home directory. Generally, the home directory of a user is named after the user name in the base directory. For example, if the base directory is \"/home/wangwu\", the home directory of \"zhaoliu\" is \"/home/wangwu/zhaoliu\" instead of \"/home/wangwu\". The correct option for specifying the user's home directory is \"-d\".\nOption B is true. This command deletes user \"lisi\", the \"-r\" option deletes the user's home directory (usually \"/home/lisi\"), and the \"-f\" option forcibly deletes the user even if the user has logged in to the system.\nOption C is false. This command tries to modify the description of group \"lisi\". However, the \"-c\" option modifies the group name instead of the group description. To modify the group description, you should use \"-g\" (which actually specifies the group ID, not the group description), or \"-d\" or \"-i\" (not a standard method) on some systems. On most systems, the group description is stored in the \"/etc/group\" file, but cannot be modified by running the \"groupmod\" command.\nOption D is true. This command displays the contents of the \"/etc/group\" file. The file contains the information about all groups on the system, including the group name, group password (usually \"x\", indicating that the password is in another file), group ID, and group member list. By viewing this file, you can know which groups are created and their group IDs.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 53 （12 Points）",
+        "question": "To grant the user \"jack\" permission to create tables in myschema, which of the following state-ments must be executed?",
+        "choices": [
+            "A. GRANT USAGE schema myschema TO jack",
+            "B. GRANT ALTER ON schema myschema TO jack",
+            "C. GRANT DROP ON schema myschema TO jack",
+            "D. GRANT CREATE ON schema myschema TO jack"
+        ],
+        "answer": "AD",
+        "explanation": "First, we need to clarify the permissions required for a user to create a table in a schema. Typically, this user must have the USAGE permission on the schema (allowing the user to access the schema) and the permission to create objects on the schema (CREATE permission).\n- Option A: This statement grants the USAGE permission on the \"myschema\" schema to user \"jack\" so that the user can view and access objects in \"myschema\".\n- Option B: This statement grants user \"jack\" the ALTER permission on \"myschema\", that is, allowing the user to modify existing objects. This permission is not necessary for creating a table. Therefore, this is false.\n- Option C: This statement grants user \"jack\" the DROP permission on \"myschema\", that is, allowing the user to drop existing objects. Also, this permission is not necessary for creating a table. Therefore, this is false.\n- Option D: This statement grants user \"jack\" the CREATE permission on \"myschema\", including the permission to create tables.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 54 （12 Points）",
+        "question": "Which of the following statements about shell script troubleshooting are true?",
+        "choices": [
+            "A. Errors are usually caused by input errors, syntax errors, or incorrect script logic.",
+            "B. When writing scripts, using a text editor with Bash syntax highlighting helps make errors more obvious.",
+            "C. The most direct way to find and correct errors in a script is to debug.",
+            "D. A way to avoid introducing errors into a script is to follow a good style during script creation."
+        ],
+        "answer": "ABCD",
+        "explanation": "Option A is true. Errors in shell scripts are usually caused by input errors (such as spelling errors and incorrect commands or parameters), syntax errors (such as incorrect syntax and bracket mismatch), and incorrect script logic (such as logic judgment errors and loop condition errors).\nOption B is true. Text editors (such as vim, Emacs, and VSCode) that support Bash syntax highlighting clearly shows syntactic structures in scripts and makes errors more obvious.\nOption C is true. Debugging is a direct and effective way to find and troubleshoot errors in a script. You can run the \"bash -x\" command to debug the script. It prints each command and its arguments during the execution, helping you locate errors.\nOption D is true. Following a good programming style (with indentation, comment, and variable naming conventions) makes scripts easier to read and understand, thereby reducing errors. In addition, using structures such as functions and loops can make the code more modular and reusable, further reducing potential errors.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 55 （12 Points）",
+        "question": "Which of the following statements about common process management commands in openEuler is false?",
+        "choices": [
+            "A. \"jobs\" lists the processes running in the foreground.",
+            "B. \"fg\" resumes a background process.",
+            "C. \"bg\" moves a background process to the foreground.",
+            "D. \"Ctrl+C\" interrupts a running process."
+        ],
+        "answer": "ABC",
+        "explanation": "Option A is false. The \"jobs\" command displays the job list of the current shell, including commands running in the background, not in the foreground. Therefore, this option is false.\nOption B is false. The \"fg\" command brings background jobs to the foreground instead of running them in the background. Therefore, this option is false.\nOption C is false. Contrary to option B, the \"bg\" command executes background jobs in the background instead of in the foreground. Therefore, this option is false.\nOption D is true. \"Ctrl+C\" is a standard shortcut key used to interrupt the command that is being executed.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 56 （12 Points）",
+        "question": "Which of the following statements about system information monitoring and viewing commands are true?",
+        "choices": [
+            "A. You can run the \"lscpu\" command to query the CPU architecture.",
+            "B. You can run the \"uname -r\" command to query the kernel version.",
+            "C. System memory information returned by the \"free -m\" command is in MB.",
+            "D. You can run the \"df -Th\" command to query the type and available space of each drive."
+        ],
+        "answer": "ABCD",
+        "explanation": "Option A is true. The \"lscpu\" command gathers CPU architecture information in Linux, such as x86, x86_64, and Arm.\nOption B is true. The \"uname -r\" command displays the release version of the OS, which is usually the kernel version.\nOption C is true. In the \"free -m\" command, \"free\" indicates the command for querying the free memory of the system, and \"-m\" indicates that the memory is displayed in MB. That is, the command obtains the memory of the system, in MB.\nOption D is true. In the \"df -Th\" command, \"df\" stands for \"disk free\", that is, the free drive space. This command is used to display the summary information about the drive space usage of the file system. The \"-t\" option specifies the file system type. The \"-h\" option converts the file size in human-readable unit, such as MB or GB. This command can obtain the type and available capacity of each drive.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 57 （12 Points）",
+        "question": "Which of the following are advantages of the ext4 file system?",
+        "choices": [
+            "A. High performance and reliability",
+            "B. Data security protection",
+            "C. Compatibility with all Linux distributions",
+            "D. Defragmentation that improves file system availability"
+        ],
+        "answer": "ABD",
+        "explanation": "Option A is true. ext4 is an advanced level of ext3, which incorporates scalability and reliability enhancements for supporting large file systems and extended inodes.\nOption B is true. ext4 provides features such as journaling, which helps restore the consistency of the file system after the system breaks down, thereby ensuring data security. In addition, ext4 supports online check and repair utilities, such as \"fsck\", which can check and repair mounted file systems.\nOption C is false. Although ext4 is widely supported in later Linux releases, it is not compatible with all Linux releases. In particular, earlier Linux releases may not support the ext4 file system.\nOption D is true. ext4 supports defragmentation, which helps reduce file fragmentation on drives to improve file system performance and availability.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 58 （12 Points）",
+        "question": "Which of the following are high-risk database operations?",
+        "choices": [
+            "A. Rebuild read-only instances.",
+            "B. Delete instance backups.",
+            "C. Parses database execution logs.",
+            "D. Change database ports."
+        ],
+        "answer": "ABD",
+        "explanation": "- Option A: Although this operation may not directly involve data modification, rebuilding read-only instances can involve complex configuration and data synchronization processes. Improper operations may cause data inconsistency or loss.\n- Option B: This is an obvious high-risk operation. Backup is the key to data restoration. If backups are deleted, data cannot be restored in case of data loss, resulting in serious consequences.\n- Option C: Log analysis is not a high-risk operation. It is often used for diagnosis or audit. Log analysis does not directly constitute a high-risk operation.\n- Option D: This is a high-risk operation. The database port is the entry for external access to the database. Improper modification may cause unauthorized access to the database or access failures. In addition, if new ports are detected by malicious users, the risk of database attacks can be increased.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 59 （12 Points）",
+        "question": "Which of the following statements about software and service management are true?",
+        "choices": [
+            "A. The RPM database file is stored in the \"/var/lib/rpm\" directory. You can run the \"rpm -rebuilddb\" command to rebuild the database.",
+            "B. The \"dnf autoremove\" command can be used to uninstall software packages that are not needed in the system.",
+            "C. After the \"systemctl enable firewalld\" command is executed, a soft link pointing to the \"firewalld.service\" file is created in \"/etc/systemd/system\".",
+            "D. You can run the \"rpm -qc glibc\" command to view the configuration files contained in the \"glibc\" software package."
+        ],
+        "answer": "ABCD",
+        "explanation": "First, let's learn about the knowledge points of each option.\nOption A: This statement is true. In Linux, the database of RPM files is stored in the \"/var/lib/rpm\" directory by default. When the RPM database is faulty, you can run the \"rpm --rebuilddb\" command (\"--\" instead of \"-\") to rebuild the database.\nOption B: This statement is true. The \"dnf autoremove\" command is used to delete all unnecessary software packages that are installed due to dependency relationships. This is a function of the DNF software package manager. It is used to clean up the system and reduce the space occupied by unnecessary software packages.\nOption C: This statement is true. After the \"systemctl enable firewalld\" command is executed, a soft link (symlink) pointing to \"/usr/lib/systemd/system/firewalld.service\" is created in \"/etc/systemd/system/multi-user.target.wants/\" (or the \"wants\" directory of another target) instead of \"/etc/systemd/system\". This is a common mechanism for \"systemctl\" to manage services. It is used to automatically start services upon system startup.\nOption D: The \"rpm -qc\" command is used to list all configuration files of a specified software package, but the content of these files is not displayed. To view the contents of the configuration files of the glibc software package, you need to use \"rpm -qc glibc\" to list these files, and then view the contents of these files separately.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 60 （12 Points）",
+        "question": "In HAProxy, which of the following options can use an access control list to restrict the IP addresses that can access the frontend?",
+        "choices": [
+            "A. The \"allow\" command",
+            "B. The \"allowlist\" command",
+            "C. The \"acl\" command",
+            "D. The \"restrict\" command"
+        ],
+        "answer": "AC",
+        "explanation": "Option A: HAProxy does not have a direct \"allow\" command for ACL. However, in Layer 7 proxy, \"http-request allow\" and \"http-request deny\" can be used to allow or deny ACL-based HTTP requests. However, the two commands do not directly correspond to the ACL definition but are operated based on the ACL. Therefore, strictly speaking, the \"allow\" command is not directly used to restrict IP addresses in ACL definitions, but it can be used to control access after ACL conditions are processed.\nOption B: In the HAProxy document, there is no explicit \"allowlist\" command. However, the word is often used to describe an allowable list, which may be customized in some configurations or scripts.\nOption C: This is correct. In HAProxy, an ACL (access control list) is defined using the \"acl\" command. You can use the \"acl\" command to define one or more conditions based on attributes such as the source IP address, destination IP address, port number, and request header. Then, you can control access based on these ACL conditions in other parts of the configurations (such as \"http-request\" and \"tcp-request\").\nOption D: In the standard configurations and commands of HAProxy, there is no \"restrict\" command. HAProxy uses commands such as \"acl\", \"http-request\", and \"tcp-request\" to control access.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 61 （12 Points）",
+        "question": "If you find that a database instance has stopped responding, what steps should you take?",
+        "choices": [
+            "A. Restart the database server.",
+            "B. Check server resources, such as memory and disk space.",
+            "C. Restore the data backup.",
+            "D. Check the error logs for useful information."
+        ],
+        "answer": "BD",
+        "explanation": "- Option A: Although restart can solve the problem temporarily, but the root cause is not pinpointed. The problem can recur. In addition, restart can cause loss of unsaved data and affect service continuity.\n- Option B: Insufficient resources (such as exhausted memory and insufficient disk space) are common reasons for the database to stop responding. Check the server resource status and ensure that the server has sufficient memory and disk space.\n- Option C: In this step, all data changes from the last backup to the current time are lost. This step is performed only when the data is damaged and other methods cannot solve the problem.\n- Option D: Error logs can contain error information that causes the database to stop responding. Viewing logs helps to locate the root cause of the problem and take corresponding measures to rectify the fault.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 62 （12 Points）",
+        "question": "Which of the following statements about the security mechanism of Linux are true?",
+        "choices": [
+            "A. The default permission on files created in Linux is \"644\".",
+            "B. The default permission on directories created in Linux is \"755\".",
+            "C. The default permission mask in Linux is \"022\".",
+            "D. You can use the \"umask\" command to change the default permissions on files and directories in Linux."
+        ],
+        "answer": "ABCD",
+        "explanation": "Option A: True statement. But note that the default permission for creating files in Linux is actually determined by \"umask\" (permission mask). In the default setting where \"umask\" is \"022\", the default permission of a new file is \"644\". That is, the file owner has the read and write permissions, and users in the same group and other users have only the read permission.\nOption B: This statement is true. By default, if \"umask\" is set to \"022\", the default permission on a new directory is \"755\". That is, the directory owner has the read, write, and execute permissions, and users in the same group and other users have the read and execute permissions.\nOption C: This statement is true. In Linux, the default value of \"umask\" is usually \"022\". This means that when a file or directory is created, the \"umask\" value is subtracted from the default \"777\" (file) and \"666\" (directory) permissions to determine the final permission.\nOption D: This statement is true. The \"umask\" command is used to set or view the permission mask to change the default permission on new files and directories. You can change the value of \"umask\" to flexibly configure file and directory permissions on the system.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 63 （12 Points）",
+        "question": "By default, the database system administrator has the highest database permissions. To mitigate risks associated with the centralized permissions held by the system administrator, you can con-figure the separation-of-duties function during actual service management. Which two members can be granted some of the same permissions system administrators have?",
+        "choices": [
+            "A. Audit administrator",
+            "B. System administrator",
+            "C. Security administrator",
+            "D. Initial user"
+        ],
+        "answer": "AC",
+        "explanation": "Separation of duties is a database security management mechanism. This mechanism divides database management permissions into three independent domains to prevent excessive centralization of management permissions, reducing security risks and ensuring database security. Under the principle of separation of duties, the permissions of a database system administrator are properly assigned to the other two members to implement balancing.\nAccording to the separation of duties principle, some permissions of the database system administrator are assigned to the security administrator and audit administrator.\n- Option A:  Audit administrator audits and monitors database operations to ensure that all operations comply with regulations and potential security risks can be detected in a timely manner.\n- Option B: Under the principle of separation of duties, the permissions of a database system administrator are assigned to other members to implement balancing, instead of being highly centralized.\n- Option C: Security administrator is responsible for database security configuration and permission management to ensure that database security policies are correctly implemented.\n- Option D: The initial user does not have the permissions of the system administrator and is not within the scope of separation of duties.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 64 （12 Points）",
+        "question": "Before installing the openEuler operating system, you need to change BIOS settings. Which of the following statements about the BIOS settings are true?",
+        "choices": [
+            "A. BIOS settings allow the machine to identify storage devices, such as HDDs and CD-ROM drives, and correctly read installation files.",
+            "B. BIOS settings can be used to detect and adjust hardware parameters to ensure normal running of hardware devices.",
+            "C. BIOS settings allow you to set the boot sequence to ensure that the operating system can boot from the correct device during installation.",
+            "D. BIOS settings let you change the startup password of the computer to protect the system from unauthorized access."
+        ],
+        "answer": "ABC",
+        "explanation": "Option A is true. The BIOS identifies various hardware devices connected to the motherboard during startup, including storage devices such as hard drives and CD/DVD drives. It can correctly read the information on these devices, including the files required for installing the operating system.\nOption B is true. One of the main functions of the BIOS is self-check and initialization, including hardware device detection and initialization. In BIOS settings, you can check and adjust the parameters of hardware devices, such as the memory size and processor speed, to ensure that these devices can run properly before the operating system is loaded.\nOption C is true. The BIOS allows you to set the boot sequence, that is, the sequence in which the computer loads the operating system during startup. This is important for installing the operating system from a specific storage device, such as a USB drive, CD/DVD drive, or hard drive, because it ensures that the computer can read the installation file from the correct device at startup.\nOption D is false. Although BIOS settings allow you to set passwords, this is not intended to protect the system from unauthorized user access. The BIOS password is used to restrict access to BIOS settings to prevent unauthorized modifications. Operating system-level security measures, such as user account and password management, are used to protect the system from unauthorized user access.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 65 （12 Points）",
+        "question": "What are the advantages of openGauss tablespaces?",
+        "choices": [
+            "A. Different disks can be selected based on data features.",
+            "B. The upper limit (maxsize) of the tablespace capacity can be set.",
+            "C. A tablespace corresponds to a file system directory; you must have the read and write permissions on an empty directory.",
+            "D. Tablespaces allow an administrator to distribute data based on the schema of database objects, improving system performance."
+        ],
+        "answer": "ABCD",
+        "explanation": "- Option A: Tablespaces allow administrators to store data on different types of disks based on the data characteristics and usage frequency. For example, frequently used indexes can be placed on disks with stable performance and high computing speed, such as solid-state hard disks, to improve data access speed. Archived data or tables that do not require high performance can be stored on disks with a slow computing speed to optimize the configuration of storage resources.\n- Option B: openGauss allows administrators to set a capacity limit for each tablespace. This prevents a tablespace from occupying too much disk space and affects the normal running of the system. By setting \"maxsize\", administrators can better control and manage the use of disk space.\n- Option C: In openGauss, each tablespace corresponds to a directory in the file system. This design makes data storage and management more straightforward and convenient. In addition, to ensure normal data read and write, users must have read and write permissions on this directory.\n- Option D: By properly arranging the location of data in tablespaces, administrators can optimize the data access performance. For example, data that is frequently accessed is stored in the same tablespace to reduce disk I/O operations and improve the data retrieval speed. This enables openGauss to flexibly adapt to different application scenarios and requirements.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 66 （12 Points）",
+        "question": "Which of the following composite query types are supported by openGauss?",
+        "choices": [
+            "A. UNION",
+            "B. INTERSECT",
+            "C. MINUS",
+            "D. EXCEPT"
+        ],
+        "answer": "ABCD",
+        "explanation": "- Option A: UNION combines the results of two or more SELECT statements into a result set and automatically delete duplicate rows.\n- Option B: INTERSECT returns the intersection of the results of two or more SELECT statements, that is, the rows that exist in all query results.\n- The Option C: MINUS removes the rows that match the result set of one SELECT statement from the result set of another SELECT statement to obtain the difference set.\n- The Option D: EXCEPT removes all rows in the result set of one SELECT statement from the result set of another SELECT statement and returns the difference set.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 67 （12 Points）",
+        "question": "In the openGauss fully-encrypted database, which of the following methods can be used to create an encrypted table?",
+        "choices": [
+            "A. Use the CREATE TABLE statement to specify the encryption algorithm and key.",
+            "B. Use the ALTER TABLE statement to specify the encryption algorithm and key.",
+            "C. Use the CREATE TABLESPACE statement to specify the encryption algorithm and key.",
+            "D. Run the pg_dump command to back up the existing encrypted table and specify the encryption algorithm and key."
+        ],
+        "answer": "AB",
+        "explanation": "- Option A: This is a standard method for directly creating an encrypted table. In the CREATE TABLE statement, you can specify an encryption algorithm and a key to create an encrypted table.\n- Option B: This method is used to convert an existing table to an encrypted table. You can run the statement to specify the encryption algorithm and key for an existing table and convert the table to an encrypted table.\n- The Option C: The CREATE TABLESPACE statement is used to create tablespaces instead of encrypted tables. Tablespace encryption is a tablespace-level operation, not a table-level operation.\n- The Option D: pg_dump is used to back up database tables, but not to create encrypted tables or specify encryption algorithms and keys. Backup and creating an encrypted table are two different processes.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 68 （12 Points）",
+        "question": "Which of the following files are loaded by the shell when you log in to openEuler using the CLI or SSH?",
+        "choices": [
+            "A. /etc/profile",
+            "B. /.bash_profile",
+            "C. ~/.profile",
+            "D. ~/.bashrc"
+        ],
+        "answer": "ABCD",
+        "explanation": "In the openEuler system (and other Linux-based systems), when you log in to the system using the CLI or SSH, the shell loads a series of configuration files based on different conditions.\n\tThe shell of a login user loads the following files:\n\t\"/etc/profile\" (system file)\n\t\"~/.bash_profile\" or \"~/.profile\" (user file)\n\tThe shell of a non-login user loads the following files:\n\t\"~/.bashrc\" (usually loaded through \"~/.bash_profile\" or \"~/.profile\")\n\nOption A is true. This is a global configuration file used for initialization when each user logs in. It usually contains some system-level environment variable settings, alias definitions, and so on.\nOption B is true. On a standard Linux system, the file should be \"~/.bash_profile\", in which the wavy line (~) represents the user's home directory. This file is executed when a user logs in, especially when the Bash shell is used as the login shell. It is usually used to set user-level environment variables or execute other initialization commands.\nOption C is true. If \"~/.bash_profile\" does not exist, the Bash shell attempts to load \"~/.profile\" as an alternative. This file is also used to set user-level environment variables and initialization commands.\nOption D is true. \"~/.bashrc\" is executed each time a user starts a new Bash shell (whether through the CLI, SSH, or terminal emulator). Typically, \"~/.bash_profile\" or \"~/.profile\" contains a \"source ~/.bashrc\" line or equivalent commands to load the settings in \".bashrc\".",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 69 （12 Points）",
+        "question": "Which of the following steps need to be performed during openGauss installation?",
+        "choices": [
+            "A. Disable transparent huge pages.",
+            "B. Disable the firewall.",
+            "C. Disable the swap memory.",
+            "D. Unify the time zone and time."
+        ],
+        "answer": "ABCD",
+        "explanation": "- Option A: Transparent Huge Pages (THP) may affect the performance of the database. Therefore, you need to disable it before installing openGauss.\n- Option B: The firewall can block network connections of a database. Turning the firewall off can avoid network communication problems during installation and configuration.\n- Option C: To ensure the performance and stability of the database, swap memory is usually disabled or seldom used in normal operations.\n- Option D: Ensure that the system time zone and time are correct. This is especially important for the database system because the timestamp plays a key role in the database. If the time is different from the current time, you can copy the corresponding time zone file to \"/etc/localtime\".",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 70 （12 Points）",
+        "question": "Which of the following openGauss database processes are not responsible for flushing dirty page data from the memory to disks?",
+        "choices": [
+            "A. pagewriter",
+            "B. bgwriter",
+            "C. walwriter",
+            "D. checkpoint"
+        ],
+        "answer": "BCD",
+        "explanation": "- Option A: A pagewriter, consisting of a main pagewriter thread and a group of pagewriter worker threads, writes dirty page data in the memory to disks. The main pagewriter thread obtains dirty pages from the global dirty page queue in batches, writes the dirty pages to the doublewrite file in batches, updates the checkpoints of the entire database, and distributes dirty pages to pagewriter worker threads. The pagewriter worker threads then write dirty pages into the file system.\n- Option B: A bgwriter writes dirty page data in the shared buffer to disks (that is, writing dirty page data to disks) so as to reduce the number of database threads waiting for write operations during user query.\n- Option C: A walwriter updates page data to a WAL file to ensure that all committed transactions are stored permanently. It does not directly flush dirty page data from memory to disks.\n- Option D: A checkpointer flushes dirty page data to disks at different checkpoints to ensure database consistency.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 71 （10 Points）",
+        "question": "In openEuler, the niceness value of a process ranges from -20 to +20.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "In openEuler and most Linux systems, the niceness value of a process ranges from -20 to +19, not from -20 to +20. The niceness value affects the process priority. A smaller value indicates a higher priority and a higher probability that the process is scheduled and executed by the CPU. In Linux, a positive niceness value indicates a lower priority, and a negative niceness value indicates a higher priority. The niceness value of a process ranges from -20 (highest priority) to +19 (lowest priority).",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 72 （10 Points）",
+        "question": "iptables is a command line tool in the user space. You can use iptables to set security configurations for the data packet processing module netfilter in the Linux kernel.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "iptables is a utility used to configure the Linux kernel firewall. It consists of two parts: iptables command line tool in user mode and iptables service in kernel mode. Therefore, it is not accurate to say that iptables is located in the user space. It allows you to configure the data packet processing module netfilter in the Linux kernel through the CLI. In addition, the \"iptables\" command does not directly process data packets. It interacts with the netfilter module in the kernel to configure and manage the firewall.\nnetfilter is a framework for filtering and processing data packets in the Linux kernel. It provides functions such as data packet filtering, network address translation (NAT), and routing decision making. iptables is the user-space interface of netfilter. It allows you to define rule sets through command lines or other tools. These rule sets are used by netfilter to process data packets entering and leaving the Linux system.\nTherefore, iptables is not a firewall tool located in the user space, but a tool used to configure the netfilter module in the Linux kernel.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 73 （10 Points）",
+        "question": "SELinux is a mandatory access control security mechanism based on the Linux LSM framework.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "SELinux is a mandatory access control (MAC) strategy developed based on the Linux Security Modules (LSM) framework.\n1. Definition: SELinux is a Linux security subsystem jointly developed by the United States National Security Agency (NSA) and other security organizations such as Secure Computing Corporation (SCC). It aims to enhance the security of conventional Linux operating systems.\n2. LSM framework: It is a security framework of the Linux kernel, which allows developers to add various security modules to Linux. SELinux is developed based on this framework to provide MAC.\n3. MAC: Different from discretionary access control (DAC), the MAC mechanism restricts access to system resources, even if the owner or user of the resource has required permissions. In SELinux, this access control is enforced and is not affected by users or programs.\n4. Security policies: SELinux provides fine-grained access control policies, which can be customized based on scenarios and requirements. These policies can restrict the access of processes, users, and applications to system resources, preventing malicious software attacks and data leakage.\n5. Implementation and integration: SELinux was originally developed as a series of patches for the Linux kernel and was later integrated into the upstream Linux kernel in 2003. Now, SELinux has become an important part of many Linux distributions, such as Fedora and Red Hat Enterprise Linux.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 74 （10 Points）",
+        "question": "If you specify the PARTITION parameter when running the CREATE TABLE statement, the table will be partitioned.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "This is true.\nIn a database management system, partitioning is a technique that divides the data of a table into smaller, manageable parts. This can improve query performance and management efficiency. In openGauss, you can use the \"PARTITION\" parameter to enable the data partitioning function when creating a table.\nThe benefits of partitioning include:\nPerformance optimization: Query, insert, delete, and update operations can be faster because these operations only need to be performed on related partitions rather than the entire table.\nEasy management: Independent management operations, such as backup and restoration, can be performed on different partitions.\nData archiving: Old data can be moved to cheaper storage devices, while new data remains on high-performance storage devices.\nTherefore, adding the \"PARTITION\" parameter to the CREATE TABLE statement indicates that the partitioning function is applied to the table.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 75 （10 Points）",
+        "question": "When using the Vim editor, you can run the :x command in normal mode to save the modification and exit.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "The vim editor provides the following modes:\n1. Normal mode, also called the command mode, in which you can run most commands such as copy, paste, cut, find, and replace. However, you cannot input text directly.\n2. Insert mode, in which you can insert text into a file by pressing \"i\" (insert before the current character), \"a\" (insert after the current character), or \"o\" (insert a new line below the current line).\n3. Visual mode, in which you can select text blocks by pressing \"v\" (select a character), \"V\" (select a line), or \"Ctrl+v\" (select a block).\nYou can input a colon (:) to switch from the normal mode to the command line mode (also known as ex mode). In this mode, you can run advanced commands such as save, exit, and search and replace.\nThe \":x\" command is executed in the command line mode to save the modifications to the current file and exit vim. Therefore, the description is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 76 （10 Points）",
+        "question": "\"smb.conf\" is the core configuration file of Samba.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "The \"smb.conf\" file is the Samba configuration file, which contains the runtime configurations of the Samba program. This file is necessary for the normal operating of the Samba server. It contains various configuration options of the Samba server, such as the settings of shared directories, access control, and user authentication. It is the most important configuration file of the Samba server.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 77 （10 Points）",
+        "question": "Currently, the SERIAL column can be specified when you create a table and it can be inserted into an existing table.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This is false.\nIn openGauss, similar to other database management systems (such as PostgreSQL), the SERIAL type is a special column type used to automatically create a unique identifier (usually an integer) and can be automatically incremented. However, openGauss does not support using SERIAL to define auto-increment columns like PostgreSQL.\nIn PostgreSQL, you can use SERIAL, BIGSERIAL, or SMALLSERIAL to define auto-increment columns. In this way, an \"id\" column is created in \"example_table\". This column automatically increases and is set as the primary key.\nHowever, in openGauss, there is no such support for the SERIAL type. Therefore, you cannot use SERIAL to define auto-increment columns when creating a table or add columns of the SERIAL type to an existing table.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 78 （10 Points）",
+        "question": "Uninstalling the database is a major operation. Therefore, you need to run the uninstallation script as the user root.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This is false. You do not need to run the uninstallation script as the \"root\" user to uninstall the openGauss database. Generally, the database installation and uninstallation are performed by a database administrator (DBA) or a specific user (such as the \"gauss\" user) created during database installation, not the \"root\" user. Using a specific database user to manage and uninstall the database helps avoid unnecessary permission risks and security issues.\nPermissions of the installation user:\nThe installation and management of the openGauss database are usually performed by a specific user (for example, user \"gauss\"). This user has sufficient permissions to install, manage, and uninstall the database.\nSecurity:\nPerforming database operations as the \"root\" user brings security risks. Especially when the database is uninstalled, the \"root\" user has the highest permission and may perform misoperations on other system files or configurations. Therefore, it is recommended that you perform these operations as a database administrator with appropriate permissions.\nPermission on the uninstallation script:\nAppropriate permissions must be set for the database uninstallation script to ensure that only authorized users can execute the script. This is usually configured when the database is installed.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 79 （10 Points）",
+        "question": "A system catalog stores openGauss metadata and is the core part of a database. Users cannot manually edit the system catalog data.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "System catalogs store structured metadata of openGauss. They are the source of information used by openGauss to control system running and are a core part of the database system. System catalogs, also called data dictionaries or metadata, store definitions of database objects. openGauss manages multiple databases in an instance. Therefore, system catalogs are classified into instance-level system catalogs and database-level system catalogs.\nIn normal cases, system catalogs or system views should not be manually modified by users. The system catalog information is automatically maintained by SQL-related system catalog operations to ensure the database stability and data consistency. Some system catalogs can be modified by users, but you are advised not to modify them.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 80 （10 Points）",
+        "question": "The result of SELECT CIRCLE '((0, 0), 1)' << CIRCLE '((5,0), 1)'; is TRUE.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "This question is about the geometric operator << in the openGauss database. In openGauss, << is an operator that determines whether a geometric object is completely inside another geometric object. According to the expression in the question, assume that the two CIRCLEs are A and B, their centers are (0,0) and (5,0), and their radiuses are 1. Because the center of A is on the right of B, A is completely inside B. Therefore, the expression returns TRUE.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 81 （10 Points）",
+        "question": "gs_dump is used to export database information. During the export, gs_dump suspends normal access to the database so that complete and consistent data can be exported.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This is false. gs_dump is used to export information about the openGauss database. During the export, access to the database is not blocked. Instead, it is usually executed when the database is running, ensuring that the database can still be accessed and used during the backup. The following describes the tool from some key perspectives:\nSnapshot:\ngs_dump uses the snapshot technology to ensure that the exported data is consistent. When the export starts, a snapshot is created. All exported data is based on the snapshot to ensure data consistency.\nNo shutdown:\nDuring the export, the database can still accept read and write operations. Because snapshots are used, gs_dump can ensure that the exported data is consistent even if data changes during the export.\nConcurrent access:\ngs_dump is designed to be executed when the database is running properly. This means that other users and applications can still access and operate the database without being interrupted by the export operation.\nTherefore, normal access to the database is not blocked when data is exported from the database. Instead, technical means are used to ensure the integrity and consistency of the exported data.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 82 （10 Points）",
+        "question": "In the instr(string1, string2, int1, int2) function, int2 indicates the position where a string ends to be matched.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This is false. The instr function is usually used to find the position of a string in another string. The parameter meanings may vary depending on the database implementation. In a common database system (such as Oracle or MySQL), the parameters of the instr function are described as follows:\n\"string1\": character string to be searched.\n\"string2\": character string to be searched for.\n\"int1\": start position of the search.\n\"int2\": search direction or occurrence times.\nTherefore, \"int2\" does not indicate the position where the match ends, but specifies the position of the specified occurrence.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 83 （10 Points）",
+        "question": "The rwx mechanism of Linux controls file access permissions.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "In the Linux operating system, file permissions determine which users or user groups can read (r), write (w), and execute (x) operations on a file. These permissions are usually represented by symbols (rwx) or numbers (421).\n1.\tThe read permission (r) allows the file content to be read. If you have the read permission on a directory, you can view the list of files and subdirectories in the directory.\n2.\tThe write permission (w) allows the file content to be modified. If you have the write permission on a directory, you can create files in or delete files from the directory.\n3.\tThe execute permission (x) allows executable files to be executed. If you have the execute permission on a directory, you can access the directory (that is, run the \"cd\" command to access the directory).\nFile permissions are classified into three groups. Each group contains three types of permissions (rwx) for the owner, group, and others, respectively. For example, \"-rwxr-xr--\" indicates that the owner has the read, write, and execute permissions, the group has the read and execute permissions, and others have only the read permission.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 84 （10 Points）",
+        "question": "A tablespace is used to manage data objects and corresponds to a directory on a disk.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "This is true.\nIn the database system, a tablespace is used to manage data objects (such as tables and indexes) and corresponds to a directory on a disk. Specifically:\nThe functions of tablespaces are as follows:\nA tablespace is a logical structure for storing data in a database. It is used to organize and manage physical storage in a database. With tablespaces, database administrators can better control the physical storage space and data storage policies.\nMapping with a directory:\nEach tablespace usually corresponds to a directory on a disk. This directory stores data files that belong to the tablespace. These data files contain data of tables, indexes, and other objects in the database.\nIn this way, tablespaces provide a flexible mechanism that allows database administrators to distribute data objects in different physical storage locations based on data object features, access modes, and storage requirements, optimizing performance and storage management.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 85 （10 Points）",
+        "question": "After openEuler is installed, the default root partition is \"openEuler-root\".",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "openEuler is an open source Linux distribution. The partition settings during the installation may vary according to the version and installation options. You cannot determine whether the default root partition is \"openEuler-root\" after openEuler is installed. You need to refer to the official documents or installation guide of openEuler to obtain accurate information.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 86 （10 Points）",
+        "question": "When you access the Samba directory through \"\\\\Samba_IP\\share\", login authentication is not required, but you can only create folders or files.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Samba is a piece of software that implements the Server Message Block (SMB) protocol on Linux and UNIX systems. It is used to share files between Linux, UNIX, and Windows systems. When configuring Samba, you can set different sharing options to implement different access control policies.\n1.\tLogin authentication is not required: It depends on the Samba configuration. If anonymous sharing is configured for Samba (that is, \"guest ok = yes\" and \"security = share\"), you can access shared directories without login. However, if Samba is configured to require user authentication (that is, \"security = user\"), you need to provide the user name and password to access shared directories.\n2.\tYou can only create folders or files: This also depends on the Samba configuration. Yu can set the permissions on shared directories in the Samba configuration file (usually \"/etc/samba/smb.conf\"), including whether to allow users to read, write, and create folders or files. For example, if \"writable = yes\" is set, users are allowed to write and create files or folders in shared directories. However, this does not mean that users can only create folders or files. They can also perform other operations (such as read and delete), depending on the configured permissions.\nIn conclusion, the description is false.\nMore specifically:\n\tWhether login authentication is required depends on the Samba configuration (you may or may not need to perform login authentication);\n\tand whether you can create folders or files in shared directories also depends on the Samba configuration (you may or may not be allowed to do so, and are usually allowed to perform other operations).",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 87 （10 Points）",
+        "question": "In addition to the query performance, indexes can be used to improve the insertion and deletion performance of the database.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This is false. Indexes are mainly used to improve the query performance of the database, but they usually have a negative impact on insert and delete operations.\nQuery performance:\nIndexes significantly improve query performance by providing a quick search mechanism, especially in searching, sorting, and filtering.\nInsertion performance:\nDuring the insert operation, the database not only needs to insert data into a table, but also needs to update related indexes. This means that the insert operation becomes slower because the index structure needs to be maintained for each insert.\nDeletion performance:\nSimilarly, when a delete operation is performed, the database needs to delete data from a table and update related indexes. This also increases overheads of the delete operation.\nUpdate performance:\nIf the update operation involves index columns, indexes also need to be maintained and updated, thereby affecting the performance.\nIn a word, indexes indeed improve query performance, but they typically deteriorate the performance of insert and delete operations.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 88 （10 Points）",
+        "question": "\"$#\" in a shell script obtains the number of arguments supplied to the script.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "In a shell script, \"$#\" is a special variable used to obtain the number of arguments passed to a script or function. When you run a script on the CLI and pass some arguments, you can use \"$#\" inside the script to get the number of the arguments. For example:\n \nIf you run the script and pass three arguments, such as \"./script.sh arg1 arg2 arg3\", the output is as follows:\n \n\"$#\" correctly outputs the number of arguments, while \"$@\" indicates all arguments to traverse.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 89 （10 Points）",
+        "question": "Logical backup can back up the data of the entire cluster and restore the data to a homogeneous database.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This is false.\nLogical backup usually refers to backing up the logical structure and data of a database instead of backing up the data of the entire cluster. In database terminology, a cluster usually refers to a collection of database instances or nodes rather than a single database. Specifically:\nLogical backup:\nLogical backup is performed by exporting data and structures (such as tables, views, functions, and stored procedures) from the database. This backup is independent of the underlying storage engine and typically stores data in SQL scripts or other logical formats.\nCluster restoration:\nTo restore the entire database cluster, you need to physically back up and copy data files to ensure the integrity and efficiency of the restoration. Logical backup cannot be used to directly restore the entire database cluster because it involves only the logical structure and data inside the database.\nTherefore, logical backup is not applicable to backing up data of the entire cluster or simply restoring data of the entire cluster to a homogeneous database. Restoring the entire cluster usually requires physical backup and cluster management tools to handle the replication and restoration of the entire database instance or node.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 90 （10 Points）",
+        "question": "In openEuler, the memory allocated by \"malloc\", a dynamic memory allocation function, is physically continuous.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "In Linux, including openEuler, the \"malloc\" function dynamically allocates memory on the heap. The memory allocated by \"malloc\" is continuous in the virtual address space, but may be discontinuous in the physical memory space. This is because the Linux kernel implements virtual memory to run programs and then translates the virtual memory to its location in physical memory. Moreover, Linux divides all memory in pages, and adjacent virtual memory addresses may be mapped to different physical memory pages. Therefore, the memory allocated by \"malloc\" may not be continuous in the physical memory.",
+        "questionType": "true_false"
+    }
+]

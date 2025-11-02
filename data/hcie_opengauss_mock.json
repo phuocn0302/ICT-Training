@@ -1,0 +1,725 @@
+[
+    {
+        "title": "Question 1 （15 Points）",
+        "question": "In scenarios involving a large amount of data, IndexScan is more efficient than SeqScan.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （15 Points）",
+        "question": "Merge join is seldom used in openGauss. Although the two tables to be joined have been sorted, the optimizer still prefers hash join in most cases.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （15 Points）",
+        "question": "When setting max_process_memory, you must reserve at least 10% of the physical memory in the OS kernel for sending and receiving data.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （15 Points）",
+        "question": "To allow reads without writes in common SELECT statements, you can use ACCESS SHARE, ensuring database concurrency in the production environment.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （15 Points）",
+        "question": "The main distinction between a spinlock and a semaphore is that when resources are unavailable, a semaphore blocks the process and makes it enter the sleep state, whereas a spinlock forces the process to engage in busy waiting.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （15 Points）",
+        "question": "Using the MVCC mechanism, the flashback table feature removes incremental data added after a specified time point and restores data that was deleted at or before that time point at the database level.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （15 Points）",
+        "question": "IPC is used for communication and message transfer between multiple background processes but does not provide management of shared memory.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （15 Points）",
+        "question": "Flashback DROP and TRUNCATE are based on the recycle bin mechanism. You can restore dropped physical table files from the recycle bin.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （15 Points）",
+        "question": "If RemoveIPC is set to yes, the OS releases the IPC resources (shared memory and semaphore) when the corresponding user exits, causing the openGauss database to break down.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （15 Points）",
+        "question": "When openGauss restores the database cluster to the status before the crash, no special operations are required. When openGauss is restarted, you need to manually set it to the recovery mode.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （15 Points）",
+        "question": "If data is being written in 8 KB blocks and the server crashes, only the 4 KB of real data may be stored before the crash (that is, the valid data on the page is 4 KB). During recovery, Xlog records cannot be replayed on the damaged page.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （15 Points）",
+        "question": "The name of a WAL segment file consists of 21 hexadecimal characters. Each name has three parts, with each part having seven hexadecimal characters.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （15 Points）",
+        "question": "By default, a WAL segment file is 16 MB and consists of 8 KB pages. The header data of page 1 is defined by the XLogPageHeaderData structure, and the headers of other pages are defined by the XLogLongPageHeaderData structure.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （15 Points）",
+        "question": "openGauss periodically flushes the data of committed transactions and uncommitted transactions to disks. The data can be used together with redo logs for database restoration if a database restarts or breaks down.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （15 Points）",
+        "question": "pg_control is a key file in the openGauss database system. It stores the metadata of the database cluster. If the file is damaged, the system cannot determine the restoration start point, but the database restoration will not be affected.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （15 Points）",
+        "question": "Partitioning transaction commit logs (Clogs) enable independent write on different NUMA nodes, thereby dispersing I/O workloads and preventing multiple CPU cores from contending for resources on the same NUMA node.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （15 Points）",
+        "question": "DMS is a dynamic library integrated into the database that transmits page data over TCP/RDMA networks, coordinating memory between primary and standby nodes. This memory pooling ensures real-time consistent writes on the standby node.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （15 Points）",
+        "question": "Resource pooling supports DDL and LOCK statements in transactions on the standby node when the write feature is supported on the standby node.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （15 Points）",
+        "question": "The on-demand replay feature of ultimate RTO can be used in resource pooling deployment, but does not support read on standby.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 20 （15 Points）",
+        "question": "The virtual index feature simulates the presence of an index without the overhead of creating a real index, saving time and space costs. However, users cannot directly create a virtual index within the database.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 21 （15 Points）",
+        "question": "X-Tuner runs in three modes. Operations are completed within seconds and the database does not need to be restarted only in the train mode. In other modes, the database may need to be restarted repeatedly.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 22 （15 Points）",
+        "question": "Which of the following operators joins data from two input streams by using nested loop?",
+        "choices": [
+            "A. Merge join",
+            "B. Nested loop join",
+            "C. Append",
+            "D. Hash join"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 23 （15 Points）",
+        "question": "Which of the following operators distributes data in polling mode across threads within an instance?",
+        "choices": [
+            "A. Local RoundRobin",
+            "B. Local Broadcast",
+            "C. Local Redistribute",
+            "D. Local Gather"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 24 （15 Points）",
+        "question": "The SMP technology is used to implement operator-level parallel execution, which effectively speeds up queries, improving the query performance and resource utilization. Which of the following operators is not applicable to the SMP technology?",
+        "choices": [
+            "A. WindowAgg partition by",
+            "B. WindowAgg order by",
+            "C. SortAgg",
+            "D. PlainAgg"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 25 （15 Points）",
+        "question": "To improve query efficiency, scan operators are used to query a large table. Which of the following is true about the query speed of the scan operators (from fast to slow)?",
+        "choices": [
+            "A. IndexScan > IndexOnlyScan > SeqScan > BitmapScan",
+            "B. IndexOnlyScan > SeqScan > IndexScan > BitmapScan",
+            "C. SeqScan > IndexOnlyScan > IndexScan > BitmapScan",
+            "D. BitmapScan > IndexOnlyScan > IndexScan > SeqScan"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 26 （15 Points）",
+        "question": "Which of the following SQL rewriting rules cannot improve the SQL query efficiency?",
+        "choices": [
+            "A. Replace UNION with UNION ALL.",
+            "B. Add the NOT NULL constraint to the join columns.",
+            "C. Convert NOT EXISTS to NOT IN.",
+            "D. Use HashAgg."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 27 （15 Points）",
+        "question": "In openGauss, which of the following single-table query statements does not cause the index to become invalid?",
+        "choices": [
+            "A. Using functions on the index column",
+            "B. AND statement in the WHERE condition",
+            "C. Implicit type conversion of the index column",
+            "D. Performing calculations on the index column"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 28 （15 Points）",
+        "question": "Which of the following is not an appropriate design principle for achieving optimal database performance?",
+        "choices": [
+            "A. Create composite indexes rather than single-column indexes if possible.",
+            "B. Select the data type that is most suitable for storage.",
+            "C. If a table contains a large amount of data, conduct table partitioning or splitting.",
+            "D. Avoid using foreign keys."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 29 （15 Points）",
+        "question": "Which of the following lock-related parameters specifies the maximum wait time for a single lock?",
+        "choices": [
+            "A. gs_clean_timeout",
+            "B. update_lockwait_timeout",
+            "C. deadlock_timeout",
+            "D. lockwait_timeout"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 30 （15 Points）",
+        "question": "Which of the following parameters specifies the number of locks on concurrent write-ahead logging?",
+        "choices": [
+            "A. fault_mon_timeout",
+            "B. xloginsert_locks",
+            "C. enable_online_ddl_waitlock",
+            "D. lockwait_timeout"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 31 （15 Points）",
+        "question": "openGauss provides eight lock levels for different statement concurrency purposes. Which type of statements or operations is the level-8 lock used for?",
+        "choices": [
+            "A. SELECT operations",
+            "B. Basic INSERT, UPDATE, and DELETE operations",
+            "C. Operations such as VACUUM and ANALYZE",
+            "D. DDL statements"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 32 （15 Points）",
+        "question": "Which of the following statements about regular locks is false?",
+        "choices": [
+            "A. Regular locks are implemented by using a hash table.",
+            "B. Multiple lock modes are supported. Conflict tables define the semantics and conflicts between these lock modes.",
+            "C. A regular lock has a wait queue but does not provide a deadlock detection mechanism.",
+            "D. Regular locks are used to lock database objects accessed by services."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 33 （15 Points）",
+        "question": "Which of the following attributes in the TOAST table stores the location of a chunk in the entire TOAST data?",
+        "choices": [
+            "A. chunk_seq",
+            "B. chunk_id",
+            "C. chunk_data",
+            "D. chunk_type"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 34 （15 Points）",
+        "question": "Which of the following statements is false about deleting TOAST data?",
+        "choices": [
+            "A. When a tuple containing TOAST data is deleted, the corresponding TOAST data also needs to be deleted.",
+            "B. For data that uses the EXTENDED policy, you only need to delete tuples and do not need to delete data stored out of line.",
+            "C. For data that uses the PLAIN and MAIN policies, the TOAST data is deleted together with the tuple. No extra processing is required.",
+            "D. For data that uses the EXTERNAL policy, in addition to deleting tuples, you also need to delete data stored out of line."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 35 （15 Points）",
+        "question": "Which of the following threads in a thread pool distributes and manages events?",
+        "choices": [
+            "A. Postmaster",
+            "B. ThreadPoolWorker",
+            "C. ThreadPoolControler",
+            "D. ThreadPoolListener"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 36 （15 Points）",
+        "question": "Which of the following parameters of the gs_dump tool is used to specify the format of an exported file?",
+        "choices": [
+            "A. -t",
+            "B. -T",
+            "C. -F",
+            "D. -p"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 37 （15 Points）",
+        "question": "Which of the following commands is used to check the I/O usage to determine whether the I/O of the current disk is saturated?",
+        "choices": [
+            "A. top -H",
+            "B. iostat -x 1 3",
+            "C. vmstat 1 3",
+            "D. sysctl -a"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 38 （15 Points）",
+        "question": "Physically, transaction logs are divided into files by default. Each file is called a WAL segment. How large is each file?",
+        "choices": [
+            "A. 16 MB",
+            "B. 8 MB",
+            "C. 4 MB",
+            "D. 32 MB"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 39 （15 Points）",
+        "question": "Which of the following scenarios are supported by resource pooling operator offloading?",
+        "choices": [
+            "A. Ustore",
+            "B. TOAST tables",
+            "C. Resource pooling architecture",
+            "D. synchronize_seqscans"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 40 （15 Points）",
+        "question": "Which of the following is not a state of the DB4AI-Snapshots feature that manages data versions?",
+        "choices": [
+            "A. normal",
+            "B. published",
+            "C. archived",
+            "D. purged"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 41 （20 Points）",
+        "question": "Which of the following application scenarios are supported by the TidScan operator?",
+        "choices": [
+            "A. Astore column-store compressed table",
+            "B. Astore column-store partitioned compressed table",
+            "C. Astore partitioned table",
+            "D. Ustore partitioned table"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 42 （20 Points）",
+        "question": "Which of the following are typical scenarios of the merge join operator?",
+        "choices": [
+            "A. Two tables varying greatly in size are joined.",
+            "B. The join columns of the two tables have been sorted, for instance, by index.",
+            "C. The sizes of the two tables are similar.",
+            "D. Two tables are joined by equality, except in a range query."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 43 （20 Points）",
+        "question": "Which of the following query statements can be converted to vectorized execution to improve performance?",
+        "choices": [
+            "A. Query that contains expression calculation",
+            "B. Multi-table join query",
+            "C. Query that contains aggregation operation",
+            "D. Simple query of a single table"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 44 （20 Points）",
+        "question": "In which of the following scenarios is the SMP technology not applicable?",
+        "choices": [
+            "A. Queries on global temporary tables",
+            "B. Updates of materialized views",
+            "C. Index scan",
+            "D. Queries that contain the median operation"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 45 （20 Points）",
+        "question": "In openGauss, which of the following single-table query operations may cause an index to become invalid?",
+        "choices": [
+            "A. Using functions on the index column",
+            "B. Performing calculations on the index column",
+            "C. OR statement in the WHERE condition",
+            "D. Using fuzzy match conditions on the index column"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 46 （20 Points）",
+        "question": "The CBO estimates the execution cost based on the data statistics, cardinality estimation, and operator cost model. Which of the following are included in statistics?",
+        "choices": [
+            "A. Number of rows in a table",
+            "B. Column width",
+            "C. Distinct values",
+            "D. Column types"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 47 （20 Points）",
+        "question": "Which of the following system catalogs or views can be used to view lock information?",
+        "choices": [
+            "A. pg_locks",
+            "B. pg_attribute",
+            "C. pg_class",
+            "D. pg_ctl"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 48 （20 Points）",
+        "question": "Only read operations are allowed in shared lock mode. Which of the following lock modes conflict with the shared lock mode?",
+        "choices": [
+            "A. SHARE",
+            "B. ACCESS SHARE",
+            "C. ROW EXCLUSIVE",
+            "D. ACCESS EXCLUSIVE"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 49 （20 Points）",
+        "question": "Which of the following are restrictions of the openGauss column storage engine?",
+        "choices": [
+            "A. Triggers are not supported.",
+            "B. Primary and foreign keys are not supported.",
+            "C. Among DDL statements, only CREATE TABLE, DROP TABLE, and TRUNCATE TABLE are supported.",
+            "D. PSort index and B-tree index are not supported."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 50 （20 Points）",
+        "question": "To implement quick search, FSM uses the maximum heap structure, and FSM blocks use the three-layer tree structure. Which of the following statements are true about the three-layer tree structure?",
+        "choices": [
+            "A. There is only one FSM block at layer 0, which serves as the root.",
+            "B. There may be a plurality of FSM blocks at layer 1 (auxiliary layer), which are used as child nodes of FSM blocks at layer 0.",
+            "C. The FSM blocks at layer 1 are used to store the idle values of each table block.",
+            "D. Multiple FSM blocks at layer 2, which are child nodes of the FSM blocks at layer 1, are used to store the idle values of each table block."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 51 （20 Points）",
+        "question": "Which of the following statements are true about the physical backup tool gs_basebackup?",
+        "choices": [
+            "A. gs_basebackup copies the binary files of the database on the server.",
+            "B. gs_basebackup uses the replication protocol.",
+            "C. gs_basebackup supports only hot backup but does not support compressed backup.",
+            "D. To remotely use gs_basebackup, you need to use the system administrator account."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 52 （20 Points）",
+        "question": "gs_probackup periodically backs up the openGauss instances so that the database server can be restored after a database fault occurs. Which of the following statements about gs_probackup are true?",
+        "choices": [
+            "A. It supports logical backup for databases deployed in standalone mode.",
+            "B. It supports the backup of contents in external directories.",
+            "C. It supports incremental backup and periodic backup but does not support remote backup.",
+            "D. It supports settings on the backup retention policy."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 53 （20 Points）",
+        "question": "Which of the following are the functions of gs_sdr?",
+        "choices": [
+            "A. Clears the DR information of the primary database instance.",
+            "B. Promotes a standby database instance to primary (during a failover).",
+            "C. Queries the DR status of the primary and standby database instances.",
+            "D. Upgrades the primary and standby database instances in the DR state, but only during a major version upgrade."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 54 （20 Points）",
+        "question": "Which of the following actions need to be taken if the error message \"Connection refused\" is printed in the log?",
+        "choices": [
+            "A. Check if the port is incorrectly configured.",
+            "B. Check if the port number that is recorded in the postgresql.conf configuration file of the faulty node is the same as the listening port number of the peer end.",
+            "C. Check if the peer listening port is normal.",
+            "D. Check if the peer process exists."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 55 （20 Points）",
+        "question": "Which of the following are the possible causes of or solutions for exceptions such as \"data path disc writable test failed\" in logs?",
+        "choices": [
+            "A. The file system is damaged.",
+            "B. The disk is not mounted.",
+            "C. The permission on the directory corresponding to the disk is abnormal. To check your permission, run the ls –l command.",
+            "D. The disks have bad blocks, and the OS protects the file system."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 56 （20 Points）",
+        "question": "In which of the following scenarios will Xlog records be written to WAL segment files?",
+        "choices": [
+            "A. A running transaction is rolled back.",
+            "B. A running transaction is committed or terminated.",
+            "C. The WAL buffer is filled with tuples.",
+            "D. The WAL writer process periodically writes data."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 57 （20 Points）",
+        "question": "Which of the following statements are true about the DSS function?",
+        "choices": [
+            "A. DSS does not support the NoF/NoF+ API.",
+            "B. DSS supports a thread pool, allowing server memory resources to be utilized and scaled on demand, and configured as needed.",
+            "C. DSS supports a thread pool, allowing server CPUs to be utilized and scaled on demand and configured as needed.",
+            "D. DSS uses black box logs to locate DSS Server faults, which enhances the DFX capability."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 58 （20 Points）",
+        "question": "When you use the EXPLAIN statement to print the SQL execution plan, you can use the ______ parameter (in lowercase) to specify the output format.",
+        "choices": [],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 59 （20 Points）",
+        "question": "If all network packets to be transmitted are large, you need to increase the MTU. The default MTU is 1500 bytes. The maximum MTU is ______ bytes (in numeric format).",
+        "choices": [],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 60 （20 Points）",
+        "question": "Before creating a Ustore table, you need to set undo_zone_count to ______ (in numeric format) in the postgresql.conf file. After the setting, restart the database.",
+        "choices": [],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    }
+]

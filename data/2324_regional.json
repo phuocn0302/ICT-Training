@@ -1,0 +1,752 @@
+[
+    {
+        "title": "Question 1 （16 Points）",
+        "question": "Which of the following SQL statements is incorrect?",
+        "choices": [
+            "A. alter table emp add column addcolumn int;",
+            "B. alter test emp delete column addcolumn;",
+            "C. alter table emp change addcolumn addcolumn int;",
+            "D. alter table emp modify column addcolumn char(10);"
+        ],
+        "answer": "B",
+        "explanation": "A: This statement is correct. It uses the \"ALTER TABLE\" statement to add a new column named \"addcolumn\" to the \"emp\" table with the data type \"int\".\nB: This statement is incorrect. \"alter test emp\" is not valid SQL syntax. The correct usage of the \"ALTER TABLE\" statement is \"ALTER TABLE table_name\". Also, the correct keyword for deleting a column is \"DROP\", not \"DELETE\".\nC: This statement is correct. The \"CHANGE\" clause of the \"ALTER TABLE\" statement is typically used to modify the name and/or data type of an existing column.\nD: This statement is correct. It uses the \"MODIFY COLUMN\" clause to change the data type of the column named \"addcolumn\" in the \"emp\" table to \"char(10)\".\nIn conclusion, the correct answer is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （16 Points）",
+        "question": "In openEuler, shortest job next (SJN) is a non-preemptive process scheduling algorithm. Assume that the times of arrival and execution durations of processes P1, P2, P3, and P4 are (0, 8), (2, 5), (4, 1), and (5, 4), respectively. If SJN is used, which of the following is the scheduling sequence?",
+        "choices": [
+            "A. P1, P2, P3, P4",
+            "B. P1, P3, P2, P4",
+            "C. P1, P3, P4, P2",
+            "D. P2, P4, P1, P3"
+        ],
+        "answer": "C",
+        "explanation": "According to the given arrival times and execution times, the specific analysis of the scheduling sequence of SJN is as follows:\nAt time 0, process P1 arrives with an execution time of 8.\nAt time 2, process P2 arrives with an execution time of 5, but since P1 is still executing, P2 needs to wait.\nAt time 4, process P3 arrives with an execution time of 1. Since the execution time of P3 is shorter than that of P2, P3 is executed first.\nAt time 5, process P4 arrives with an execution time of 4, which is shorter than the remaining time for P1 and P2, so P4 is executed first.\nFinally, P1 and P2 are executed.\nIn conclusion, the correct answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （16 Points）",
+        "question": "Which of the following is used to specify the node name when gs_guc set is used to set parameters?",
+        "choices": [
+            "A. -D",
+            "B. -N",
+            "C. -I",
+            "D. -c"
+        ],
+        "answer": "B",
+        "explanation": "A. This option specifies the openGauss database instance directory in which the command is to be run. When the \"encrypt\" command is used, this parameter indicates the directory for storing the generated password file.\nB. This option specifies the name of the host to be set.\nC. This option specifies the name of the instance to be set.\nD. This option specifies the name and value of the openGauss configuration parameter to be set. The format is \"parameter=value\".\nIn conclusion, the answer is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （16 Points）",
+        "question": "Which of the following statements about performance tuning and tools is false?",
+        "choices": [
+            "A. In Java, regular expressions will be precompiled.",
+            "B. In C++, bitwise operations are more efficient than arithmetic operations. Therefore, bitwise operations can be used to replace arithmetic operations in some scenarios.",
+            "C. In Python, while 1 executes more efficiently than while true. You are advised to use while true instead of while 1.",
+            "D. The overall architecture of A-Tune developed based on openEuler consists of three layers: intelligent decision-making, system profile, and interaction system."
+        ],
+        "answer": "C",
+        "explanation": "A: This statement is correct. In Java, when you use the \"Pattern\" and \"Matcher\" classes to process a regular expression, the regular expression is actually compiled into an internal data structure (usually a finite state machine) the first time it is used, so that subsequent matches can be executed more quickly. This compilation does not need to be explicitly called.\nB: This statement is correct. Bitwise operations (such as bitwise AND, OR, XOR, left shift, and right shift) are generally faster than arithmetic operations (such as addition, subtraction, multiplication, and division) because they operate directly on binary bits and do not require complex arithmetic logic. Therefore, using bitwise operations can significantly improve performance in scenarios where such operations need to be performed frequently.\nC: This statement is incorrect. In Python, \"True\" is a Boolean constant with a value of true. The number \"1\" is also interpreted as true in a Boolean context, as all non-zero numbers in Python are considered true. However, from a performance perspective, there is no difference in execution between \"while True\" and \"while 1\" because the Python interpreter creates a persistent Boolean value (\"True\") in both cases, and this value does not change with each iteration of the loop. Therefore, the performance difference is negligible. In addition, from a code readability perspective, \"while True\" is more intuitive as it directly expresses the intention that the loop will continue indefinitely.\nD: This statement is correct. Based on the description, this layered architecture is common in performance tuning tools because it allows the tools to address different problems at different layers and provides clear interfaces for users or other systems. This is mentioned in the official description or documentation of A-Tune.\nIn conclusion, the correct answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （16 Points）",
+        "question": "Which of the following statements about compiler optimization is false?",
+        "choices": [
+            "A. GCC 10 enables automatic vectorization optimization at the \"-O2\" optimization level to improve program performance.",
+            "B. GCC 10 enables constant propagation optimization at the \"-O2\" optimization level to improve program performance.",
+            "C. GCC 10 enables function inline optimization at the \"-O2\" optimization level to improve program performance.",
+            "D. GCC 10 enables partial redundancy elimination optimization at the \"-O2\" optimization level to improve program performance."
+        ],
+        "answer": "A",
+        "explanation": "A: While GCC does support automatic vectorization optimization, it is not clear whether it is enabled by default at the \"-O2\" level. Automatic vectorization is a complex optimization that may not be enabled in all cases, especially when there are data dependencies between iterations. Therefore, this statement is inaccurate.\nB: Constant propagation is a common optimization in GCC that aims to replace known constant values directly into appropriate places in the code to reduce runtime calculations. According to documentation and common behavior of GCC, the \"-O2\" level typically includes this kind of optimization. This statement is correct.\nC: Function inlining is an important optimization in GCC (and many other compilers), which can directly insert the code of small functions into the call site to reduce the overhead of function calls. According to documentation and common behavior of GCC, the \"-O2\" level typically includes this kind of optimization. This statement is correct.\nD: Partial redundancy elimination is a compiler optimization technique aimed at eliminating unnecessary repeated computations in code. This is also one of the common optimizations at various optimization levels in GCC. According to common behavior of GCC, this statement is correct.\nIn conclusion, the correct answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （16 Points）",
+        "question": "After openGauss is successfully installed, which of the following is the name of the database that can be connected by default?",
+        "choices": [
+            "A. postgres",
+            "B. opengauss",
+            "C. openGauss",
+            "D. Same as the installation username"
+        ],
+        "answer": "A",
+        "explanation": "A. After the database is installed, the database \"postgres\" is generated by default. When connecting to a database for the first time, you can connect to this database.\nB. After the installation is complete, there is no default database \"opengauss\".\nC. Same as option B, and there is no default database \"openGauss\".\nD. It is not mentioned that the name of the default database is the same as the installation username.\nIn conclusion, the answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （16 Points）",
+        "question": "Which of the following commands can be used to collect OS and log information to locate faults when openGauss is faulty?",
+        "choices": [
+            "A. gs_collector",
+            "B. gs_restore",
+            "C. gs_checkperf",
+            "D. gs_check"
+        ],
+        "answer": "A",
+        "explanation": "A. gs_collector is used to collect various openGauss information, including but not limited to OS logs and database run logs. The collected information is useful for fault locating and fault diagnosis. This tool can be used to collect DMS and DSS logs in the resource pool architecture, and to collect related configuration files and disk array information. For example, run the \"gs_collector --begin-time=\"...\" --end-time=\"...\"\" command to specify a time range for log collection. When openGauss is faulty or has performance issues, gs_collector can be used to collect related logs and information to locate the fault.\nB. gs_restore is used to restore the database from the backup. It is irrelevant to fault locating.\nC. gs_checkperf is used to check CPU usage, memory usage, I/O usage, SSD performance of openGauss database. Although it helps analyze the performance status of the system, it is not directly collect fault-related log information.\nD. If gs_check is a real command in openGauss, it may be related to system check or configuration verification, but it is not directly related to fault-related log collection.\nIn conclusion, the answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （16 Points）",
+        "question": "Which of the following statements about the NFS service permissions and user mapping is true?",
+        "choices": [
+            "A. \"no_root_squash\" maps the root user accessing from a client as the nfsnobody user on the NFS server.",
+            "B. \"no_root_squash\" grants only read permission on the NFS server to the root user accessing from a client.",
+            "C. \"root_squash\" maps the root user accessing from a client as the root user on the NFS server.",
+            "D. \"all_squash\" maps all client users who access the NFS server as anonymous users."
+        ],
+        "answer": "D",
+        "explanation": "A: This statement is incorrect. \"no_root_squash\" allows root users accessing from the client to have root privileges on the NFS server, instead of being mapped to the \"nfsnobody\" user.\nB: This statement is incorrect. no_root_squash not only grants read access but also grants all permissions on the NFS server to the \"root\" user accessing from the client.\nC: This statement is incorrect. \"root_squash\" maps the \"root\" user accessing from the client to an anonymous user instead of the \"root\" user on the NFS server.\nD: This statement is correct. Although \"all_squash\" is not directly mentioned in the question, its meaning can be inferred from the description. In NFS, there is no direct parameter called \"all_squash\". \"root_squash\" and \"no_root_squash\" are special settings for the \"root\" user. For non-root users, NFS typically maps them to an anonymous user (such as \"nfsnobody\"), which can be seen as a form of \"all_squash\" behavior, where all non-privileged users are treated as anonymous users.\nIn conclusion, the correct answer is D.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （16 Points）",
+        "question": "Which of the following is NOT a function provided by gs_om?",
+        "choices": [
+            "A. Start and stop the openGauss database.",
+            "B. Check the OS, control parameters, and disk configurations.",
+            "C. Generate static configuration files and update dynamic configuration files.",
+            "D. Display the help information and version number."
+        ],
+        "answer": "B",
+        "explanation": "A. This is a function of gs_om. Run the \"gs_om -t start\" and \"gs_om -t stop\" commands to start and stop openGauss.\nB. This is not a function of gs_om. This is a function of gs_checkos. It is used to check whether OS parameters are properly set, including system control parameters, I/O configurations, network configurations, and THP services.\nC. This is a function of gs_om. It uses gs_om to generate static configuration files and update dynamic configuration files.\nD. This is also a function of command-line tools, most of which support displaying help information and version numbers.\nIn conclusion, the answer is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （16 Points）",
+        "question": "Which of the following statements about row-level security is false?",
+        "choices": [
+            "A. Row-level security policies can be applied only to SELECT, UPDATE, INSERT, and DELETE operations and cannot be applied to MERGE operations.",
+            "B. Row-level security policies cannot be defined for views.",
+            "C. The initial user and system administrators are not affected by row-level security policies.",
+            "D. If a dynamic data masking policy is configured for a table with row-level security policies defined, grant the trigger permission of the table to other users with caution to prevent other users from bypassing the masking policy."
+        ],
+        "answer": "A",
+        "explanation": "A. This is false. Row-level security policies can be applied only to SELECT, UPDATE, and DELETE operations and cannot be applied to INSERT and MERGE operations.\nB. This is true. Row-level security policies cannot be defined for views.\nC. This is true.  The initial user and system administrators are not affected by row-level security policies.\nD. This statement focuses on the relationship between dynamic data masking policies and row-level security policies, and mentions the permissions of triggers. However, it is not directly associated with the key features of row-level security, but it is a reasonable suggestion for permission and policy configuration. Although this statement is not directly related to the row-level security policy, it is true about row-level security features.\nIn conclusion, the answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （16 Points）",
+        "question": "Which of the following commands can be used to query the list of files provided by a software package?",
+        "choices": [
+            "A. rpm -Uvh <package_name>",
+            "B. rpm -ivh <package_name>",
+            "C. rpm -ql <package_name>",
+            "D. rpm -qf <package_name>"
+        ],
+        "answer": "C",
+        "explanation": "A: This command attempts to upgrade a package to the latest version, but does not actually perform the installation or upgrade operation. This is because the \"-h\" option is used to display the installation progress. Without the \"-i\" or \"-U\" option, the command will not execute the operation when used alone with \"-h\". It is not used to query the file list.\nB: This command installs a software package and displays the installation progress. The \"-i\" option indicates installation, the \"-v\" option indicates verbose output, and the \"-h\" option displays the installation progress. It is also not used to query the file list.\nC: This command lists all files installed by the specified software package \"<package_name>\".\nD: This command queries the software package to which a file belongs. It is not used to list all files in a software package, but to reversely query the software package to which a file belongs.\nIn conclusion, the correct answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （16 Points）",
+        "question": "Which of the following tools can be used to run the same command on multiple database nodes?",
+        "choices": [
+            "A. gs_guc",
+            "B. gs_check",
+            "C. gs_ssh",
+            "D. gs_om"
+        ],
+        "answer": "C",
+        "explanation": "A. This tool is used to set parameters in the openGauss configuration files (such as \"postgresql.conf\" and \"pg_hba.conf\"). It does not support to execute commands in parallel on multiple database nodes.\nB. This tool is used to check the openGauss operating environment, OS environment, network environment, and database operating environment. Although it may involve multiple nodes, it is not used to execute the same command in parallel on multiple nodes.\nC. This tool allows users to execute commands on a central node and execute them in parallel on multiple remote nodes. In the openGauss environment, gs_ssh may be used to execute the same command or script across multiple database nodes. Therefore, this tool can execute the same command on multiple database nodes.\nD. This tool is used to maintain the openGauss cluster, including starting, stopping, and rebooting the cluster. Although it involves multiple database nodes, it is mainly used for managing cluster-level tasks rather than executing the same commands in parallel on multiple nodes.\nIn conclusion, the answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （16 Points）",
+        "question": "Which of the following commands can be used to uninstall the openGauss database and delete the data directory?",
+        "choices": [
+            "A. gs_uninstall",
+            "B. gs_preinstall",
+            "C. gs_uninstall --delete-data",
+            "D. gs_postuninstall"
+        ],
+        "answer": "C",
+        "explanation": "A. This command can start the uninstallation process, but does not specify the option to delete the data directory.\nB. This command is used to prepare the cluster environment and is irrelevant to the uninstallation of openGauss.\nC. This command can both uninstall openGauss and delete the data directory. \"--delete-data\" deletes data files. It is the correct command for uninstalling openGauss and deleting the data directory.\nD. This command is used to clear environment information after openGauss database is uninstalled. It does not uninstall the openGauss database or directly delete the data directory.\nIn conclusion, the answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （16 Points）",
+        "question": "Which of the following statements about Ansible functional modules is true?",
+        "choices": [
+            "A. The \"copy\" module can pull files from a remote node to the control node.",
+            "B. The \"raw\", \"shell\", and \"command\" modules can call a command or an executable file on the target host, but only the \"shell\" module supports pipes.",
+            "C. The \"fetch\" module can only pull files and cannot pull directories.",
+            "D. When the script module is used to run scripts remotely, the corresponding scripts must exist on the remote host."
+        ],
+        "answer": "C",
+        "explanation": "A: This statement is incorrect. The \"copy\" module of Ansible copies files from a control node to a remote node, not pulling files from a remote node to a control node. The function of pulling files is provided by the \"fetch\" module.\nB: This statement is inaccurate. The \"raw\", \"shell\", and \"command\" modules can call commands or executable files on the target host. However, in terms of pipeline support, both the \"shell\" and \"command\" modules can handle pipelines in certain cases (although the \"command\" module has limitations when dealing with special characters), not just the \"shell\" module.\nC: This statement is correct. The \"fetch\" module of Ansible is used to pull files from a remote node to a control node, but cannot directly fetch directories. If you want to fetch a directory, you generally need to use another module (such as \"archive\") to archive the directory on the remote node, then use the \"fetch\" module to pull the archived file.\nD: This statement is incorrect. When a script is executed remotely using the \"script\" module of Ansible, the script file actually resides on a control node. Ansible copies the script file to a remote node for execution. The script file does not need to exist on the remote node.\nIn conclusion, the correct answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （16 Points）",
+        "question": "How to defend against directory traversal vulnerabilities in the Apache configuration file?",
+        "choices": [
+            "A. Add a hyphen (-) before Indexes in Options Indexes FollowSymLinks.",
+            "B. Add a plus sign (+) before Indexes in Options Indexes FollowSymLinks.",
+            "C. Add an asterisk (*) before Indexes in Options Indexes FollowSymLinks.",
+            "D. Add a slash (/) before Indexes in Options Indexes FollowSymLinks."
+        ],
+        "answer": "A",
+        "explanation": "A: This option is correct. By changing \"Options Indexes FollowSymLinks\" to \"Options -Indexes FollowSymLinks\", you are actually disabling the directory listing function (that is, disabling \"Indexes\"), which helps prevent potential directory traversal attacks. Attackers often exploit directory listing to view the file structure on a server and launch further attacks.\nB: This option is incorrect. Adding a plus sign actually enables the function of \"Indexes\" rather than disables it.\nC: This option is incorrect. The \"Options\" directive of Apache does not support adding an asterisk (*) before \"Indexes\" to modify its functionality.\nD: This option is also incorrect. The slash (/) does not have any special meaning in the context of the \"Options\" directive and cannot be used to modify the \"Indexes\" functionality.\nIn conclusion, the correct answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （16 Points）",
+        "question": "Which of the following statements about Salt is false?",
+        "choices": [
+            "A. Salt sends remote commands over port 4505.",
+            "B. The SLS files of Salt can be indented only by spaces.",
+            "C. When a minion of Salt is started for the first time, \"minion.pem\" is automatically generated in the path specified in \"/etc/salt/minion\".",
+            "D. If the value of \"acceptance_wait_time_max\" in the \"salt-master\" file of Salt is 0, reconnection upon failure is not accepted."
+        ],
+        "answer": "D",
+        "explanation": "A: This statement is correct. Salt master uses port 4505 by default to listen for connection requests from minions and send remote commands.\nB: This statement is correct. SLS (Salt State) files are written in YAML, which requires spaces instead of tabs for indentation.\nC: This statement is correct. When a Salt minion starts for the first time, it generates its key pair, including \"minion.pem\", in the path specified in the minion configuration file.\nD: This statement is incorrect. In fact:\n   - The \"acceptance_wait_time_max\" parameter defines the maximum time Salt master waits for a minion key to be accepted.\n   - Setting it to 0 does not mean rejecting reconnections, but rather indicates an infinite wait.\n   - This parameter mainly affects the initial connection process, not reconnection after a failure.\n   - Salt has other mechanisms to handle connection failures and reconnections, such as \"auth_tries\" and \"auth_timeout\".\nIn conclusion, the correct answer is D.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （16 Points）",
+        "question": "Which of the following location rules of Nginx is incorrect?",
+        "choices": [
+            "A. location /",
+            "B. location =/",
+            "C. location /~\\\\\\\\.(txt|md)$",
+            "D. location =/index.html"
+        ],
+        "answer": "C",
+        "explanation": "A: This rule is correct. This rule is used to match any request because it is a prefix match and does not specify any specific path.\nB: This rule is correct. The equal sign (=) indicates an exact match, so this rule will only match requests with a URI of \"/\".\nC: This rule is incorrect. In Nginx location rules, the symbols used for regular expressions are \"~\" (case-sensitive) and \"~*\" (case-insensitive). In addition, a backslash (\\) is typically used as an escape character in Nginx configuration files. However, in this example, it is used to escape itself, which is unnecessary and makes the rule useless because there is nothing to escape after it. A correct regular expression might look like \"location ~* \\.(txt|md)$\", which will match any URI ending in \".txt\" or \".md\".\nD: This rule is correct. The equal sign (=) indicates an exact match, so this rule will only match requests with a URI of \"/index.html\".\nIn conclusion, the correct answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （16 Points）",
+        "question": "Which of the following statements about GlusterFS volume types is false?",
+        "choices": [
+            "A. At least four servers are required for creating a distributed dispersed volume.",
+            "B. Distributed volumes divide files into bricks, improving access efficiency.",
+            "C. Distributed volumes do not have redundancy.",
+            "D. Data of a replicated volume is stored on multiple nodes simultaneously. Even if one of the nodes fails, data is still available."
+        ],
+        "answer": "B",
+        "explanation": "A: This statement is correct. Dispersed Volume is a volume type based on erasure codes. It requires a certain number of bricks and redundancy level to ensure data reliability.\nB: This statement is not accurate. Distributed volumes actually use hash algorithms to randomly distribute files across bricks, rather than dividing files into bricks. They are mainly for scaling storage, not directly for improving access efficiency. Therefore, this statement is incorrect.\nC: This statement is correct. Distributed volumes are primarily for expanding storage, and they do not provide redundancy unless implemented through other hardware or software layers.\nD: This statement is correct. Replicated volumes indeed synchronize files across multiple bricks, providing high availability and fault tolerance.\nIn conclusion, the correct answer is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （16 Points）",
+        "question": "In the openGauss database, which of the following sets of operators is usually used as scan nodes?",
+        "choices": [
+            "A. HashJoin, MergeJoin, and NestedLoopJoin",
+            "B. Limit, Offset, and Sort",
+            "C. SeqScan, IndexScan, and SubQueryScan",
+            "D. Aggregate, Group, and Distinct"
+        ],
+        "answer": "C",
+        "explanation": "A. They are join operators used to process table associations. Although they play a key role in a query, they are usually not seen as simply \"scan nodes\". These operators involve join operations between tables, rather than directly scanning data from tables or indexes.\nB. These operators are used to limit the number of result sets, skip some results, and sort result sets, but they are not used to scan data directly.\nC. These operators comply with the definition of \"scan nodes\".\n- SeqScan: indicates sequential scan, that is, scanning is performed based on the physical storage sequence of data in the table.\n- IndexScan: indicates index scan. Indexes are used to locate data, improving scanning efficiency.\n- SubQueryScan: processes scan operations in subqueries.\nThese nodes are used to scan data from data tables or indexes.\nD. These operators are for data aggregation, grouping, and deduplication. They are located after the scan nodes to process the scanned data.\nIn conclusion, the answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 20 （16 Points）",
+        "question": "Which of the following statements is false about gs_dump and gs_dumpall?",
+        "choices": [
+            "A. Both gs_dump and gs_dumpall can be used to export database information.",
+            "B. gs_dumpall can export all complete and consistent data from the openGauss database.",
+            "C. When gs_dump is used to export database data, users can still access the database.",
+            "D. The database cannot be accessed when gs_dumpall is exporting data from the database."
+        ],
+        "answer": "D",
+        "explanation": "A. This is true. gs_dump is used to export certain database information. Users can export a database or its objects (such as schemas, tables, and views). gs_dumpall is used to export all database information, including data of the default database \"postgres\", user-defined databases, and all common global objects of openGauss database.\nB. This is true. gs_dumpall is used to export all complete and consistent data from openGauss database.\nC. This is true. When gs_dump is used to export data, other users can still access (read and write) the openGauss database. gs_dumpall can export complete and consistent data.\nD. This is false. There is not a direct description that the database cannot be accessed when gs_dumpall was used to export data. In fact, it is similar to gs_dump. When gs_dumpall is used to export data, other users can still access (read or write) the database.\nIn conclusion, the answer is D.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 21 （16 Points）",
+        "question": "Assume that there are eight processes in an openEuler system. A resource allows three processes to enter their critical sections at the same time. Which of the following is the possible value range of semaphore s and the maximum number of processes in the waiting state?",
+        "choices": [
+            "A. -5<s<3; 5",
+            "B. -5<s<8; 3",
+            "C. -5<s<3; 3",
+            "D. -5<s<8; 5"
+        ],
+        "answer": "A",
+        "explanation": "There are a total of eight processes. The resource allows three processes to enter its critical section simultaneously. We use a semaphore (s) to manage the processes.\nSemaphore value range: The initial value of the semaphore should be 3 (as initially three processes can enter), and the lower limit of the semaphore will be -5 because, in the worst-case scenario, all eight processes are trying to enter, out of which three are allowed, and the remaining five are waiting (8 - 3 = 5). Therefore, the range is indeed -5 < s ≤ 3.\nMaximum number of waiting processes: As explained above, the maximum number of waiting processes is 5.\nA: Both of the options are correct.\nB: The semaphore value range is incorrect (the upper limit should be 3, not 8), and the maximum number of waiting processes is also incorrect.\nC: The semaphore value range is correct, but the maximum number of waiting processes is incorrect.\nD: The semaphore value range is incorrect (the upper limit should be 3, not 8), but the maximum number of waiting processes is correct.\nIn conclusion, the correct answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 22 （16 Points）",
+        "question": "When the gs_checkperf tool is used to check system performance, which of the following can be viewed only by user root?",
+        "choices": [
+            "A. openGauss level",
+            "B. Host level",
+            "C. Session/Process level",
+            "D. SSD performance"
+        ],
+        "answer": "D",
+        "explanation": "A. It includes the host CPU usage, openGauss CPU usage, and I/O usage. However, it does not mean that it is only available to the \"root\" user. Users who install openGauss database can also perform the corresponding check operations.\nB. Host level is similar to the openGauss level. It also includes checks of CPU, memory, and I/O usage. It is not only available to the \"root\" user.\nC. It involves the performance data of specific database sessions and processes. It is also not only available to the root user.\nD. Users need to check the SSD performance as the \"root\" user. This is because in some systems, the underlying check of SSD performance may require the root permission to access related hardware information or execute specific system commands.\nIn conclusion, the answer is D.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 23 （16 Points）",
+        "question": "Which of the following items must be checked by the openGauss installation user when the gs_checkperf tool is used?",
+        "choices": [
+            "A. SSD performance",
+            "B. openGauss performance",
+            "C. CPU usage",
+            "D. Memory usage"
+        ],
+        "answer": "B",
+        "explanation": "A. This option involves the performance of storage media, which affects the performance of databases. However, gs_checkperf focuses on the performance of database services rather than the performance of storage media.\nB. This is true. gs_checkperf is used to check the performance of the openGauss database. It provides metrics to help users learn about the database performance.\nC. CPU usage is one of the important metrics for measuring system performance, but it is not only related to the performance of openGauss. gs_checkperf aims to check the performance of openGauss. Therefore, CPU usage may not be the key check item of gs_checkperf.\nD. Memory usage is also an important metric for measuring system performance, but it is not a major concern of gs_checkperf. Although memory usage affects database performance, this tool focuses more on performance check on database services.\nIn conclusion, the answer is B.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 24 （16 Points）",
+        "question": "Which of the following statements about openGauss materialized views is false?",
+        "choices": [
+            "A. Materialized views support UNION ALL for querying multiple single tables.",
+            "B. Indexes can be created on materialized views.",
+            "C. Materialized views support both row-store and column-store tables.",
+            "D. Materialized views do not support the add, delete, or modify operation but only query statements."
+        ],
+        "answer": "C",
+        "explanation": "A. Currently, base table scanning statements or UNION ALL can be used to create materialized views. Therefore, A is true. Materialized views support UNION ALL for querying multiple single tables.\nB. In relational databases, materialized views typically have attributes similar to those of tables, including support for indexes. It can be inferred that indexes can be created on materialized views. Therefore, B is true.\nC. openGauss supports row-store engines, column-store engines, and in-memory engines. However, this does not indicate that materialized views support both storage types. Considering that a materialized view is actually a materialized query result, it may depend on the storage type of base tables, but it may not directly support all types of storage engines. Therefore, C is false.\nD. A materialized view is similar to CREATE TABLE AS, but mainly provides a snapshot for the query result. If the base table data changes, users need to run the \"REFRESH\" command to synchronize the materialized view with the base table. This means that the materialized view itself does not support CREATE, DELETE, or MODIFY operations, but only supports query operations. Therefore, D is true.\nIn conclusion, the answer is C.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 25 （16 Points）",
+        "question": "Which of the following is a client command tool provided by openGauss?",
+        "choices": [
+            "A. gsql",
+            "B. gs_check",
+            "C. gs_dump",
+            "D. gs_guc"
+        ],
+        "answer": "A",
+        "explanation": "A. gsql is a database connection tool provided by openGauss and runs in the command-line interface (CLI). Users can use gsql to connect to a server and perform O&M on the server. In addition to basic functions for database operations (such as running SQL statements), gsql provides meta-commands. Administrators can run meta-commands to check database objects, query caches, format SQL output results.\nB. gs_check is not a command-line tool. It helps users fully check openGauss runtime, OS, network, and database operation environments.\nC. gs_dump is a tool used by openGauss to export database information. Although it can be used for database management, it is often used to export and back up data. It is not a command-line tool.\nD. gs_guc is a tool used to set or display openGauss configuration parameters and mainly used for configuration management on the server. It is not a command-line tool.\nIn conclusion, the answer is A.",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 26 （18 Points）",
+        "question": "The gs_check tool that openGauss provides can check the database health status. Which of the following statements about the precautions for using the gs_check tool are true?",
+        "choices": [
+            "A. Only the user root is authorized to check new nodes. Other checks can only be performed by user omm.",
+            "B. The parameter -i or -e must be specified. -i is used to specify a single item to be checked, and -e is used to specify a scenario where multiple items will be checked.",
+            "C. You can run --skip-root-items to skip root check items to avoid switching to user root and entering the password of user root.",
+            "D. When checking the consistency between new and existing nodes, run the gs_check command on an existing node and specify the --hosts parameter. The IP address of the new node needs to be written into the hosts file."
+        ],
+        "answer": "ABCD",
+        "explanation": "A. This is true. Only the \"root\" user is authorized to check new nodes. Other checks must be performed by the \"omm\" user.\nB. This is true. The parameter \"-i\" or \"-e\" is required. \"-i\" is used to check a specific item and \"-e\" is used to check multiple items in a specific scenario.\nC. This is true. You can run \"--skip-root-items\" to skip root items.\nD. This is true. To check the consistency between the new node and existing nodes, run the \"gs_check\" command on an existing node and specify the \"--hosts\" parameter. The IP address of the new node needs to be written into the hosts file.\nIn conclusion, the answers are A, B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 27 （18 Points）",
+        "question": "Which of the following statements about flashback are true?",
+        "choices": [
+            "A. Flashback query enables you to query a snapshot of a table at a certain time point in the past. This feature can view and logically rebuild damaged data deleted or modified by mistake.",
+            "B. Flashback table enables you to restore a table to a specific point in time. When only one table or a group of tables are logically damaged instead of the entire database, this feature can quickly restore the table data.",
+            "C. Flashback DROP enables you to restore tables dropped by mistake and their auxiliary structures, such as indexes and table constraints, from the recycle bin.",
+            "D. Flashback TRUNCATE enables you to restore tables truncated by mistake and restore the physical data of the truncated tables and indexes from the recycle bin."
+        ],
+        "answer": "ABCD",
+        "explanation": "A. This is true. Flashback query enables you to query data of a table as it existed at certain time point in the past or at a particular SCN. It reads data from the rollback segment within a certain period after operations were preformed on the table. It allows you to view and logically reconstruct data that was mistakenly deleted or modified due to errors.\nB. This is true. Using a flashback table, you can restore a table to a specific point of time or a particular SCN. When only one table or a group of tables are logically damaged instead of the entire database, this feature can quickly restore the table data.\nC. This is true. Flashback DROP can restore a deleted table and its indexes to the status before the deletion, but the index names cannot be restored to the status before the deletion. Although this concept does not mention that this feature can restore a deleted table and its indexes \"from the recycle bin\", the recycle bin is a relevant part of Flashback DROP.\nD. This is true. Although Flashback TRUNCATE is not a standard function name in mainstream database management systems, such as Oracle database and PostgreSQL database, the flashback technology does include the function of restoring misoperations.\nIn conclusion, the answers are A, B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 28 （18 Points）",
+        "question": "Which of the following statements about the secGear technical architecture are false?",
+        "choices": [
+            "A. The vertical federated learning feature of the base layer of secGear cannot shield TEE differences.",
+            "B. The service layer of secGear provides the switchless feature, which is implemented based on memory sharing.",
+            "C. The middle layer of secGear provides the security channel feature as libraries, including the client and server host libraries.",
+            "D. The client and server host of the secure channel feature provided by the middle layer of the secGear are invoked by the client and server CA of the service program respectively."
+        ],
+        "answer": "ABC",
+        "explanation": "A: This statement is incorrect. The vertical federated learning feature in the base layer of secGear aims to shield trusted execution environment (TEE) differences and offer unified interfaces and services to developers.\nB: This statement is incorrect. The switchless feature of secGear is typically implemented based on security mechanisms like TEEs, not just simple memory sharing. Memory sharing alone cannot guarantee the security of the switchless feature. A TEE is essential for ensuring its security.\nC: This statement is inaccurate. The middle layer of secGear does provide the secure channel feature as libraries, which include client and server-side implementations for establishing secure communication channels. Client-server interactions usually involve multiple components and interactions, not just a single library.\nD: This statement is correct. The client and server libraries of the secure channel feature provided by the middle layer of secGear are called by the client application (CA) and server application of the service program to establish secure communication.\nIn conclusion, the correct answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 29 （18 Points）",
+        "question": "Which of the following statements about the procedure for the SQL engine to execute SQL statements are true?",
+        "choices": [
+            "A. Syntax & lexical parsing: converts the formatted structure into objects that can be recognized by the database.",
+            "B. Query rewriting: converts the output of semantic parsing into an equivalent structure that is suitable for query execution.",
+            "C. Query optimization: plans the execution mode of SQL statements (that is, the execution plan) based on the output of query rewriting and the internal database statistics.",
+            "D. Query execution: executes SQL query statements based on the execution path planned in query optimization."
+        ],
+        "answer": "BCD",
+        "explanation": "A. This is false. Syntax & lexical parsing converts SQL statements into abstract syntax trees (ASTs) or other internal representation forms, rather than \"formatted structures\". The internal representation form is an object that can be identified by the database system. However, \"formatted structure\" is usually not used to describe the initial state of an SQL statement.\nB. This is true. Query rewriting is a process that may modify queries to optimize performance, implement security policies, or meet other requirements. This process is usually performed after semantic analysis, and it is true that the results of semantic analysis are converted into equivalent structures suitable for query execution.\nC. This is true. Query optimization is the core part of the database management system. It determines the execution mode (execution plan) of SQL statements based on query rewriting results and internal database statistics.\nD. This is true. Query execution executes SQL query statements based on the execution path planned in query optimization.\nIn conclusion, the answers are B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 30 （18 Points）",
+        "question": "Which of the following statements are true about configuring disks to meet openGauss database requirements?",
+        "choices": [
+            "A. At least 1 GB is required to install openGauss applications.",
+            "B. Each host requires at least 300 MB for metadata storage.",
+            "C. At least 30% of the remaining space must be reserved for data storage.",
+            "D. You are advised to configure RAID 1 as the system disk and RAID 5 as the data disk and plan four groups of RAID 5 data disks for installing openGauss."
+        ],
+        "answer": "ABD",
+        "explanation": "A. This is true. At least 1 GB is required to install openGauss applications.\nB. This is true. About 300 MB is used for each host to store metadata.\nC. This is false. \"30%\" is incorrect. Actually, it is recommended that \"at least 70% of the remaining space must be reserved for data storage\". .\nD. This is true. \"You are advised to configure RAID 1 as the system disk and RAID 5 as the data disk and plan four groups of RAID 5 data disks for installing openGauss.\"\nIn conclusion, the answers are A, B, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 31 （18 Points）",
+        "question": "Which of the following statements about openGauss logical decoding are false?",
+        "choices": [
+            "A. The logical decoding function generates logical logs by decoding Xlogs.",
+            "B. Logical decoding is supported on the cascaded standby node.",
+            "C. After the database where a logical replication slot resides is deleted, the replication slot becomes unavailable and needs to be manually deleted.",
+            "D. A replication slot can be used simultaneously by the primary and standby modes or multiple standby nodes for decoding."
+        ],
+        "answer": "BD",
+        "explanation": "A. This is true. openGauss database provides logical decoding to generate logical logs by decoding Xlogs.\nB. This is false. Logical decoding is not supported on the cascaded standby node.\nC. This is true. According to the concept of logical replication slots, when a database is deleted, the related replication slots usually become unavailable. However, the specific system configuration and management policy decide whether the database needs to be manually deleted. This statement highlights a possible scenario.\nD. This is false. A logical replication slot represents a stream of changes that can be re-executed in other databases in the order they were generated in the original database. It means that a replication slot is used by a particular primary-standby pair or stream, rather than being used by primary and multiple standby modes or nodes at the same time.\nIn conclusion, the answers are B and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 32 （18 Points）",
+        "question": "Which of the following statements about x2openEuler are true?",
+        "choices": [
+            "A. The migration tool for openEuler is x2openEuler.",
+            "B. The x2openEuler architecture consists of the server and the node to be upgraded.",
+            "C. x2openEuler supports simultaneous OS upgrade of 1,000 hosts.",
+            "D. x2openEuler supports in-place migration."
+        ],
+        "answer": "ABCD",
+        "explanation": "A: True. x2openEuler is indeed a migration tool for migrating a source OS to openEuler.\nB: True. x2openEuler follows a client-server architecture. The server refers to the machine where x2openEuler is installed, and the client is the machine running the OS that requires kernel upgrade, that is, the node to be upgraded.\nC: True. x2openEuler is capable of upgrading 1,000 hosts simultaneously.\nD: True. The phrase \"end-to-end imperceptible migration\" in the context of x2openEuler refers to in-place migration. That is, the OS is upgraded to another version or migrated to another OS while preserving the original system configurations and data.\nIn conclusion, the correct answers are A, B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 33 （18 Points）",
+        "question": "Which of the following statements about Keepalived configuration are false?",
+        "choices": [
+            "A. Before configuring the health check script, check the server availability. If the returned status is 0, the server is unavailable and traffic needs to be forwarded to other nodes.",
+            "B. The \"nopreempt\" configuration option can be set on the master node to prevent automatic switchover when the master node is available again.",
+            "C. If \"lb_kind\" is set to \"DR\" (direct routing), the \"lc\" or \"wlc\" polling policy can be used.",
+            "D. lvs_id is the ID of the load balancer. The value of \"lvs_id\" must be unique on a network."
+        ],
+        "answer": "ABC",
+        "explanation": "A: This statement is incorrect. When you configure the health check script, if the status code returned by the script is 0, the server is available. In Unix and Linux OSs, an exit status code of 0 usually indicates success, and a non-zero value indicates an error or unavailability. Therefore, if the health check script returns 0, traffic does not need to be forwarded to other nodes.\nB: This statement is incorrect. The \"nopreempt\" option cannot be directly set on the master node to prevent automatic active/standby switchover. The \"nopreempt\" option is intended for the BACKUP node, allowing a lower-priority node to retain its MASTER status without being automatically preempted even if a higher-priority node becomes available. To implement a similar function, all nodes need to be set as BACKUP, and the \"nopreempt\" option should be configured on the required nodes.\nC: This statement is inaccurate. It does not directly relate to Keepalived configuration errors but rather to the configuration in the LVS scheduler (such as \"iproute2\"). This can be misleading in understanding LVS configuration.\nD: This statement is correct. In Keepalived configuration, \"lvs_id\" serves as a unique identifier for load balancer instances. Within a network, the \"lvs_id\" value must be unique to prevent conflicts between different load balancer instances.\nIn conclusion, the correct answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 34 （18 Points）",
+        "question": "Which of the following statements about memory management in Linux are true?",
+        "choices": [
+            "A. \"kmalloc\" allocates kernel-level memory.",
+            "B. \"kmalloc\" allocates user-level memory.",
+            "C. \"vmalloc\" allocates kernel-level memory.",
+            "D. \"vmalloc\" allocates user-level memory."
+        ],
+        "answer": "AC",
+        "explanation": "A: The \"kmalloc\" function is used to allocate memory in the Linux kernel. It is primarily used for kernel space requirements like kernel modules and device drivers. This memory is allocated directly from the memory pool of the kernel, so it is kernel-level memory. This statement is correct.\nB: \"kmalloc\" allocates memory at the kernel level, not at the user level. This statement is incorrect.\nC: The \"vmalloc\" function is also used to allocate memory in the Linux kernel, but it is different from \"kmalloc\". The memory area allocated by \"vmalloc\" has contiguous virtual addresses but may have non-contiguous physical addresses. It is mainly used to allocate large chunks of memory because it incurs relatively high overhead and is not suitable for small memory allocation. Similarly, this is kernel-level memory. This statement is correct.\nD: \"vmalloc\" also allocates memory at the kernel level, not at the user level. This statement is incorrect.\nIn conclusion, the correct answers are A and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 35 （18 Points）",
+        "question": "Which of the following statements about the openGauss resource pool are true?",
+        "choices": [
+            "A. The primary and standby nodes share one copy of data, significantly reducing the storage capacity in traditional HA deployment mode.",
+            "B. Log replication is not required between the primary and standby nodes. Instead, page swap is implemented between the primary and standby nodes, and real-time consistent read is supported on standby nodes.",
+            "C. By default, the primary and standby nodes swap pages in real time through the TCP network.",
+            "D. To reduce the page swap latency, you can use the OCK RDMA dynamic library to accelerate the real-time consistency performance of the standby nodes."
+        ],
+        "answer": "ABCD",
+        "explanation": "A. This is true. In the resource pools of openGauss database, the primary and standby nodes share one copy of data, which significantly reduces the storage capacity in the traditional HA deployment mode. The primary and standby nodes share storage resources, so you do not need to configure independent storage space for each node, which saves storage resources. \nB. This is true. In the resource pooling architecture of openGauss database, log replication is no longer required between the primary and standby nodes. Data consistency is ensured through page swapping between the primary and standby nodes, and the standby node supports real-time read consistency. It uses the Distributed Memory Service (DMS) component. DMS allows memory pages to be shared between the primary and standby nodes in real time, realizing the real-time read consistency. \nC. This is true. By default, the primary and standby nodes swap pages through the TCP network. However, to reduce the page swap latency, openGauss database also uses the Remote Direct Memory Access (RDMA) technology to accelerate the page swap process, but this requires additional hardware and software. \nD. This is true. To reduce the page swap latency and improve the real-time read consistency of the standby node, you can use the OCK RDMA dynamic library to accelerate page swapping between the primary and standby nodes. RDMA allows data to be directly transmitted between memories without the intervention of the OS or CPU, significantly reducing the transmission latency. \nIn conclusion, the answers are A, B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 36 （18 Points）",
+        "question": "Which of the following statements about HAProxy configuration are false?",
+        "choices": [
+            "A. Most Challenge Collapsar (CC) attacks can be defended against through related configurations.",
+            "B. The names in the ACLs are case-insensitive.",
+            "C. When acting as a layer 7 proxy, HAProxy can analyze and modify requests.",
+            "D. When acting as a layer 4 proxy, HAProxy can perform intelligent forwarding."
+        ],
+        "answer": "ABD",
+        "explanation": "A: This statement is incorrect. HAProxy is a load balancer and reverse proxy tool used for processing network traffic and load balancing. Challenge Collapsar (CC) attacks are a type of application-layer denial-of-service (DoS) attack that utilizes a large number of seemingly legitimate requests to exhaust resources of the target server. While HAProxy configurations can help optimize server performance, they do not directly provide protection against CC attacks. Typically, defending against CC attacks requires a combination of measures, including firewalls, IP access frequency limitations, and verification codes.\nB: This statement is incorrect. ACL names are case-sensitive and can only contain uppercase and lowercase letters, numbers, hyphens (-), underscores (_), periods (.), and colons (:). For example, \"my_acl\" and \"My_Acl\" represent distinct ACLs.\nC: This statement is correct. When acting as a layer 7 proxy, HAProxy analyzes the protocol and can control it by allowing, denying, swapping, adding, modifying, or deleting specified content within requests or responses.\nD: This statement is incorrect and vague. When acting as a layer 4 proxy, HAProxy primarily handles TCP traffic and can forward traffic based on configurations. However, the term \"intelligent forwarding\" implies a more intelligent decision-making process, such as making forwarding decisions based on application layer information, which is usually a feature of layer 7 proxies.\nIn conclusion, the correct answers are A, B, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 37 （18 Points）",
+        "question": "In a typical LVS cluster, which of the following modes support the front-end server (FS)?",
+        "choices": [
+            "A. VRF",
+            "B. DR",
+            "C. PR",
+            "D. NF"
+        ],
+        "answer": "BCD",
+        "explanation": "A: This is not a standard mode of LVS clusters. Virtual routing and forwarding (VRF) is usually used to simulate multiple independent routing and forwarding instances on a single router and is not directly related to the front-end server (FS) role in LVS clusters.\nB: This is a mode of LVS clusters, that is, the direct routing (DR) mode. In DR mode, front-end schedulers (also called directors) are responsible for receiving client requests and selecting a back-end real server to handle each request based on the load balancing algorithm. However, response packets are directly returned to the clients by the back-end real servers, instead of being sent to the front-end schedulers and then forwarded to the clients. Therefore, the DR mode supports FSs as load balancers and schedulers.\nC: This is a load balancing mode in LVS clusters, implemented using the IP Virtual Server (IPVS) kernel module. In the persistent routing (PR) mode, LVS clusters use persistent connections to handle client requests. That is, when the connection of a client is assigned to a backend server, subsequent requests of the client will continue to be directed to the same server to maintain connection persistence.\nD: This is another load balancing mode in LVS clusters that uses Netfilter/iptables to forward and balance packets. In the network full NAT (NF) mode, LVS clusters modify the destination address of packets to distribute them to backend servers, implementing load balancing.\nIn conclusion, the correct answers are B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 38 （18 Points）",
+        "question": "Which of the following statements about the performance monitoring tools are true?",
+        "choices": [
+            "A. The total CPU usage statistics displayed by \"top\" does not include the vCPU time used by the OS.",
+            "B. \"perf\" records the consumption of a function by adding statistics code to the function.",
+            "C. sar obtains a large amount of data by continuously sampling the system, analyzes the sampled data, and saves the data and analysis results to files. The load of \"sar\" is low.",
+            "D. \"mpstat\" is used to display the status of each available CPU in a multi-CPU environment."
+        ],
+        "answer": "CD",
+        "explanation": "A: This statement is inaccurate. In Linux, the \"top\" command is used to dynamically monitor the system resource usage, including the CPU usage. It typically shows the overall CPU usage of the system, including time spent in the user space, kernel space, and waiting for I/O. This usually includes vCPU time used by the OS if the system supports virtualization technology.\nB: This statement is inaccurate. The \"perf\" tool is used to analyze program performance in terms of CPU, memory, cache, and more. When running in sampling mode, \"perf\" samples events at a specified frequency, recording performance metrics (such as CPU usage, process ID, and running stack) each time a sample is taken. However, this does not mean that \"perf\" records function consumption by adding statistical code. It primarily obtains performance data by sampling the system or process status.\nC: This statement is correct. \"sar\" (System Activity Reporter) is a tool used to collect, report, and save system activity information. It does gather a large amount of data through continuous system sampling and can save this data and analysis results to files. Compared to real-time performance analysis tools like \"top\" or \"vmstat\", \"sar\" typically has a smaller impact on the system when collecting data.\nD: This statement is correct. \"mpstat\" is used to display the status of each available CPU in a multi-CPU environment. It can display various CPU usage statistics, such as user space CPU usage, kernel space CPU usage, idle time, and can provide reports for each CPU or the entire system.\nIn conclusion, the correct answers are C and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 39 （18 Points）",
+        "question": "When a host accesses domain name www.huawei.com, how many DNS queries may be performed to resolve the domain name in iterative query mode?",
+        "choices": [
+            "A. 0",
+            "B. 2",
+            "C. 4",
+            "D. 6"
+        ],
+        "answer": "ABC",
+        "explanation": "In iterative query mode, when a host accesses domain name \"www.huawei.com\", the number of DNS queries depends on the level of domain resolution and cache situation.\nThe host first sends a query request to the locally configured name server (usually provided by the ISP) to query the IP address of \"www.huawei.com\". If the local name server has a cached record of \"www.huawei.com\", it directly returns the result to the host, resulting in one query. If the local name server has no record in the cache, it proceeds to the next phase of the query. In iterative query mode, the local name server sends query requests to the root name server, top-level name server (.com), and authoritative name server (huawei.com) in sequence.\nWithout considering cache, the local name server needs to make three queries for \"www.huawei.com\" (one each to the root name server, top-level name server, and authoritative name server) in iterative query mode.\nIncluding the one query initiated by the host to the local name server, a total of four DNS queries are required to resolve domain name \"www.huawei.com\".\nTherefore, in iterative query mode, when a host accesses domain name \"www.huawei.com\", four DNS queries may be required to resolve the domain. This assumes that the local name server and each level of name server do not have cached resolution records for the domain name. If there is cache on any name server, the number of queries will decrease accordingly. Therefore, the required number of queries ranges from 0 to 4.\nIn conclusion, the correct answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 40 （18 Points）",
+        "question": "Which of the following statements about openGauss logs are true?",
+        "choices": [
+            "A. System logs include those generated by database nodes when openGauss is running and those generated when openGauss is deployed.",
+            "B. Operation logs are generated when database tools are used by a database administrator or called by openGauss.",
+            "C. Performance logs are primarily concerned with monitoring the access efficiency of internal resources.",
+            "D. After the audit function is enabled, many audit logs will be generated, which occupy a large storage space."
+        ],
+        "answer": "ABD",
+        "explanation": "A. This is true. System logs include logs generated by the database node when openGauss is running and logs generated during openGauss installation and deployment. These logs are important for locating the cause of a fault and formulating a recovery method when openGauss is running.\nB. This is true. Operation logs are generated when database tools are used by a database administrator or called by openGauss. If openGauss is faulty, you can backtrack user operations on the database and reproduce the fault based on the operation logs.\nC. This is false. Performance logs focus on the access performance of external resources instead of internal resources. Performance logs are used to record the status of physical resources and the performance of access to external resources such as disks. When there is a performance issue, you can locate the cause using performance logs, which improves troubleshooting efficiency.\nD. This is true. After the audit function is enabled, a large number of audit logs will be generated, which occupy a large storage space. You can customize an audit log maintenance policy based on the size of available storage space.\nIn conclusion, the answers are A, B, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 41 （18 Points）",
+        "question": "Which of the following statements about the Kunpeng 920 processor are true?",
+        "choices": [
+            "A. The processor uses the 7 nm manufacturing process.",
+            "B. A single processor supports up to 128 cores.",
+            "C. The processor uses the Armv8.2 architecture.",
+            "D. The processor uses the strong memory model."
+        ],
+        "answer": "AC",
+        "explanation": "A: This statement is correct. Kunpeng 920 uses the 7 nm manufacturing process.\nB: This statement is incorrect. Kunpeng 920 supports up to 64 cores instead of 128 cores.\nC: This statement is correct. Kunpeng 920 uses the Armv8.2 architecture.\nD: This statement is incorrect. Although high-performance processors typically have optimized memory models, there is no direct indication that Kunpeng 920 uses the \"strong memory model\". Therefore, the accuracy of this statement is uncertain.\nIn conclusion, the correct answers are A and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 42 （18 Points）",
+        "question": "Which of the following statements about the upgrade of the openGauss database are true?",
+        "choices": [
+            "A. Do not perform the upgrade and scale-out/-in at the same time.",
+            "B. Services must be stopped during the in-place upgrade. The gray upgrade supports a full-service upgrade.",
+            "C. If the upgrade fails due to an exception, you need to manually roll back the upgrade. The next upgrade can be performed only after the rollback is successful.",
+            "D. To perform upgrade, ensure that the GUC parameter enable_stream_replication is set to off."
+        ],
+        "answer": "ABC",
+        "explanation": "A. This is true. During the upgrade of the openGauss database, do not perform the upgrade and scale-out/-in at the same time. This is to ensure the stability of the upgrade process and the consistency of the data. Otherwise, extra operations and risks may be introduced, which may cause upgrade failures or data damage.\nB. This is true. During the in-place upgrade, services are stopped indeed and all nodes are upgraded at a time. The gray upgrade supports full-service upgrade. It means that all nodes are upgraded at a time (openGauss 1.1.0 and later versions support this function). Therefore, this statement is correct.\nC. This is true. If upgrade fails due to an exception and then automatic rollback fails, you need to manually perform the rollback. After the rollback is successful, the GUC parameters configured during the upgrade become invalid.\nD. This is false. During the upgrade of openGauss, it is not specified that the GUC parameter enable_stream_replication needs to be set to off. Therefore, D is inaccurate.\nIn conclusion, the answers are A, B, and C.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 43 （18 Points）",
+        "question": "After multiple DELETE operations are performed on a database, periodic index rebuilds can improve query efficiency. Which of the following statements about index rebuild are true?",
+        "choices": [
+            "A. If a large amount of data is deleted, the index keys on the index pages are deleted. As a result, the number of index pages decreases, causing index bloat. Rebuilding indexes can recycle wasted space.",
+            "B. In a newly created index, pages with logically adjacent structures tend to be physically adjacent. Therefore, a new index achieves a higher access speed than an index updated multiple times.",
+            "C. Rebuilding indexes using REINDEX does not block related read and write operations.",
+            "D. If you run the DROP INDEX statement to delete an index and then run the CREATE INDEX statement to create an index, a temporary exclusive lock will be added to the parent table to block related read and write operations."
+        ],
+        "answer": "ABD",
+        "explanation": "A. If a large amount of data is deleted from a table, the related index entries are also deleted. However, this does not directly reduce the number of index pages, because the database system usually maintains the page allocation policy and attempts to fill the existing space to avoid frequent page splitting and merging. However, as time goes by, such deletion operations may lead to index fragmentation, which indicates that there is a lot of unused spaces in index pages (i.e., \"index bloat\"). In this case, rebuilding the index (such as using REINDEX or equivalent operations) can help recycle wasted space and restructure the index to improve query efficiency. Therefore, A is true.\nB. This is true. A newly created index is typically compact in physical storage, and logically adjacent entries tend to be physically adjacent as well, which can reduce I/O operations and improve query performance. In contrast, indexes that have been inserted, deleted, and updated for multiple times may become fragmented and deteriorate the performance. Therefore, B is true.\nC. This is false. The REINDEX operation (or equivalent index recreating operation) usually requires an exclusive lock (for example, the ACCESS EXCLUSIVE lock in PostgreSQL database), which means that it blocks other read and write operations that attempt to access the index. Although some database systems may offer an option for online index recreating, this does not mean it will not block any operations. It may simply manage locks in a finer-grained manner to minimize the impact on concurrent operations. Therefore, C is false.\nD. Deleting and recreating indexes does involve exclusive lock operations on tables, especially in transactional databases. DROP INDEX needs to delete all data structures related to the index and may require exclusive locks to ensure consistency. Also, CREATE INDEX also requires exclusive locks to re-create the index structure. Therefore, during both operations, any read and write operations that attempt to access the table are blocked. This statement is correct\nIn conclusion, the answers are A, B, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 44 （18 Points）",
+        "question": "OpenStack consists of the control, compute, network, and storage node types. Which of the following statements about the node types are correct?",
+        "choices": [
+            "A. Generally, a control node requires only one network port to communicate with other nodes.",
+            "B. A compute node runs Nova to support VM creation and running, and provides APIs to interconnect with the control node.",
+            "C. A network node contains at least two network ports for communication with the control node and storage node, respectively.",
+            "D. A storage node runs Swift to provide the object storage service. Swift stores and formats files and converts file systems in a virtualized drive space."
+        ],
+        "answer": "AB",
+        "explanation": "A: This statement is correct. In an OpenStack environment, a control node typically needs only one network port to communicate with other nodes. This network port is used for managing and controlling OpenStack services like Nova (compute), Neutron (network), and Cinder (block storage). The control node functions as the central point for managing and coordinating the entire OpenStack environment.\nB: This statement is correct. Compute nodes run the Nova service, which is a component in OpenStack responsible for managing the lifecycle of VMs. Nova provides APIs that allow the control node (and other clients) to communicate with compute nodes to request the creation, deletion, management, and other operations of VMs.\nC: This statement is incorrect. A network node (typically running the Neutron service) does require network ports to communicate with other nodes, but it may not necessarily use a separate port for each of the control node and storage node. The configuration of the network node depends on the specific network topology and structure. In some cases, a network node may only need one port to communicate with all other nodes, while in other cases, it may need multiple ports to handle different network traffic.\nD: This statement is incorrect. Swift is a distributed, highly scalable object storage service in OpenStack designed for storing and retrieving unstructured data efficiently. It does not format files or convert file systems on storage nodes. In OpenStack, storage nodes usually run either Cinder or Swift. The difference between the two is obvious: Cinder provides block storage, such as VM drives, while Swift provides object storage.\nIn conclusion, the correct answers are A and B.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 45 （18 Points）",
+        "question": "What are the main reasons for using commands to maintain each table periodically?",
+        "choices": [
+            "A. VACUUM FULL can recycle disk space occupied by outdated or deleted data and merge small-size data files.",
+            "B. VACUUM can maintain a visualized map for each table to track pages containing arrays visible to other active transactions.",
+            "C. VACUUM can prevent raw data loss caused by duplicate transaction IDs when the number of executed transactions exceeds the database threshold.",
+            "D. ANALYZE can collect statistics on tables in databases."
+        ],
+        "answer": "ABCD",
+        "explanation": "A. VACUUM can be used to recycle disk space occupied by discarded or deleted data and merge small-size data files. This is one of the main reasons to use the \"VACUUM\" command.\nB. VACUUM can be used to maintain a visualized map for each table to track pages that contain arrays visible to other active transactions. This is also one of the main reasons to use the \"VACUUM\" command.\nC. VACUUM can be used to vacuum and recycle unnecessary transaction IDs to prevent transaction ID wraparound. This ensures that the system has sufficient space to continue to allocate new transaction IDs without conflicting with outdated and vacuumed transaction IDs.\nD. ANALYZE can be used to collect statistics on tables in databases. This is also an important reason to run the \"ANALYZE\" command periodically.\nIn conclusion, the answers are A, B, C, and D.",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 46 （16 Points）",
+        "question": "StratoVirt allows you to adjust the number of drives, NICs, and passthrough devices during VM running.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "StratoVirt is a VM management system. The statement \"allows you to adjust the number of drives, NICs, and passthrough devices during VM running\" highlights the ability of StratoVirt to modify drives, network cards, and passthrough devices on the fly.\nThis description is accurate as StratoVirt does allow users to adjust hardware resources while VMs are running. Therefore, the statement in the question is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 47 （16 Points）",
+        "question": "Uninstalling the database is a major operation. Therefore, you need to run the uninstallation script as the user root.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "In some cases, uninstalling a database might only require running a specific uninstallation command or script as the database administrator (such as DBA for Oracle database, the \"root\" user for MySQL database, or the corresponding role for other databases). However, in other cases, especially when database software or some components are installed as the \"root\" user, it may be necessary to run the uninstallation script as the \"root\" user. Uninstalling the database is a major operation indeed, while it is not a \"must\" to perform the operation as the \"root\" user. The specific database software, installation method, and OS environment are also key factors to be considered. In some cases, it may be necessary to perform the operation as the \"root\" user, but in others, it may not be. Therefore, the answer is F.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 48 （16 Points）",
+        "question": "OpenStack consists of two main modules: Nova and Swift. Nova is the virtual server deployment and service computing module, and Swift is the distributed cloud storage module.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "OpenStack, an open source cloud management platform, comprises core components like Nova and Swift, along with various collaborating components that collectively deliver a comprehensive set of cloud services. Key components include:\nNova (compute): manages and automates the lifecycle of VM instances, including starting, stopping, migrating, and scaling VM instances. This is one of the most important components in OpenStack as it provides abstraction and management of compute resources.\nSwift (object storage): offers scalable, redundant, and persistent distributed object storage primarily used for storing unstructured data like photos, videos, backups, and archives. It is a key component in OpenStack for cloud storage.\nCinder (block storage): abstracts block storage devices and enables the management of persistent block storage devices (such as drives) for VM instances.\nGlance (image): provides storage, retrieval, and management for VM images.\nKeystone (identity and access management): offers authentication, authorization, and directory services for verifying the identities and controlling access of OpenStack components and users.\nNeutron (networking): provides networking as a service, allowing users to create and manage networks, subnets, and routers.\nThese components collaborate to enable OpenStack to offer a complete cloud computing solution, including compute, storage, networking, and identity and access management. Therefore, although Nova and Swift are core components in OpenStack, the platform is not solely comprised of them. The statement in the question is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 49 （16 Points）",
+        "question": "If the specified port number is occupied, the port number will be preempted during openGauss installation.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Before installing openGauss, it is necessary to ensure that the specified port number is not occupied by other services. \"Before the installation, check whether the specified openGauss port is occupied. If the port is occupied, change the port number or stop the process that uses the port.\"\nHowever, during openGauss installation, the occupied port number will not be preempted automatically. Users need to manually check and address port number occupation before the installation. If the port number is occupied, users need to manually stop the process that occupies the port number or modify the openGauss configuration to use a different port number.\nIn summary, during openGauss installation, users need to address port number occupation to ensure that the openGauss can run properly with the specified port number. Therefore, the answer is F.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 50 （16 Points）",
+        "question": "Security-Enhanced Linux (SELinux) provides fine-grained access control, including role-based access control (RBAC).",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "SELinux, a security module in the Linux kernel, offers mandatory access control (MAC), distinguishing it from the traditional discretionary access control (DAC) based on user and group IDs. Administrators can define policies in SELinux to precisely regulate process access to resources like files, directories, and ports. Role-based access control (RBAC) links permissions to roles, not users directly. Users acquire permissions by assuming one or more roles. This greatly simplifies permission management by enabling role sharing and role-level permission management. SELinux does provide detailed access control and support role-based access control. The statement in the question is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 51 （16 Points）",
+        "question": "If Git is used to submit code to openEuler and the PR has not been merged, forcible synchronization fails.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "After you submit code to openEuler through Git and create an unmerged pull request (PR), a forcible synchronization attempt will fail. openEuler uses Git as its version control system. A developer modifies code on a local branch and then submit a PR to merge the code into a openEuler repository. Until the PR is merged, the commit history of the openEuler repository does not match that of the local branch. Forcing a synchronization with \"git push -f\" would overwrite the commit history of the remote repository, conflicting with the best practices of Git. openEuler projects typically prohibit this to protect the commit history of their repositories. Developers must wait for their PRs to be merged before synchronizing. Therefore, the statement in the question is true.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 52 （16 Points）",
+        "question": "The installation script does not automatically create the database OS user during the installation. You need to manually create the user before the installation.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Installation script action: The installation script automatically creates a user-specified installation user and this user will be used as an administrator for subsequent running and maintenance of openGauss. This means that the installation script does automatically create the database OS user.\nTime of user creation: The installation script creates a user during the installation. This means that you do not need to manually create the user before installation.\nOperations of user creation: When \"gs_install\" is executed, a database user \"omm\" with the same name as the installation user is created. This user has the highest operation permissions on the database. You can set the initial password of the user.\nIn summary, the installation script does automatically create the database OS user. You do not need to manually create the user before the installation. Therefore, the answer is F. The correct statement should be \"the installation script automatically creates the database OS user during the installation. You do not need to manually create the user before the installation\".",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 53 （16 Points）",
+        "question": "You do not need to create an XML file before using the installation package to install openGauss.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Before installing openGauss, the \"cluster_config.xml\" file must be created. The XML file contains key information about the server where openGauss will be deployed, including the installation path, IP address, and port. The file guides the deployment of openGauss.\nThe \"cluster_config.xml\" file contains information such as the server information, installation path, IP address, and port number. The configuration information is essential to the openGauss installation.\nIn the openGauss installation process and initialization environment requirements, there is no explicit description of XML file creation. However, creating an XML file is a necessary step before the openGauss installation. Therefore, an XML file need to be created before installing openGauss using the installation package. The XML file is an indispensable configuration file during openGauss installation. It contains key information required for installing openGauss. Therefore, the answer is F.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 54 （16 Points）",
+        "question": "Before installing openGauss, you do not need to disable the OS firewall for security purposes.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Before openGauss installation, OS firewall and SELinux should be disabled to ensure the proper running of openGauss and data security. Currently, openGauss can be installed only when the firewall is disabled. Disabling the firewall or configuring firewall rules is important to ensure database security.\nActual installation requirements: During openGauss installation, the ports for communicating with the database should be enabled to allow necessary network traffic to pass through. However, only enabling the ports is not enough to ensure security. Other security measures also need to be considered.\nIf the firewall is not disabled, the firewall rules must be correctly configured to allow openGauss ports and protocols to pass through and prohibit any unnecessary external access.\nSecurity policy: In an environment requiring high security, stricter control over network access may be required, including disabling firewalls or configuring stricter firewall rules. Disabling firewalls is not the only security measure. Other factors, such as encryption, identity authentication, and authorization, need to be considered.\nIn most cases, to ensure the security and proper running of openGauss, it is recommended to disable firewalls or SELinux before the installation, or at least configure firewall rules to allow openGauss ports and protocols to pass through. Therefore, the answer is F.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 55 （16 Points）",
+        "question": "In primary/standby deployment mode, all database nodes share the postgresql.conf configuration file.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "The primary/standby deployment mode is a widely used HA solution. In this mode, one primary node is used for processing routine data reads and writes, and one or more standby nodes synchronize data from the primary node in the backend and can take over services when the primary node is faulty.\n\"postgresql.conf\" is a core configuration file of the PostgreSQL database. It is used to set various parameters and options of the database server. This file is usually located in the data directory of PostgreSQL, and each database instance (either the primary or standby node) has a \"postgresql.conf\" file.\nIn primary/standby deployment mode, although the primary node and standby nodes are logically interdependent (for data backup and fault recovery), they are still physically independent database instances. Therefore, they have different \"postgresql.conf\" files.\nThese configuration files may be similar in content because they need to be configured with some of the same parameters (such as network connection settings and memory management), but may also be different, especially with settings related to replication, backup, and restoration.\nTherefore, it can be determined that in primary/standby deployment mode, all database nodes do not share the same \"postgresql.conf\" configuration file. Each node has its own configuration file, so this statement is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 56 （16 Points）",
+        "question": "In the configuration of the connection authentication rule, if the authentication rule of the same host has two different configurations, the later configuration overwrites the previous one.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "\"In the configuration of the connection authentication rule, if the authentication rule of the same host has two different configurations, the latter configuration overwrites the previous one.\" In this sentence, \"the latter configuration overwrites the previous one\" is inaccurate, because it also depends on the specific configuration system, software, or database management system.\n1. Configuration coexistence and priority: Multiple configurations may coexist in many systems. These configurations may be processed based on certain rules or priorities. For example, some configurations may have higher priority, while others may only take effect under specific conditions.\n2. Configuration syntax and context: The correctness of configuration rules also depends on the syntax and context. Even if two rules seem to be the same, they may have different effects due to context differences (such as scope, range, or condition).\n3. System default settings: The system may have default configurations or actions. These default settings may conflict with or work with user-defined configurations.\n4. Troubleshooting: In some cases, configuration conflicts may lead to incorrect or inconsistent actions, which need to be addressed by specific operations rather than simply overwriting the configuration.\n5. Implementation: Different software, databases, or middleware may have different logics and actions when processing configurations. Therefore, we cannot just say \"the latter configuration overwrites the previous one\".\nIn conclusion, this statement is inaccurate, as it also depends on factors such as the specific system implementation, configuration syntax, and context. Therefore, the answer is F.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 57 （16 Points）",
+        "question": "An openEuler update is released every week to incorporate fixes for bugs and CVEs. The openEuler update is released as a full update to ensure that the service level objective (SLO) for CVE fixing is achieved.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "This question can be dissected into two parts. The first part, \"an openEuler update is released every week to incorporate fixes for bugs and CVEs\", is inaccurate as openEuler updates are not released on a weekly basis. The actual release plan depends on the severity of bugs, CVEs, and the availability of the development team. The second part, \"the openEuler update is released as a full update to ensure the service level objective (SLO) for CVE fixing is met\", is also incorrect. Updates include full updates, security patches, bug fixes, and more, based on specific requirements. Therefore, the statement in the question is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 58 （16 Points）",
+        "question": "After logging in to the database as the initial user created during installation, you must create a new user. The initial user cannot be used again.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "An initial user is automatically generated during database installation. This account has the highest level of permissions in the system and can perform all operations. It is recommended that the initial user be used only as a database administrator for database management instead of service or application. This implies that although the initial user can be used to manage the database, it may be recommended that other users be created for different service or application requirements for best effects of security and management.\nThe initial user has the highest-level permissions in the system and can perform all operations. This means that if the initial user is reused for a different service or application, the usage may be limited, considering best effects of security and management.\nIn practice, the initial user can be reused for a different service with limited range or another user can be created for the service based on specific service requirements and management policies. Therefore, the answer is F.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 59 （16 Points）",
+        "question": "The version of the built-in GCC of openEuler 22.03 LTS is 7.3.x.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "openEuler 22.03 LTS is an open source OS with a variety of software packages and tools, featuring GNU Compiler Collection (GCC) as an important compiler collection. The specific version of GCC included in openEuler 22.03 LTS is unknown, as newer releases like openEuler 22.03 LTS SP1 includes GCC 10.3.1. Therefore, the statement in the question is false.",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 60 （16 Points）",
+        "question": "The openEuler community evaluates vulnerabilities based on CVSS v3.0. Vulnerabilities with a score higher than 7 will be fixed within 14 days.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "The Common Vulnerability Scoring System (CVSS) is an open framework for assessing vulnerability severity. Version 3.0 (v3.0) is the current widely adopted version. The openEuler community's choice of using CVSS v3.0 to assess software vulnerabilities is reasonable. The community aims to fix vulnerabilities scoring above 7 within 14 days, as it is a part of their policy and goal. The statement in the question is true.",
+        "questionType": "true_false"
+    }
+] 

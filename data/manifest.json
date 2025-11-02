@@ -1,0 +1,31 @@
+[
+    {
+        "fileName": "2324_preliminary.json",
+        "test_name": "Preliminary 2023-2024"
+    },
+    {
+        "fileName": "2324_national.json",
+        "test_name": "National 2023-2024"
+    },
+    {
+        "fileName": "2324_regional.json",
+        "test_name": "Regional 2023-2024"
+    },
+    {
+        "fileName": "hcia_openeuler_mock.json",
+        "test_name": "HCIA-openEuler V1.0 Mock Exam"
+    },
+    {
+        "fileName": "hcia_opengauss_mock.json",
+        "test_name": "HCIA-openGauss V1.0 Mock Exam"
+    },
+    {
+        "fileName": "hcip_opengauss_mock.json",
+        "test_name": "HCIP-openGauss V1.0 Mock Exam"
+    },
+    {
+        "fileName": "hcie_opengauss_mock.json",
+        "test_name": "HCIE-openGauss V1.0 Mock Exam"
+    }
+]
+  

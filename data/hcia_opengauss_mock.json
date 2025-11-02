@@ -1,0 +1,721 @@
+[
+    {
+        "title": "Question 1 （15 Points）",
+        "question": "In openGauss, system catalogs and all built-in data types, functions, and operators belong to which of the following schemas?",
+        "choices": [
+            "A. pg_catalog",
+            "B. pg_temp",
+            "C. information_schema",
+            "D. public"
+        ],
+        "answer": "A",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （15 Points）",
+        "question": "To prevent disclosure of user passwords, openGauss encrypts and stores them in which of the following system catalogs?",
+        "choices": [
+            "A. pg_directory",
+            "B. pg_authid",
+            "C. pg_password",
+            "D. pg_proc"
+        ],
+        "answer": "B",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （15 Points）",
+        "question": "Which of the following statements about the second normal form (2NF) of the database is false?",
+        "choices": [
+            "A. If a composite primary key exists in a table, other non-primary key columns can partially depend on the column in the composite key.",
+            "B. 2NF is established on the basis of 1NF, that is, 1NF must be met before 2NF can be.",
+            "C. 2NF requires that each instance or row in a database table be uniquely distinguishable.",
+            "D. 2NF emphasizes full functional dependency."
+        ],
+        "answer": "A",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （15 Points）",
+        "question": "Which of the following functions is provided by the CM module of a database cluster?",
+        "choices": [
+            "A. It manages and monitors the running status of functional units and physical resources in a distributed system, ensuring stable operation of the entire system.",
+            "B. It provides management interfaces and tools for routine maintenance and configuration management of the cluster.",
+            "C. It generates and maintains globally unique information such as global transaction IDs, transaction snapshots, timestamps, and sequences.",
+            "D. It receives access requests from the application layer, and returns the execution result to the client. It breaks down tasks and distributes task fragments to different DNs for parallel processing."
+        ],
+        "answer": "A",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （15 Points）",
+        "question": "Which of the following data types is aliased INT4?",
+        "choices": [
+            "A. TINYINT",
+            "B. SMALLINT",
+            "C. INTEGER",
+            "D. BIGINT"
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （15 Points）",
+        "question": "An application can set appropriate parameters by calling gs_guc. Which of the following is the meaning of -N all?",
+        "choices": [
+            "A. All hosts in openGauss.",
+            "B. All instances of the host.",
+            "C. client can connect to any database.",
+            "D. Statements that need to be added in the pg_hba.conf file."
+        ],
+        "answer": "A",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （15 Points）",
+        "question": "Which of the following statements about the deployment modes supported by openGauss is true?",
+        "choices": [
+            "A. Only standalone deployment is supported.",
+            "B. Only primary/standby deployment is supported.",
+            "C. Both standalone deployment and primary/standby deployment are supported.",
+            "D. Only distributed deployment is supported."
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （15 Points）",
+        "question": "Write-ahead logs (WALs) are important in the openGauss database and may be used for operation restoration when the system crashes. Which of the following is the default folder for WALs?",
+        "choices": [
+            "A. pg_log",
+            "B. pg_xlog",
+            "C. pg_audit",
+            "D. global"
+        ],
+        "answer": "B",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （15 Points）",
+        "question": "Which of the following keywords indicates that a data source cannot be deleted as objects that depend on it currently exist?",
+        "choices": [
+            "A. src_name",
+            "B. CASCADE",
+            "C. RESTRICT",
+            "D. IF EXISTS"
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （15 Points）",
+        "question": "After separation of duties in GaussDB(for openGauss) is enabled, which of the following administrators can view audit logs?",
+        "choices": [
+            "A. Security administrator",
+            "B. Storage administrator",
+            "C. Audit administrator",
+            "D. System administrator"
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （15 Points）",
+        "question": "Which of the following type conversion functions is used to convert x to the type specified by y?",
+        "choices": [
+            "A. hextoraw(string)",
+            "B. cast(x as y)",
+            "C. pg_systimestamp()",
+            "D. to_bigint(varchar)"
+        ],
+        "answer": "B",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （15 Points）",
+        "question": "Anomaly_detection is a tool integrated into openGauss and can be used to collect and predict database indicators, as well as monitor and diagnose exceptions. Which of the following statements about anomaly_detection is false?",
+        "choices": [
+            "A. Anomaly_detection can monitor multiple indicators at the same time and predict the trends for each indicator.",
+            "B. Anomaly_detection consists of an agent and a detector.",
+            "C. The agent module of anomaly_detection and the openGauss database can be deployed on different servers.",
+            "D. The detector module of anomaly_detection communicates with the agent module over HTTP or HTTPS."
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （15 Points）",
+        "question": "Which of the following tools can be used to start or stop openGauss and generate or update the configuration file?",
+        "choices": [
+            "A. gs_collector",
+            "B. gs_ssh",
+            "C. gs_om",
+            "D. gs_dumpall"
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （15 Points）",
+        "question": "One-click diagnosis information collection helps administrators quickly obtain collected information. Which of the following statements about one-click diagnosis information collection is false?",
+        "choices": [
+            "A. It provides multiple suites to capture, collect, and analyze diagnosis data, enabling fault diagnosis and accelerating the diagnosis process.",
+            "B. It extracts necessary database logs, cluster management logs, and stack information from the environment based on the requirements of development and fault locating personnel. Administrators demarcate and locate faults based on the obtained information.",
+            "C. The one-click collection tool obtains different information from the production environment depending on the actual faults, improving the fault locating and demarcation efficiency.",
+            "D. Administrators can collect the required information without modifying the configuration file."
+        ],
+        "answer": "D",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （15 Points）",
+        "question": "Which of the following geometry types supported by openGauss represents a rectangle?",
+        "choices": [
+            "A. point",
+            "B. lseg",
+            "C. box",
+            "D. polygon"
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （15 Points）",
+        "question": "Which of the following statements about the validity period of a user account is false?",
+        "choices": [
+            "A. The validity period of a user account is set to limit the operation period of the user.",
+            "B. new validity period is set to enable a user not within the validity period to use its account.",
+            "C. An operation period includes the validity start time and validity end time.",
+            "D. If the start and end times of the validity period are not specified, the default validity period is used."
+        ],
+        "answer": "D",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （15 Points）",
+        "question": "Which of the following commands cannot be used to view user information?",
+        "choices": [
+            "A. \\d pg_authid",
+            "B. select * from pg_authid;",
+            "C. select * from pg_user;",
+            "D. select * from dba_user;"
+        ],
+        "answer": "D",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （15 Points）",
+        "question": "By default, all users and roles in openGauss have which of the following permissions?",
+        "choices": [
+            "A. admin",
+            "B. dba",
+            "C. PUBLIC",
+            "D. administrator"
+        ],
+        "answer": "C",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （20 Points）",
+        "question": "Compared with the column-store model, which of the following are advantages of the row-store model?",
+        "choices": [
+            "A. Only the selected columns are read.",
+            "B. The insert/update operation is easier.",
+            "C. The projection is efficient.",
+            "D. The data is stored together."
+        ],
+        "answer": "BD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 20 （20 Points）",
+        "question": "Which of the following statements about the openGauss feature of binding threads to cores based on NUMA are true?",
+        "choices": [
+            "A. This feature is used to avoid the switchover time of corresponding threads on different CPU cores.",
+            "B. This feature reduces resource contention for corresponding threads.",
+            "C. If this feature is not used, the corresponding thread queue waits for a time slice to be allocated.",
+            "D. Threads are bound to cores to avoid thread offset between cores."
+        ],
+        "answer": "ABCD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 21 （20 Points）",
+        "question": "Which of the following operations on tables are DDL operations?",
+        "choices": [
+            "A. CREATE TABLE",
+            "B. UPDATE TABLE",
+            "C. ALTER TABLE",
+            "D. DROP TABLE"
+        ],
+        "answer": "ACD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 22 （20 Points）",
+        "question": "openGauss supports database audit. Which of the following system views are related to audit information?",
+        "choices": [
+            "A. GS_AUDITING",
+            "B. GS_MASKING",
+            "C. GS_AUDITING_ACCESS",
+            "D. GS_AUDITING_PRIVILEGE"
+        ],
+        "answer": "ACD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 23 （20 Points）",
+        "question": "Which of the following are common logical operators?",
+        "choices": [
+            "A. and",
+            "B. but",
+            "C. or",
+            "D. not"
+        ],
+        "answer": "ACD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 24 （20 Points）",
+        "question": "Which of the following capabilities belong to DB4AI of the openGauss database?",
+        "choices": [
+            "A. Predictor",
+            "B. X-Tuner",
+            "C. DeepSQL",
+            "D. SQLdiag"
+        ],
+        "answer": "AC",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 25 （20 Points）",
+        "question": "Which of the following statements are true about the features of the real-time migration function in DRS?",
+        "choices": [
+            "A. Only table data can be migrated.",
+            "B. During migration, it allows services to continue to be used externally as much as possible.",
+            "C. It effectively minimizes the impact on services.",
+            "D. It is used to smoothly migrate databases to the cloud."
+        ],
+        "answer": "BCD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 26 （20 Points）",
+        "question": "Which types of network addresses can be stored among the data types provided by openGauss?",
+        "choices": [
+            "A. IPv4",
+            "B. IPv6",
+            "C. IPv8",
+            "D. MAC"
+        ],
+        "answer": "ABD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 27 （20 Points）",
+        "question": "Which of the following statements about the memory-optimized table (MOT) storage engine are true?",
+        "choices": [
+            "A. MOT is the most advanced production-level feature of openGauss databases. It performs better for transactional workloads.",
+            "B. MOT supports a complete set of database features, such as stored procedures and user-defined functions.",
+            "C. MOT fully supports ACID features and includes strict persistence and high availability support.",
+            "D. MOT's near-lock-free design and highly tuned implementation enable superior near-linear throughput scaling on multi-core servers."
+        ],
+        "answer": "ABCD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 28 （20 Points）",
+        "question": "Administrators use gs_dumpall to export data. Which of the following statements about the gs_dumpall command are true?",
+        "choices": [
+            "A. gs_dumpall is executed by the OS user omm.",
+            "B. Other users cannot access the openGauss database when gs_dumpall is used to export data.",
+            "C. During an export, gs_dumpall reads all the tables in a database, so you need to connect to the database as an openGauss administrator to export a complete file.",
+            "D. The result exported from gs_dumpall is an SQL script file in plain text format."
+        ],
+        "answer": "ACD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 29 （20 Points）",
+        "question": "Which of the following are common database management systems?",
+        "choices": [
+            "A. Oracle",
+            "B. Windows",
+            "C. MySQL",
+            "D. Linux"
+        ],
+        "answer": "AC",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 30 （20 Points）",
+        "question": "Which of the following SQL statements return an output result of \"03:00:00\"?",
+        "choices": [
+            "A. SELECT time '05:00' - interval '2 minutes' AS RESULT;",
+            "B. SELECT time '05:00' - interval '2 hours' AS RESULT;",
+            "C. SELECT time '04:00' - interval '1 minutes' AS RESULT;",
+            "D. SELECT time '04:00' - interval '1 hours' AS RESULT;"
+        ],
+        "answer": "BD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 31 （20 Points）",
+        "question": "Which of the following are part of the three-layer key management mechanism in the openGauss fully-encrypted equality query process?",
+        "choices": [
+            "A. Root key",
+            "B. Master key",
+            "C. Row encryption key",
+            "D. Column encryption key"
+        ],
+        "answer": "ABD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 32 （20 Points）",
+        "question": "Which of the following statements about tablespaces controlling the layout of database disks are true?",
+        "choices": [
+            "A. Tablespaces can be used to arrange storage locations for database objects as needed, improving database performance.",
+            "B. When a partition is shared with other data, tablespaces will not occupy excessive space in the partition.",
+            "C. When the usage of the disk where the tablespace resides reaches 60%, the tablespace can set the database to read-only mode.",
+            "D. If the disk partition or volume allocated to the initialized database is full and the space cannot be logically increased, you can create and use tablespaces in other partitions until the space is reconfigured."
+        ],
+        "answer": "ABD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 33 （20 Points）",
+        "question": "Service data flows in a fully-encrypted database exist in ciphertext form during data processing. Which of the following statements about equality query in a fully-encrypted database are true?",
+        "choices": [
+            "A. The fully-encrypted database protects data privacy and security throughout the lifecycle on the cloud. Attackers cannot obtain valid information from the database server regardless of the data status.",
+            "B. The fully-encrypted database helps cloud service providers gain third-party trust. Users can keep keys for themselves, preventing high-privilege users from obtaining valid data information.",
+            "C. With the help of full encryption capabilities, the fully-encrypted database enables cloud databases to better comply with personal privacy protection laws and regulations.",
+            "D. Data is stored in ciphertext and therefore does not need to be protected by firewalls."
+        ],
+        "answer": "ABC",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 34 （20 Points）",
+        "question": "Which of the following statements about system catalogs and system views are true?",
+        "choices": [
+            "A. System catalogs store openGauss structural metadata. They are the source of information used by openGauss to control system operations.",
+            "B. The system view provides methods to query system catalogs and the internal state of the database.",
+            "C. System catalogs and views are visible only to administrators.",
+            "D. In normal cases, users should not manually modify system catalogs or views."
+        ],
+        "answer": "ABD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 35 （20 Points）",
+        "question": "The accuracy of the statistics may affect the database's ability to generate a valid execution plan. Which of the following describes situations in which you should consider recollecting statistics to ensure they are accurate?",
+        "choices": [
+            "A. Numerous inserts or deletes are performed on a table.",
+            "B. The intermediate table is generated in the batch processing script or stored procedure.",
+            "C. If multiple columns in a table are related to each other and the query has conditions or grouping operations based on those columns, you can attempt to collect multi-column statistics.",
+            "D. Numerous update operations are performed on a table."
+        ],
+        "answer": "ABC",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 36 （20 Points）",
+        "question": "Which of the following statements about hash distribution are true?",
+        "choices": [
+            "A. It applies to user tables with a small amount of data.",
+            "B. It calculates the hash value of a single or multiple distribution columns specified by users.",
+            "C. Data from the same user table is stored in different shards.",
+            "D. It increases the total amount of data supported by the database."
+        ],
+        "answer": "BCD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 37 （20 Points）",
+        "question": "Which of the following functions can be implemented by the system administrator by restricting the permission to execute a stored procedure?",
+        "choices": [
+            "A. Restrict access to all data in the database.",
+            "B. Restrict access to corresponding data.",
+            "C. Prevent unauthorized users from accessing data.",
+            "D. Ensure data security."
+        ],
+        "answer": "BCD",
+        "explanation": "",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 38 （10 Points）",
+        "question": "Database security administrators can use audit logs to reproduce a series of events that caused a fault in the database or to identify unauthorized users, unauthorized operations, and the time when these operations were performed.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 39 （10 Points）",
+        "question": "In the logical structure of a database, one tablespace can correspond to multiple databases.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 40 （10 Points）",
+        "question": "Developed based on Kunpeng ecosystem, GaussDB(for openGauss) continuously optimizes its performance to meet ever-increasing demands across a wide range of scenarios.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 41 （10 Points）",
+        "question": "openGauss does not support CBO. The optimization capability in complex scenarios is average.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 42 （10 Points）",
+        "question": "With GaussDB(for openGauss) parallel data import, the system can quickly import external data of a specific format (CSV/TEXT/FIXED) to databases.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 43 （10 Points）",
+        "question": "In standalone mode, multiple database instances are deployed on a single host for data security purposes.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 44 （10 Points）",
+        "question": "openGauss is a relational database. It uses a client/server, single-process multi-thread architecture and supports standalone and one-primary multi-standby deployment. When primary/standby deployment is used, the standby node can be read too, and HA and read expansion are supported.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 45 （10 Points）",
+        "question": "You are not allowed to rename a database in use. To rename it, connect to another database.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 46 （10 Points）",
+        "question": "A hint specified for a query plan does not apply to its subquery plans. To specify a hint for a subquery, add the hint following the SELECT of this subquery.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 47 （10 Points）",
+        "question": "RTO refers to the maximum amount of data loss that can be tolerated, that is, the time point corresponding to the data after service recovery.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 48 （10 Points）",
+        "question": "If the disk partition or volume allocated to the initialized database is full, you can create and use tablespaces in other partitions until the space is reconfigured.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 49 （10 Points）",
+        "question": "Bit strings are strings of 1's and 0's. The bit type data must match the length n. An error is reported if short or long data is stored.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 50 （10 Points）",
+        "question": "A transaction is a logical unit of program execution, consisting of a series of operations for accessing or updating data in the system.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 51 （10 Points）",
+        "question": "Currently, a SERIAL column can be specified when you create a table and can be inserted in an existing table.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 52 （10 Points）",
+        "question": "You can set multiple IP addresses for each of the backIp, sshIp, and listenIp parameters in a configuration file.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 53 （10 Points）",
+        "question": "PG_STATS displays the single-column statistics stored in the PG_STATISTIC table.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 54 （10 Points）",
+        "question": "GaussDB(for openGauss) provides logical backup capabilities, but can only back up data in user tables to local disk files and OBS in text format.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 55 （10 Points）",
+        "question": "Standalone deployment is special. There is only one data copy. Once data is damaged or lost, only physical backups can be used to restore data.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 56 （34 Points）",
+        "question": "If the time format of another database is different to that of openGauss, you can change the value of () to ensure consistency.",
+        "choices": [],
+        "answer": "DateStyle;datastyle;Datastyle;DATASTYLE",
+        "explanation": "",
+        "questionType": "fill_in_the_blank"
+    },
+    {
+        "title": "Question 57 （34 Points）",
+        "question": "A company uses the openGauss primary/standby deployment mode to deploy the system. When the primary database is abnormal, the administrator uses () to promote the standby database to the primary database to continue supporting services.",
+        "choices": [],
+        "answer": "failover;Failover;FAILOVER",
+        "explanation": "",
+        "questionType": "fill_in_the_blank"
+    },
+    {
+        "title": "Question 58 （34 Points）",
+        "question": "If you specify the () parameter when running the CREATE TABLE statement, data in the table will be partitioned.",
+        "choices": [],
+        "answer": "PARTITION;partition;Partition",
+        "explanation": "",
+        "questionType": "fill_in_the_blank"
+    },
+    {
+        "title": "Question 59 （34 Points）",
+        "question": "In SQL statements, the common logical operators are AND, OR, and ().",
+        "choices": [],
+        "answer": "NOT;not;Not",
+        "explanation": "",
+        "questionType": "fill_in_the_blank"
+    },
+    {
+        "title": "Question 60 （34 Points）",
+        "question": "In the MOT statement for creating or deleting a memory-optimized table, the () keyword can be used to reference the MOT.",
+        "choices": [],
+        "answer": "FOREIGN;foreign;Foreign",
+        "explanation": "",
+        "questionType": "fill_in_the_blank"
+    }
+]

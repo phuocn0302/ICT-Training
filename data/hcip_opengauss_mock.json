@@ -1,0 +1,357 @@
+[
+    {
+        "title": "Question 1 （30 Points）",
+        "question": "Which of the following system views displays information about database grand unified configuration (GUC) parameters?",
+        "choices": [
+            "A. PG_STAT_ACTIVITY",
+            "B. PG_SETTINGS",
+            "C. PG_STATS",
+            "D. PG_OS_THREADS"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （30 Points）",
+        "question": "Which of the following commands can be used to create user \"jck\" and set the start time and end time of the validity period to 2023-12-15 08:00:00 and 2024-12-15 08:00:00, respectively?",
+        "choices": [
+            "A. CREATE USER jck WITH PASSWORD 'Bigdata@123' VALID BEGIN '2024-12-15 08:00:00' VALID UNTIL '2023-12-15 08:00:00';",
+            "B. CREATE USER jck WITH PASSWORD 'Bigdata@123' VALID BEGIN '2023-12-15' VALID UNTIL '2024-12-15';",
+            "C. CREATE USER jck WITH PASSWORD 'Bigdata@123' VALID BEGIN '2023-12-15 08:00:00' VALID UNTIL '2024-12-15 08:00:00';",
+            "D. CREATE USER jck WITH PASSWORD 'Bigdata@123' VALID BEGIN '2023-12-15 08:00:00' VALID UNTIL '2024-12-15';"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （30 Points）",
+        "question": "Which of the following openGauss database objects is a handle or pointer that points to the context area of a stored procedure?",
+        "choices": [
+            "A. Cursor",
+            "B. Index",
+            "C. Partitioned table",
+            "D. Physical view"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （30 Points）",
+        "question": "Which of the following functions is not supported when openGauss is used to develop stored procedures?",
+        "choices": [
+            "A. Setting a breakpoint",
+            "B. Packing multiple SQL statements",
+            "C. Eight levels of exception information",
+            "D. Single-step debugging"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （30 Points）",
+        "question": "The three-layer key management mechanism is used in encrypted equality queries. Which of the following is NOT a key in the three-layer key management mechanism?",
+        "choices": [
+            "A. Root key",
+            "B. Master key",
+            "C. Secondary key",
+            "D. Column encryption key"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （30 Points）",
+        "question": "Which of the following statements about the Workload Diagnosis Report (WDR) is false?",
+        "choices": [
+            "A. The data in the WDR is based on the system performance snapshot data at three or more different time points.",
+            "B. The WDR is based on the performance baseline of SNAPSHOT.",
+            "C. The WDR helps database administrators (DBAs) learn about the system load, performance of each component, and performance bottlenecks.",
+            "D. The WDR can be used to diagnose database kernel performance faults."
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （30 Points）",
+        "question": "By default, the table created by openGauss is a row-store table. To create a column-store table, you need to specify a corresponding keyword. Which of the following is the keyword required for creating a column-store table?",
+        "choices": [
+            "A. WITH (COLUMN)",
+            "B. WITH (ORIENTATION = COLUMN)",
+            "C. (TYPE = COLUMN)",
+            "D. WITH (TYPE = COLUMN)"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （30 Points）",
+        "question": "Which of the following SQL clauses is used to obtain the intersection in a query?",
+        "choices": [
+            "A. UNION clause",
+            "B. EXCEPT clause",
+            "C. MINUX clause",
+            "D. INTERSECT clause"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （30 Points）",
+        "question": "Which of the following directories is used to store system catalogs or data dictionary tables shared by openGauss?",
+        "choices": [
+            "A. global",
+            "B. pg_tblspc",
+            "C. base",
+            "D. pg_twophase"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （30 Points）",
+        "question": "Which of the following methods is used by gs_datacheck to extract data?",
+        "choices": [
+            "A. ODBC",
+            "B. JDBC",
+            "C. Python",
+            "D. gsql"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （40 Points）",
+        "question": "After separation of duties is enabled for openGauss, which of the following administrators are assigned permissions of the super administrator?",
+        "choices": [
+            "A. Security Administrator",
+            "B. Audit administrator",
+            "C. System administrator",
+            "D. O&M administrator"
+        ],
+        "answer": "ABC",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 12 （40 Points）",
+        "question": "Which of the following statements are false about the relationship between users and roles?",
+        "choices": [
+            "A. The relationship between users and roles is one-to-one.",
+            "B. The relationship between users and roles is many-to-one.",
+            "C. The relationship between users and roles is one-to-many.",
+            "D. The relationship between users and roles is many-to-many."
+        ],
+        "answer": "ABC",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 13 （40 Points）",
+        "question": "Which of the following statements about private users are true?",
+        "choices": [
+            "A. A private user is created in non-separation-of-duties mode with the INDEPENDENT attribute.",
+            "B. A database administrator can perform control operations (DROP, ALTER, and TRUNCATE) on objects of private users before being authorized by the private users.",
+            "C. A database administrator can perform INSERT, DELETE, SELECT, UPDATE, and COPY operations on objects of private users before being authorized by the private users.",
+            "D. Private users have separate control and access permissions on table objects, improving the data security of common users."
+        ],
+        "answer": "ABD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 14 （40 Points）",
+        "question": "The row-level security feature can control database access to the row level in a data table. Which of the following SQL statements are affected by this feature?",
+        "choices": [
+            "A. SELECT",
+            "B. INSERT",
+            "C. UPDATE",
+            "D. DELETE"
+        ],
+        "answer": "ACD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 15 （40 Points）",
+        "question": "The audit log mechanism enhances database system security and traces unauthorized operations. Which of the following operations can be recorded in audit logs?",
+        "choices": [
+            "A. DML",
+            "B. DCL",
+            "C. DDL",
+            "D. Restarting the database"
+        ],
+        "answer": "ABCD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 16 （40 Points）",
+        "question": "Which of the following roles are required for accessing Workload Diagnosis Report (WDR) snapshot data?",
+        "choices": [
+            "A. sysadmin",
+            "B. monadmin",
+            "C. auditadmin",
+            "D. createdb"
+        ],
+        "answer": "AB",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 17 （40 Points）",
+        "question": "There are two parallel replay solutions for incremental migration: parallel replay based on databases and tables and parallel replay based on the MySQL parallel replication mechanism. What are the disadvantages of parallel replay based on databases and tables?",
+        "choices": [
+            "A. Transactions cannot be executed in sequence, and data consistency cannot be ensured.",
+            "B. If the data volume and operation frequency of each table in the database differ significantly, the Worker thread load may be imbalanced.",
+            "C. When a transaction replay encounters an exception and is suspended, it may block subsequent transaction replays.",
+            "D. The implementation is relatively complex."
+        ],
+        "answer": "AB",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 18 （30 Points）",
+        "question": "Users should not add, delete, or modify system catalogs because doing so will result in exceptions or even the unavailability of openGauss.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 19 （30 Points）",
+        "question": "An Operation Manager (OM) provides the ability to manage and monitor the running status of each function unit and physical resource in a distributed system, ensuring system-wide stability.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 20 （30 Points）",
+        "question": "A CM Server is responsible for the health status of OM Monitor. If the CM Server process cannot be detected, start the process.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 21 （30 Points）",
+        "question": "The index structure and overall data organization of the in-memory engine are implemented based on Masstree, providing strong transaction processing capabilities.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 22 （30 Points）",
+        "question": "If the log writer crashes unexpectedly, the Postmaster thread considers that the entire openGauss backend thread crashed. In this case, SIGTERM is called to forcibly stop all backend threads and reset shared memory to restore backend threads.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 23 （30 Points）",
+        "question": "In an openGauss disaster recovery (DR) solution, the failover command, which promotes the standby cluster to the primary cluster, refers to a switchover between the primary and standby clusters when both of them are normal. In this case, the primary cluster is demoted to the standby cluster, and the standby cluster is promoted to the primary cluster.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 24 （30 Points）",
+        "question": "gs_mysync uses multiprocessing read/write isolation to implement full migration. Producers read data from MySQL and write the data to CSV files. Consumers read CSV files and write the data to openGauss. Multiple tables are processed concurrently.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 25 （30 Points）",
+        "question": "The gs_datacheck tool uses the intermediate data of the source and target databases to construct two Merkle trees and compares them to check the data consistency between the two databases.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 26 （30 Points）",
+        "question": "The DataKit allows users to implement their own functions based on plug-in APIs and specifications. Function plug-ins can be dynamically loaded to and run on the DataKit or dynamically uninstalled from the DataKit.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 27 （30 Points）",
+        "question": "Data encryption key rotation is supported for transparent data encryption (TDE) tables. After the key rotation, the data encrypted using the old key is decrypted using the new key, and the newly written data is encrypted using the new key.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 28 （40 Points）",
+        "question": "The \"audit_login_logout\" parameter is used to determine whether to audit successful or failed logins and user logouts of openGauss users. If a company requires that only information about user login failures be audited, the value of \"audit_login_logout\" must be set to ______. (Enter digits only.)",
+        "choices": [],
+        "answer": "",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 29 （40 Points）",
+        "question": "The ______ thread copies dirty data pages to the double-write buffer, flushes them to the disks, and then forwards the dirty pages to the bgwriter subthread for data spill. This prevents data page corruption. (Enter lowercase letters.)",
+        "choices": [],
+        "answer": "",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 30 （40 Points）",
+        "question": "The \"max_process_memory\" parameter is used to control the maximum memory of a database node. The ______ parameter is used to control the size of memory that can be used for in-memory ORDER BY in SQL and the size·of·memory·that·can·be·used before a·hash table·is·written to·temporary storage. (Enter lowercase letters. Underscores are allowed.)",
+        "choices": [],
+        "answer": "",
+        "explanation": "Nothing",
+        "questionType": "single"
+    }
+]

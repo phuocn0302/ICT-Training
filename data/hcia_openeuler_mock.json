@@ -1,0 +1,770 @@
+[
+    {
+        "title": "Question 1 （16 Points）",
+        "question": "On openEuler, which of the following commands can be used to view the OS version information?",
+        "choices": [
+            "A. uname",
+            "B. lscpu",
+            "C. free",
+            "D. cat /etc/os-release"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （16 Points）",
+        "question": "How often is an LTS version of openEuler released?",
+        "choices": [
+            "A. Every 3 months",
+            "B. Every 6 months",
+            "C. Every year",
+            "D. Every 2 years"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （16 Points）",
+        "question": "To restart the Linux system while writing memory data to the drive, which of the following commands should be used?",
+        "choices": [
+            "A. reboot",
+            "B. halt",
+            "C. reboot -f",
+            "D. shutdown -r now"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （16 Points）",
+        "question": "How often is a version of openEuler released?",
+        "choices": [
+            "A. Every 3 months",
+            "B. Every 6 months",
+            "C. Every year",
+            "D. Every 2 years"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （16 Points）",
+        "question": "Which of the following keys can be pressed to stop the current running command?",
+        "choices": [
+            "A. Ctrl+C",
+            "B. Ctrl+F",
+            "C. Ctrl+B",
+            "D. Ctrl+D"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （16 Points）",
+        "question": "Which of the following commands can be used to list all files in a directory?",
+        "choices": [
+            "A. ls -l",
+            "B. ls",
+            "C. ls -a",
+            "D. ls -d"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （16 Points）",
+        "question": "The files of Linux file systems are stored in different directories according to their functions. Which of the following directories stores files of external devices?",
+        "choices": [
+            "A. /bin",
+            "B. /etc",
+            "C. /dev",
+            "D. /lib"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （16 Points）",
+        "question": "Which of the following statements about links is incorrect?",
+        "choices": [
+            "A. A hard link points the inode number of the link file to the inode of the linked file.",
+            "B. Both the hard link and symbolic link generate new inodes.",
+            "C. Links include hard links and symbolic links.",
+            "D. Hard links cannot point to directories."
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （16 Points）",
+        "question": "Which of the following commands is used to list the files in the /home directory and its subdirectories?",
+        "choices": [
+            "A. ls -R /home",
+            "B. ls -d /home",
+            "C. ls -a /home",
+            "D. ls -l /home"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （16 Points）",
+        "question": "Which of the following commands is used to determine the type of the myfile file?",
+        "choices": [
+            "A. whatis myfile",
+            "B. file myfile",
+            "C. type myfile",
+            "D. type -q myfile"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （16 Points）",
+        "question": "Which of the following command combinations can be used to count the number of users who log in to the system?",
+        "choices": [
+            "A. who | wc -w",
+            "B. who | wc -l",
+            "C. who | wc -c",
+            "D. who | wc -a"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （16 Points）",
+        "question": "Which of the following commands is used to delete a non-empty directory?",
+        "choices": [
+            "A. mkdir",
+            "B. rmdir",
+            "C. mv",
+            "D. rm"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （16 Points）",
+        "question": "Which command can be used to extract content from specified columns of each line of a text file?",
+        "choices": [
+            "A. cp",
+            "B. dd",
+            "C. fmt",
+            "D. cut"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （16 Points）",
+        "question": "Which of the following commands is used to paste the content in the buffer before the cursor?",
+        "choices": [
+            "A. a",
+            "B. i",
+            "C. p",
+            "D. P"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （16 Points）",
+        "question": "Which of the following vi commands can be used to display the line numbers of the current file?",
+        "choices": [
+            "A. :e number",
+            "B. :set number",
+            "C. :r! date",
+            "D. :200g"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （16 Points）",
+        "question": "In the normal mode of the vi editor, which of the following commands can be used to add a new line under the cursor?",
+        "choices": [
+            "A. a",
+            "B. o",
+            "C. l",
+            "D. A"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （16 Points）",
+        "question": "Which of the following vi commands can be used to replace \"abc\" in lines 5 to 20 with \"cba\"?",
+        "choices": [
+            "A. :1,$s/abc/cba/g",
+            "B. :5,20/abc/cba/g",
+            "C. :5-20s/abc/cba/g",
+            "D. :5,20s/abc/cba/g"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （16 Points）",
+        "question": "Which of the following commands is used to change the owner of a file?",
+        "choices": [
+            "A. chmod",
+            "B. touch",
+            "C. chown",
+            "D. chgrp"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （16 Points）",
+        "question": "What is the command for displaying the home directory of a user?",
+        "choices": [
+            "A. echo $HOME",
+            "B. echo $USERDIR",
+            "C. echo $ENV",
+            "D. echo $ECHO"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 20 （16 Points）",
+        "question": "Assume that the current directory of the root user is /usr/local. After you run the cd command, which of the following directories is the current directory of the user?",
+        "choices": [
+            "A. /home",
+            "B. /root",
+            "C. /home/root",
+            "D. /usr/local"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 21 （16 Points）",
+        "question": "On openEuler, which of the following is the default start UID of a common user?",
+        "choices": [
+            "A. 500",
+            "B. 501",
+            "C. 1000",
+            "D. 1001"
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 22 （16 Points）",
+        "question": "By default, if an administrator creates a user, the home directory is created in which of the following directories?",
+        "choices": [
+            "A. /usr",
+            "B. /home",
+            "C. /root",
+            "D. /etc"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 23 （16 Points）",
+        "question": "Which of the following files can be modified to change the home directory of a user when the user is created?",
+        "choices": [
+            "A. /etc/passwd",
+            "B. /etc/default/useradd",
+            "C. /etc/profile",
+            "D. /etc/fstab"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 24 （16 Points）",
+        "question": "On openEuler, what is the command for enabling a swap partition?",
+        "choices": [
+            "A. swapon",
+            "B. mkswap",
+            "C. fdisk",
+            "D. swapoff"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 25 （16 Points）",
+        "question": "Which of the following is a block device in most Linux distributions?",
+        "choices": [
+            "A. Serial port",
+            "B. Drive",
+            "C. Virtual terminal",
+            "D. Printer"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 26 （16 Points）",
+        "question": "Which of the following can be used to view current system drive usage?",
+        "choices": [
+            "A. df",
+            "B. du /",
+            "C. du .",
+            "D. df /"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 27 （16 Points）",
+        "question": "What is the function of the cron daemon?",
+        "choices": [
+            "A. Shares files on the network.",
+            "B. Manages the printing subsystem.",
+            "C. Traces and manages system information and errors.",
+            "D. Manages the scheduling of routine tasks."
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 28 （16 Points）",
+        "question": "Which of the following commands can be used to list all tasks that are defined to be executed at a specified time in the future?",
+        "choices": [
+            "A. atq",
+            "B. cron",
+            "C. batch",
+            "D. at"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 29 （16 Points）",
+        "question": "Which of the following operations is required for a host to communicate with another LAN through a LAN?",
+        "choices": [
+            "A. Configure the domain name system server.",
+            "B. Define a route from the local host to the network where the local host is located.",
+            "C. Define a route from the local host to the gateway of the network where the local host is located.",
+            "D. Define a route from the local host to the gateway of the destination network."
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 30 （16 Points）",
+        "question": "Which of the following files contains the mapping between host names and IP addresses?",
+        "choices": [
+            "A. /etc/hostname",
+            "B. /etc/hosts",
+            "C. /etc/resolv.conf",
+            "D. /etc/networks"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 31 （16 Points）",
+        "question": "In addition to resolving host names, the Domain Name System (DNS) is responsible for resolving which of the following?",
+        "choices": [
+            "A. IP addresses",
+            "B. MAC addresses",
+            "C. Network addresses",
+            "D. Host aliases"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 32 （16 Points）",
+        "question": "What is the function of the export command in bash?",
+        "choices": [
+            "A. Runs commands in a subshell.",
+            "B. Enables the command history to be used in the subshell.",
+            "C. Sets environment variables for other applications.",
+            "D. Provides the NFS partition to other systems on the network."
+        ],
+        "answer": "C",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 33 （16 Points）",
+        "question": "Which of the following permissions is not required for running a script?",
+        "choices": [
+            "A. Read",
+            "B. Write",
+            "C. Execute",
+            "D. Directory browsing"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 34 （16 Points）",
+        "question": "There are four methods for assigning values to variables in the shell. What is the name=12 method called?",
+        "choices": [
+            "A. Assign a value directly.",
+            "B. Assign a value through the read command.",
+            "C. Use a positional parameter.",
+            "D. Use the command output."
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 35 （16 Points）",
+        "question": "Which of the following commands is used to define the global shell variables?",
+        "choices": [
+            "A. exportfs",
+            "B. alias",
+            "C. exports",
+            "D. export"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 36 （16 Points）",
+        "question": "Which of the following is a correct variable definition?",
+        "choices": [
+            "A. A1= 123",
+            "B. A1 =123",
+            "C. 1A=123",
+            "D. A1=123"
+        ],
+        "answer": "D",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 37 （16 Points）",
+        "question": "On openEuler, in which directory is the configuration file of the Samba service stored?",
+        "choices": [
+            "A. /root/samba",
+            "B. /etc/samba",
+            "C. /home/samba",
+            "D. /opt/samba"
+        ],
+        "answer": "B",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 38 （16 Points）",
+        "question": "Which of the following commands can be used to set the Samba service to start upon system startup?",
+        "choices": [
+            "A. systemctl enable smb",
+            "B. systemctl start smb",
+            "C. systemctl status smb",
+            "D. systemctl restart smb"
+        ],
+        "answer": "A",
+        "explanation": "Nothing",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 39 （17.75 Points）",
+        "question": "In the ls -la /etc command, which of the following are command options?",
+        "choices": [
+            "A. -l",
+            "B. -a",
+            "C. /etc",
+            "D. ls"
+        ],
+        "answer": "AB",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 40 （17.75 Points）",
+        "question": "On the Linux CLI, which of the following shortcut keys can be used to invoke historical commands?",
+        "choices": [
+            "A. Up arrow key",
+            "B. Down arrow key",
+            "C. Left arrow key",
+            "D. Right arrow key"
+        ],
+        "answer": "AB",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 41 （17.75 Points）",
+        "question": "Which of the following commands can be used to edit the file content only after the file is opened?",
+        "choices": [
+            "A. awk",
+            "B. sed",
+            "C. vi",
+            "D. vim"
+        ],
+        "answer": "CD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 42 （17.75 Points）",
+        "question": "Which of the following commands can be used to edit a file?",
+        "choices": [
+            "A. less",
+            "B. more",
+            "C. vi",
+            "D. vim"
+        ],
+        "answer": "CD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 43 （17.75 Points）",
+        "question": "Which of the following statements about Linux users and groups are true?",
+        "choices": [
+            "A. Linux users include super users, common users, and system users.",
+            "B. When a user is created, by default, the system adds the user to a default group or a user private group (UPG) named after the user.",
+            "C. The UPG or default group of a user is irrelevant to the supplementary group of the user.",
+            "D. Linux users are classified into different types based on UIDs."
+        ],
+        "answer": "ABCD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 44 （17.75 Points）",
+        "question": "Which of the following can be software sources of Linux?",
+        "choices": [
+            "A. Network shared directory",
+            "B. Installation CD-ROM",
+            "C. Directory on the local drive",
+            "D. Open source image repository"
+        ],
+        "answer": "ABCD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 45 （17.75 Points）",
+        "question": "Which of the following repository paths are in the correct formats?",
+        "choices": [
+            "A. ftp://192.168.1.10/to/repo",
+            "B. file://192.168.1.11/to/repo",
+            "C. https://192.168.1.12/to/repo",
+            "D. http://192.168.1.13/to/repo"
+        ],
+        "answer": "ACD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 46 （17.75 Points）",
+        "question": "Which of the following methods can be used to disable a software source on Linux?",
+        "choices": [
+            "A. Delete the corresponding repo file.",
+            "B. Change enabled=1 in the repo file to enabled=0.",
+            "C. Uninstall DNF.",
+            "D. Use RPM to uninstall the repo file."
+        ],
+        "answer": "AB",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 47 （17.75 Points）",
+        "question": "On openEuler, which of the following information can be displayed by running the dnf info httpd command?",
+        "choices": [
+            "A. Version number of the httpd installation package",
+            "B. Size of the httpd installation package",
+            "C. Development team of the httpd software package",
+            "D. Authorization information of the httpd software package"
+        ],
+        "answer": "ABD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 48 （17.75 Points）",
+        "question": "Which of the following commands can be used to upgrade the vsftpd software package?",
+        "choices": [
+            "A. rpm -ivh vsftpd",
+            "B. yum update vsftpd",
+            "C. rpm -Uvh vsftpd",
+            "D. rpm -Fvh vsftpd"
+        ],
+        "answer": "BCD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 49 （17.75 Points）",
+        "question": "Which of the following commands can be used to view drive information on openEuler?",
+        "choices": [
+            "A. fdisk -l",
+            "B. df -h",
+            "C. cat /etc/fstab",
+            "D. lvs"
+        ],
+        "answer": "AB",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 50 （17.75 Points）",
+        "question": "When creating a periodic scheduled using the crontab command, which of the following values can be used to indicate the minute?",
+        "choices": [
+            "A. 0",
+            "B. 60",
+            "C. 1.5",
+            "D. 18"
+        ],
+        "answer": "AD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 51 （17.75 Points）",
+        "question": "Which of the following are client tools of the SSH service?",
+        "choices": [
+            "A. ssh",
+            "B. sftp",
+            "C. scp",
+            "D. ssh-copy-id"
+        ],
+        "answer": "ABCD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 52 （17.75 Points）",
+        "question": "Which of the following wildcards can match only a single character?",
+        "choices": [
+            "A. ?",
+            "B. *",
+            "C. []",
+            "D. {}"
+        ],
+        "answer": "AC",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 53 （17.75 Points）",
+        "question": "If the character string is not empty, the condition is true. Which of the following conditional statements are correct?",
+        "choices": [
+            "A. test -z file",
+            "B. [ -n file ]",
+            "C. test ! -z file",
+            "D. None of them."
+        ],
+        "answer": "BC",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 54 （17.75 Points）",
+        "question": "What are the common commands of the Samba service?",
+        "choices": [
+            "A. smbpasswd",
+            "B. smbclient",
+            "C. smbmount",
+            "D. testparm"
+        ],
+        "answer": "ABCD",
+        "explanation": "Nothing",
+        "questionType": "multiple"
+    },
+    {
+        "title": "Question 55 （18 Points）",
+        "question": "The openEuler operating system can have multiple super administrators.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 56 （18 Points）",
+        "question": "If a directory has the rwx permission, anyone can create and delete files in the directory.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 57 （18 Points）",
+        "question": "A user must have the rx permission on the executable script file tesh.sh to execute it.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 58 （18 Points）",
+        "question": "On Linux, if an error occurs when the installation package is being compiled from the source code, the installation can be continued only after the error is rectified.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "True",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 59 （18 Points）",
+        "question": "Environment variables cannot be defined in shell scripts. Therefore, if variables are involved, you need to run the export command to make the environment variables take effect before running a script.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    },
+    {
+        "title": "Question 60 （18 Points）",
+        "question": "A variable name can start with a digit, letter, or underscore _.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "explanation": "Nothing",
+        "questionType": "true_false"
+    }
+]
