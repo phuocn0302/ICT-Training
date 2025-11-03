@@ -8,9 +8,9 @@
       "C. \"umount\" is used to unmount devices.",
       "D. \"fdisk -l\" displays drive partition details."
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "BCD",
+    "explanation": "The `mount` command mounts devices, `umount` unmounts them, and `fdisk -l` lists partition information. The `du` command shows **disk usage**, not drive usage, so option A is incorrect.",
+    "questionType": "multiple"
   },
   {
     "title": "Question 46 （16 Points）",
@@ -19,9 +19,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "Adding `>/dev/null 2>&1` redirects both standard output and error messages to `/dev/null`, effectively discarding them. This prevents cron jobs from sending unnecessary output or emails to the user.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 47 （16 Points）",
@@ -30,9 +30,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "False",
+    "explanation": "In Linux, a user belongs to one **primary group** but can also be part of **multiple supplementary groups**, allowing flexible permission management.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 48 （16 Points）",
@@ -41,8 +41,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "For batch deployment of openEuler, administrators commonly use **PXE network boot** or **virtual CD-ROM drives** in virtualized environments for automated installation.",
+    "questionType": "true_false"
   }
 ]
+

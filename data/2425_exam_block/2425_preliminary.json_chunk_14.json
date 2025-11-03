@@ -6,9 +6,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "The Kunpeng 920 processor, developed by Huawei, features up to 64 cores and integrates eight DDR4 memory controllers. This design allows high memory bandwidth and supports up to eight DDR4 memory slots, ideal for high-performance computing workloads.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 54 （16 Points）",
@@ -17,9 +17,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "The `ps -ef` command lists all running processes with detailed information, and piping it to `grep xxx` filters the output to show only processes containing 'xxx' in their details, making it a common way to search for specific processes.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 55 （16 Points）",
@@ -28,9 +28,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "In Vim normal mode, pressing `yy` copies (yanks) the entire current line. Pasting with `p` places the copied line **below** the current line, while `P` pastes it **above** the current line.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 56 （16 Points）",
@@ -39,8 +39,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "openEuler supports installation through multiple media types such as physical CD-ROMs, bootable USB drives, and virtual CD-ROM drives used in virtualization environments like VMware or KVM.",
+    "questionType": "true_false"
   }
 ]
+

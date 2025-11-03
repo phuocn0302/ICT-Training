@@ -6,9 +6,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "False",
+    "explanation": "In VARCHAR(n), 'n' represents the maximum number of **characters**, not bytes. However, in multi-byte character sets like UTF-8, each character may occupy multiple bytes in storage.",
+    "questionType": "true_false" 
   },
   {
     "title": "Question 58 （16 Points）",
@@ -17,9 +17,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "The COMMIT command is used to **save all changes** made during the current transaction to the database permanently. Once committed, the changes cannot be rolled back.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 59 （16 Points）",
@@ -28,9 +28,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "False",
+    "explanation": "Routes added with the `route` command are **temporary** and stored in **memory**. They are lost after a reboot unless they are added to a persistent configuration file or managed via `ip route` and system network scripts.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 60 （16 Points）",
@@ -39,8 +39,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "False",
+    "explanation": "In Linux, a **lower PRI (priority)** value means **higher priority**. The scheduler executes processes with lower numeric priority values before those with higher ones.",
+    "questionType": "true_false"
   }
 ]
+

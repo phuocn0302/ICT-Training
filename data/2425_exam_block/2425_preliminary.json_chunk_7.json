@@ -9,7 +9,7 @@
       "D. 20"
     ],
     "answer": "C",
-    "explanation": "",
+    "explanation": "The default port for OpenSSH is 22, which is used for secure shell (SSH) connections. Port 21 is used for FTP, and port 23 is for Telnet.",
     "questionType": "single"
   },
   {
@@ -22,7 +22,7 @@
       "D. mkfs -t"
     ],
     "answer": "BC",
-    "explanation": "",
+    "explanation": "`fdisk -l` lists all drives and partitions, while `df -h` shows mounted drive usage and available space. `parted -v` only shows version info, and `mkfs -t` is for creating file systems.",
     "questionType": "multiple"
   },
   {
@@ -34,8 +34,8 @@
       "C. ip link show",
       "D. nmcli device status"
     ],
-    "answer": "ABD",
-    "explanation": "",
+    "answer": "ACD",
+    "explanation": "All listed commands can display network interface configurations. `ip addr` and `ip link show` are part of the `iproute2` suite, `ifconfig -a` shows all interfaces but on Windows, and `nmcli device status` lists devices managed by NetworkManager.",
     "questionType": "multiple"
   },
   {
@@ -48,7 +48,8 @@
       "D. Configuring \"NOPASSWD\" in \"/etc/sudoers\" allows the \"sudo\" command to bypass the \"root\" password prompt."
     ],
     "answer": "ACD",
-    "explanation": "",
+    "explanation": "`sudo` lets authorized users run root commands (A). `NOPASSWD` removes the password prompt (D). `su -` changes both user and environment; `su` is the same",
     "questionType": "multiple"
   }
 ]
+

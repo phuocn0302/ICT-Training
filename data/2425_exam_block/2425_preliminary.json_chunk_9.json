@@ -8,8 +8,8 @@
       "C. pg_user",
       "D. information_schema.table_privileges"
     ],
-    "answer": "AC",
-    "explanation": "",
+    "answer": "D",
+    "explanation": "The view `information_schema.table_privileges` contains detailed information about table-level privileges granted to users or roles. `pg_authid` stores authentication information (roles and passwords), `pg_shdepend` stores shared dependencies, and `pg_user` shows user account info but not privileges directly.",
     "questionType": "multiple"
   },
   {
@@ -21,8 +21,8 @@
       "C. Stress testing is to test the processing capacity of the system under a certain saturated state, usually set to a high CPU and memory usage rate to test the stability of the system.",
       "D. Reliability testing is to load a certain service pressure and run continuously for a period of time to test whether the system can run stably, focusing on the instantaneous pressure capacity of the system."
     ],
-    "answer": "BC",
-    "explanation": "",
+    "answer": "ABC",
+    "explanation": "A, B, and C are correct. Load testing, benchmark testing, and stress testing all evaluate different aspects of system performance. D is incorrect because reliability testing focuses on long-term stability, not instantaneous pressure capacity.",
     "questionType": "multiple"
   },
   {
@@ -34,8 +34,8 @@
       "C. Network storage configuration: Optimize network storage configurations such as the number of connections and bandwidth allocation to improve remote data access speed.",
       "D. I/O scheduling and prefetch strategy: Choose an appropriate I/O scheduling algorithm and implement a file prefetch strategy to improve drive access order and efficiency."
     ],
-    "answer": "ABCD",
-    "explanation": "",
+    "answer": "ABD",
+    "explanation": "A, B, and D are correct. Drive I/O tuning focuses on local disk performance via filesystem selection, caching, and scheduling. Option C refers to network tuning, which is outside the drive I/O subsystem scope.",
     "questionType": "multiple"
   },
   {
@@ -48,7 +48,8 @@
       "D. Specifies the architecture version of the target processor."
     ],
     "answer": "ACD",
-    "explanation": "",
+    "explanation": "The `-march` option tells GCC which CPU architecture to target, defining available instructions (A), enabling processor-specific optimizations (C), and specifying the architecture version (D). Option B (`-fPIC`) controls address-independent code generation instead.",
     "questionType": "multiple"
   }
 ]
+
