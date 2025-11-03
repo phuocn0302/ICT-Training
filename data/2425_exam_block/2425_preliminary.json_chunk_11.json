@@ -8,7 +8,7 @@
       "C. gs_restore",
       "D. gs_dump"
     ],
-    "answer": "B, D",
+    "answer": "BD",
     "explanation": "`gs_dump` and `gs_dumpall` are openGauss tools used to **export (back up) data** from a database. `gs_dump` exports a single database, while `gs_dumpall` exports all databases. `gs_restore` is used for importing data, and `gs_check` is for system checking.",
     "questionType": "multiple"
   },
@@ -21,7 +21,7 @@
       "C. ALTER",
       "D. UPDATE"
     ],
-    "answer": "A, B, D",
+    "answer": "ABD",
     "explanation": "DML (Data Manipulation Language) statements manage data within tables. `INSERT`, `DELETE`, and `UPDATE` modify table contents. `ALTER` is a DDL (Data Definition Language) command used to change table structure.",
     "questionType": "multiple"
   },
@@ -34,7 +34,7 @@
       "C. The single-node architecture has performance bottlenecks.",
       "D. The single-node architecture is not scalable and cannot cope with increasing service requirements."
     ],
-    "answer": "A, C, D",
+    "answer": "ACD",
     "explanation": "In a single-node architecture, **a single database instance handles all requests**, which means faults may cause **data loss (A)**, the system can encounter **performance bottlenecks (C)**, and it is **not easily scalable (D)**. Option B is incorrect since resource contention can be mitigated through tuning.",
     "questionType": "multiple"
   },
@@ -47,7 +47,7 @@
       "C. Samba can be used for file sharing between Linux and Windows systems, as well as between Linux systems.",
       "D. Samba is a piece of software that enables Linux to use the Server Message Block (SMB) network communication protocol."
     ],
-    "answer": "A, C, D",
+    "answer": "ACD",
     "explanation": "Samba implements the **SMB (Server Message Block)** protocol, enabling **file and printer sharing** between Linux and Windows systems. It uses **NetBIOS** for communication with Windows systems. Option B is incorrect because a Samba server and client are separate configurations, not roles performed simultaneously by one instance.",
     "questionType": "multiple"
   }
