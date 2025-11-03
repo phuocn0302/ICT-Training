@@ -8,9 +8,9 @@
       "C. The \"setfacl\" command is used to set the ACL of a file.",
       "D. The \"chacl\" command is used to modify the ACL of a file."
     ],
-    "answer": "",
+    "answer": "ABCD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 30 （18 Points）",
@@ -21,9 +21,9 @@
       "C. The \"touch\" command can be used to clear file contents.",
       "D. The \"touch\" command can be used to modify the file inodes."
     ],
-    "answer": "",
+    "answer": "ABD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 31 （18 Points）",
@@ -34,9 +34,9 @@
       "C. When a user is created, the system automatically creates a schema with the same name as the user.",
       "D. Database objects with the same name can exist in different schemas of the same database without causing conflicts."
     ],
-    "answer": "",
+    "answer": "ABCD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 32 （18 Points）",
@@ -47,8 +47,8 @@
       "C. Any table in the database can have multiple tablespaces. You can specify the tablespaces to be used.",
       "D. A tablespace corresponds to a file system directory; you must have the read and write permissions on an empty directory."
     ],
-    "answer": "",
+    "answer": "BCD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   }
 ]
