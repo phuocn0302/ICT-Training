@@ -8,9 +8,9 @@
       "C. pg_user",
       "D. information_schema.table_privileges"
     ],
-    "answer": "",
+    "answer": "AC",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 34 （18 Points）",
@@ -21,9 +21,9 @@
       "C. Stress testing is to test the processing capacity of the system under a certain saturated state, usually set to a high CPU and memory usage rate to test the stability of the system.",
       "D. Reliability testing is to load a certain service pressure and run continuously for a period of time to test whether the system can run stably, focusing on the instantaneous pressure capacity of the system."
     ],
-    "answer": "",
+    "answer": "BC",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 35 （18 Points）",
@@ -34,9 +34,9 @@
       "C. Network storage configuration: Optimize network storage configurations such as the number of connections and bandwidth allocation to improve remote data access speed.",
       "D. I/O scheduling and prefetch strategy: Choose an appropriate I/O scheduling algorithm and implement a file prefetch strategy to improve drive access order and efficiency."
     ],
-    "answer": "",
+    "answer": "ABCD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 36 （18 Points）",
@@ -47,8 +47,8 @@
       "C. Optimizes the code to match the features of a specific processor.",
       "D. Specifies the architecture version of the target processor."
     ],
-    "answer": "",
+    "answer": "ACD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   }
 ]
