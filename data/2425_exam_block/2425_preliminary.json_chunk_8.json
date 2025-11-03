@@ -8,8 +8,8 @@
       "C. The \"setfacl\" command is used to set the ACL of a file.",
       "D. The \"chacl\" command is used to modify the ACL of a file."
     ],
-    "answer": "A,B,C",
-    "explanation": "ACLs allow fine-grained control of file access beyond standard owner/group/others permissions. `getfacl` retrieves ACLs, and `setfacl` sets or modifies them. `chacl` is used on some systems but is less common and not part of standard Linux utilities.",
+    "answer": "ABCD",
+    "explanation": "ACLs allow fine-grained control of file access beyond standard owner/group/others permissions. `getfacl` retrieves ACLs, and `setfacl` sets or modifies them. `chacl` is used to change acl.",
     "questionType": "multiple"
   },
   {
@@ -21,7 +21,7 @@
       "C. The \"touch\" command can be used to clear file contents.",
       "D. The \"touch\" command can be used to modify the file inodes."
     ],
-    "answer": "A,B",
+    "answer": "AB",
     "explanation": "`touch` is used to update file access and modification times (A). If the file does not exist, it creates an empty file (B). It does not modify inodes directly or erase contents.",
     "questionType": "multiple"
   },
@@ -34,7 +34,7 @@
       "C. When a user is created, the system automatically creates a schema with the same name as the user.",
       "D. Database objects with the same name can exist in different schemas of the same database without causing conflicts."
     ],
-    "answer": "A,B,C,D",
+    "answer": "ABCD",
     "explanation": "All statements are correct. Schemas separate objects to avoid conflicts, each database has a `public` schema, and each user has an automatically created schema. Identical object names in different schemas don’t conflict.",
     "questionType": "multiple"
   },
@@ -47,7 +47,7 @@
       "C. Any table in the database can have multiple tablespaces. You can specify the tablespaces to be used.",
       "D. A tablespace corresponds to a file system directory; you must have the read and write permissions on an empty directory."
     ],
-    "answer": "A,B,D",
+    "answer": "ABD",
     "explanation": "A, B, and D are correct. Tablespaces provide flexible storage management and performance optimization. Each tablespace maps to a file system directory. C is incorrect — a single table resides in one tablespace.",
     "questionType": "multiple"
   }
