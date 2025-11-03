@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 choiceLetter = parts[1]; // "A"
                 choiceText = parts[2]; // "A. cat" -> "cat"
             } else if (choice.toUpperCase() === "TRUE" || choice.toUpperCase() === "FALSE") {
-                choiceLetter = choice.toUpperCase(); // "TRUE"
+                choiceLetter = choice; // "True"
                 choiceText = choice;
             } else {
                 // Fallback for unexpected formats
