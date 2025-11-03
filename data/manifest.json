@@ -12,6 +12,10 @@
         "test_name": "Regional 2023-2024"
     },
     {
+        "fileName": "2425_preliminary.json",
+        "test_name": "Preliminary 2024-2025"
+    },
+    {
         "fileName": "hcia_openeuler_mock.json",
         "test_name": "HCIA-openEuler V1.0 Mock Exam"
     },
