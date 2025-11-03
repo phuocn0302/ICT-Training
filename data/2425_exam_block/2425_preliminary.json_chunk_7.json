@@ -8,7 +8,7 @@
       "C. 22",
       "D. 20"
     ],
-    "answer": "",
+    "answer": "C",
     "explanation": "",
     "questionType": "single"
   },
@@ -21,9 +21,9 @@
       "C. df -h",
       "D. mkfs -t"
     ],
-    "answer": "",
+    "answer": "BC",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 27 （18 Points）",
@@ -34,9 +34,9 @@
       "C. ip link show",
       "D. nmcli device status"
     ],
-    "answer": "",
+    "answer": "ABD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   },
   {
     "title": "Question 28 （18 Points）",
@@ -47,8 +47,8 @@
       "C. When the \"su\" command is used, both the user identity and shell environment are switched to the \"root\" user.",
       "D. Configuring \"NOPASSWD\" in \"/etc/sudoers\" allows the \"sudo\" command to bypass the \"root\" password prompt."
     ],
-    "answer": "",
+    "answer": "ACD",
     "explanation": "",
-    "questionType": "single"
+    "questionType": "multiple"
   }
 ]
