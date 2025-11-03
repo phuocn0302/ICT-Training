@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Question 57 （16 Points）",
+    "question": "In the character type VARCHAR(n), \"n\" indicates the number of bytes instead of characters.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 58 （16 Points）",
+    "question": "The \"commit\" command is used to commit a transaction to a database.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 59 （16 Points）",
+    "question": "You can use the \"route\" command to add routing configurations. The added routing configurations are stored in the memory and remain valid after a reboot.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 60 （16 Points）",
+    "question": "In Linux, processes with higher priority are executed preferentially. A higher PRI value indicates a higher process priority.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

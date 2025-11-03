@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Question 5 （16 Points）",
+    "question": "Which option displays the default shell of the current user?",
+    "choices": [
+      "A. cat /etc/shells",
+      "B. echo $PATH",
+      "C. echo $SHELL",
+      "D. echo $0"
+    ],
+    "answer": "C",
+    "explanation": "The command **echo $SHELL** is explicitly documented as the way to check the default shell of the current login user [1]. Option A, `cat /etc/shells`, displays all the available shells installed in the system [1]. Option B, `echo $PATH`, displays the command search path [2]. Option D, `echo $0`, views the current shell being executed [1].",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 6 （16 Points）",
+    "question": "Which of the following statements is false about the commands?",
+    "choices": [
+      "A. \"touch\" creates files or directories.",
+      "B. \"cp\" copies files or directories.",
+      "C. \"rm\" deletes files or directories.",
+      "D. \"mv\" moves files or directories."
+    ],
+    "answer": "A",
+    "explanation": "The statement that `touch` creates files or directories is **false**. The **touch** command is primarily used to **create an empty file** [3, 4] or change the timestamp of a file [3, 4]. The command used explicitly to create a directory or folder is `mkdir` [5-8]. The other statements are true according to the sources: `cp` is used to copy files or directories [9, 10], `rm` is used to delete files or directories [11-14], and `mv` is used to move files or directories (or rename a file if source and target are in the same directory) [15-18].",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 7 （16 Points）",
+    "question": "Which of the following openGauss commands is used to delete rows from a table?",
+    "choices": [
+      "A. DROP",
+      "B. DELETE",
+      "C. UPDATE",
+      "D. TRUNCATE"
+    ],
+    "answer": "B",
+    "explanation": "The **DELETE** command is a Data Manipulation Language (DML) command [19-21] used to delete records (rows) from a table [22, 23]. The `DELETE` statement supports the use of the `WHERE` condition to specify which rows to remove [24, 25]. Option A, `DROP`, is a Data Definition Language (DDL) command used to delete database objects, such as tables, schemas, or indexes entirely [19, 26, 27]. Option D, `TRUNCATE`, deletes all data from a table, releases space, and is quicker than `DELETE`, but it does not support the `WHERE` clause for row selection [25, 28, 29]. Option C, `UPDATE`, is used to modify data in a table [19, 22, 23].",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 8 （16 Points）",
+    "question": "Which of the following openGauss commands is used to create a schema?",
+    "choices": [
+      "A. GENERATE SCHEMA",
+      "B. NEW SCHEMA",
+      "C. CREATE SCHEMA",
+      "D. ADD SCHEMA"
+    ],
+    "answer": "C",
+    "explanation": "The command used in openGauss to create a schema is **CREATE SCHEMA** [30-32]. This command is classified as part of the Data Definition Language (DDL) [19, 33, 34].",
+    "questionType": "single"
+  }
+]

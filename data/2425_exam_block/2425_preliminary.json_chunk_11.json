@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Question 41 （18 Points）",
+    "question": "Which of the following openGauss tools can export data from the database?",
+    "choices": [
+      "A. gs_check",
+      "B. gs_dumpall",
+      "C. gs_restore",
+      "D. gs_dump"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 42 （18 Points）",
+    "question": "Which of the following are Data Manipulation Language (DML) statements in SQL?",
+    "choices": [
+      "A. INSERT",
+      "B. DELETE",
+      "C. ALTER",
+      "D. UPDATE"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 43 （18 Points）",
+    "question": "Which of the following statements are true about the single-node database architecture?",
+    "choices": [
+      "A. If the single-node architecture is faulty, data loss may occur.",
+      "B. In the single-node architecture, applications may preempt database resources, which cannot be resolved.",
+      "C. The single-node architecture has performance bottlenecks.",
+      "D. The single-node architecture is not scalable and cannot cope with increasing service requirements."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 44 （18 Points）",
+    "question": "Which of the following statements are true about the Samba file sharing service?",
+    "choices": [
+      "A. On Windows, Samba uses the NetBIOS protocol.",
+      "B. A Samba server can serve as a file sharing server and a Samba client.",
+      "C. Samba can be used for file sharing between Linux and Windows systems, as well as between Linux systems.",
+      "D. Samba is a piece of software that enables Linux to use the Server Message Block (SMB) network communication protocol."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

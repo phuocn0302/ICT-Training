@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Question 45 （18 Points）",
+    "question": "Which of the following statements are true about Linux commands?",
+    "choices": [
+      "A. \"du\" displays the drive usage of a specified directory.",
+      "B. \"mount\" is used to mount devices.",
+      "C. \"umount\" is used to unmount devices.",
+      "D. \"fdisk -l\" displays drive partition details."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 46 （16 Points）",
+    "question": "Cron scheduled tasks usually include \">/dev/null 2>&1\" at the end.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 47 （16 Points）",
+    "question": "A user group can have multiple users, but a user can only belong to a single user group.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 48 （16 Points）",
+    "question": "PXE booting or virtual CD-ROM drives are common methods for batch installation of openEuler.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

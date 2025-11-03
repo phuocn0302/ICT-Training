@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Question 25 （16 Points）",
+    "question": "Which of the following is the default listening port of the OpenSSH service?",
+    "choices": [
+      "A. 23",
+      "B. 21",
+      "C. 22",
+      "D. 20"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 26 （18 Points）",
+    "question": "In openEuler, which of the following commands can be used to query drive information?",
+    "choices": [
+      "A. parted -v",
+      "B. fdisk -l",
+      "C. df -h",
+      "D. mkfs -t"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 27 （18 Points）",
+    "question": "In openEuler, which of the following commands can be used to view network device configurations?",
+    "choices": [
+      "A. ip addr",
+      "B. ifconfig -a",
+      "C. ip link show",
+      "D. nmcli device status"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 28 （18 Points）",
+    "question": "Which of the following statements are true about switching to the \"root\" user?",
+    "choices": [
+      "A. The \"sudo\" command allows common users to execute commands that only the \"root\" user can execute.",
+      "B. The \"su -\" command only switches the user identity to \"root\", but the shell environment remains that of the common user.",
+      "C. When the \"su\" command is used, both the user identity and shell environment are switched to the \"root\" user.",
+      "D. Configuring \"NOPASSWD\" in \"/etc/sudoers\" allows the \"sudo\" command to bypass the \"root\" password prompt."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

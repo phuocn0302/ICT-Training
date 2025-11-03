@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Question 9 （16 Points）",
+    "question": "Compared with other open-source databases, openGauss has many new technical features. Which of the following statements is false?",
+    "choices": [
+      "A. It adopts the Mulan Permissive Software License, allowing code to be freely modified, used, and referenced.",
+      "B. It provides the Ustore for frequent update scenarios.",
+      "C. It provides AI-based parameter tuning and index recommendations and automatically recommends AI parameters.",
+      "D. It provides the Sstore engine for frequent query scenarios."
+    ],
+    "answer": "D",
+    "explanation": "The statement mentioning the 'Sstore engine' is false, as openGauss documentation specifies three main storage engines: Row-store (used for OLTP/frequent updates/point queries), Column-store (used for OLAP/complex queries/statistical analysis), and Memory-Optimized Table (MOT) (used for high-performance transactional/update scenarios) [1-8]. The terms 'Ustore' (B) and 'Sstore' (D) are not recognized names for the openGauss storage engines listed in the sources. However, the openGauss database is confirmed to adopt the **Mulan Permissive Software License v2**, allowing code to be freely modified, used, and referenced (A) [9, 10]. It also supports AI-based features, including optimizing parameters and automatically recommending AI parameters (C) [11-14]. Since openGauss addresses frequent query scenarios using its Row-store, Column-store, and MOT engines, the specific claim of an 'Sstore' engine is not supported by the sources.",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 10 （16 Points）",
+    "question": "Which of the following statements is true about the openGauss database architecture?",
+    "choices": [
+      "A. openGauss uses the client/server architecture. The client and server run in the same process.",
+      "B. openGauss uses the multi-process and multi-thread architecture.",
+      "C. openGauss uses the single-process and multi-thread architecture. All database operations are performed in the same process as threads.",
+      "D. openGauss uses the multi-process architecture. Each database connection corresponds to an independent process."
+    ],
+    "answer": "C",
+    "explanation": "openGauss is a relational database that uses a client/server architecture [15, 16]. Crucially, it employs a **single-process multi-thread architecture** [15-17]. This design is advantageous because the thread startup overhead is much lower than process startup overhead [18, 19], and multiple threads running in a process share the same address space and most data [19]. When a client connects, the GaussMaster thread forks a subthread (gaussdb) to process the request [20]. This architecture allows for parallel execution of multiple closely related tasks using multiple CPUs [18].",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 11 （16 Points）",
+    "question": "In the field of integrated circuits (IC), \"die\" refers to a single, unpackaged integrated circuit chip. In the Huawei-designed Kunpeng 920 processor, what is the maximum number of cores that can be integrated into a single CPU die?",
+    "choices": [
+      "A. 32",
+      "B. 64",
+      "C. 48",
+      "D. 16"
+    ],
+    "answer": "B",
+    "explanation": "The sources explicitly mention the specifications of the Kunpeng 920 processor in the context of openGauss performance testing. The Kunpeng 920 CPU is listed as having **64 cores** and 64 threads [21, 22]. In a typical multi-core Kunpeng CPU architecture, two such chips (CPUs) together feature 128 cores [23, 24], confirming that a single processor unit (die/CPU) integrates 64 cores.",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 12 （16 Points）",
+    "question": "When you build open source software for the Kunpeng platform using Maven repositories, which of the following statements is false?",
+    "choices": [
+      "A. The local Maven repository is first queried.",
+      "B. Maven repositories can be configured with proxy settings to accelerate dependency downloads from remote repositories.",
+      "C. Maven repositories provide all external dependency libraries, including versions specifically optimized for the Kunpeng platform.",
+      "D. When the required components are not present in the local repository, Maven downloads them from remote repositories."
+    ],
+    "answer": "C",
+    "explanation": "The source material does not explicitly mention Maven or Maven repositories. However, based on the general principles of dependency and software package management described for openEuler utilities like DNF/YUM:\n\n*   Statements A and D reflect standard dependency resolution: when managing software packages, repositories (software sources) are utilized [1]. If packages are not locally available, they are obtained from specified software repositories [2, 3]. This typically involves querying local storage first and then fetching from a remote source if necessary. \n*   Statement B reflects general network practice: remote repositories (software sources) are typically accessed via URLs [4-6], and proxy settings (although not explicitly detailed for acceleration) are standard configurations in such environments.\n*   Statement **C** claims that Maven repositories provide **all** external dependency libraries, including versions specifically optimized for Kunpeng. Claiming that any repository provides *all* external dependency libraries is an unrealistic and overly absolute assertion, particularly concerning specific architectural optimizations (like those for Kunpeng processors mentioned elsewhere in the context of openEuler performance [7-10]). While many packages are ported (as implied by the existence of architecture-specific RPM packages like `aarch64` [11]), guaranteeing *all* external dependencies are available and optimized is generally false in real software ecosystems."
+  }
+]

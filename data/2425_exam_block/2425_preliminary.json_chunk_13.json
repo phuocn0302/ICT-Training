@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Question 49 （16 Points）",
+    "question": "In the openGauss database, the primary and standby mode is automatically configured by default to ensure high data availability and fault recovery capabilities.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 50 （16 Points）",
+    "question": "In the openGauss database, when the GRANT statement is used to grant permissions, the granted user can immediately grant the obtained permissions to other users, provided that \"WITH GRANT OPTION\" is specified during the authorization.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 51 （16 Points）",
+    "question": "A-Tune is an AI-powered automatic optimization system that uses intrusive system profiling to sense service workload. It matches the optimal resource model for each service and responds to service changes in real time.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 52 （16 Points）",
+    "question": "When using the system performance analysis tool provided by the Kunpeng DevKit to analyze the performance of C or C++ applications, you can view the function source code, assembly code, and the control flow graph of basic blocks of function assembly code.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

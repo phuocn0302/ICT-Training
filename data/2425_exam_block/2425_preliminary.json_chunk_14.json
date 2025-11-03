@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Question 53 （16 Points）",
+    "question": "The Kunpeng 920 processor features a powerful 64-core design and integrates eight advanced DDR4 memory controllers, enabling support for up to eight DDR4 memory slots to meet high-performance computing demands.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 54 （16 Points）",
+    "question": "In openEuler, the \"ps -ef | grep xxx\" command can be used to find processes that contain \"xxx\" within their process information.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 55 （16 Points）",
+    "question": "In Vim normal mode of Vim in openEuler, pasting content copied by pressing \"yy\" will insert the content below the current line.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 56 （16 Points）",
+    "question": "openEuler can be installed using various methods, including CD-ROM, USB flash drives, and virtual CD-ROM drives.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

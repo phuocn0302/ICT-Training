@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Question 33 （18 Points）",
+    "question": "Which of the following system catalogs or views can be used to query permission information in a database?",
+    "choices": [
+      "A. pg_authid",
+      "B. pg_shdepend",
+      "C. pg_user",
+      "D. information_schema.table_privileges"
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 34 （18 Points）",
+    "question": "Which of the following statements are true about common performance testing methods?",
+    "choices": [
+      "A. Load testing is to measure the capacity of a system by continuously increasing the load until the system performance bottlenecks or resources are saturated.",
+      "B. Benchmark testing is to quantitatively and comparatively test a performance metric of a test object by designing scientific test methods, test tools, and test systems.",
+      "C. Stress testing is to test the processing capacity of the system under a certain saturated state, usually set to a high CPU and memory usage rate to test the stability of the system.",
+      "D. Reliability testing is to load a certain service pressure and run continuously for a period of time to test whether the system can run stably, focusing on the instantaneous pressure capacity of the system."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 35 （18 Points）",
+    "question": "In drive I/O subsystem tuning, which of the following options are key tuning strategies?",
+    "choices": [
+      "A. File system and block device management: Choose a high-performance file system and adjust block device parameters to improve I/O efficiency.",
+      "B. Memory and cache optimization: Reasonably allocate memory for caching to reduce drive access frequency.",
+      "C. Network storage configuration: Optimize network storage configurations such as the number of connections and bandwidth allocation to improve remote data access speed.",
+      "D. I/O scheduling and prefetch strategy: Choose an appropriate I/O scheduling algorithm and implement a file prefetch strategy to improve drive access order and efficiency."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 36 （18 Points）",
+    "question": "The \"-march\" option plays a crucial role for the GCC compiler on the Kunpeng platform (based on ARM architecture). Which of the following are functions of the \"-march\" option?",
+    "choices": [
+      "A. Defines the range of instructions that the compiler should generate.",
+      "B. Determines whether to generate address-independent code.",
+      "C. Optimizes the code to match the features of a specific processor.",
+      "D. Specifies the architecture version of the target processor."
+    ],
+    "answer": "",
+    "explanation": "",
+    "questionType": "single"
+  }
+]

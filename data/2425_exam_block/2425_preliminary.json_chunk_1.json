@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Question 1 （16 Points）",
+    "question": "Which command is used to view open files in openEuler?",
+    "choices": [
+      "A. find",
+      "B. lsof",
+      "C. ls",
+      "D. mount"
+    ],
+    "answer": "B",
+    "explanation": "The command typically used in Linux environments to list open files is `lsof`. The other options are documented for different purposes: `find` is used to search for files [1, 2], `ls` is used to view file and directory lists [3-5], and `mount` is used to query or configure mounting information [6-8]. Although the specific definition of the `lsof` command is not provided in the supplied texts, it is the standard utility for viewing open files among the choices listed.",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 2 （16 Points）",
+    "question": "Which statement is false about single quotes in shell scripting?",
+    "choices": [
+      "A. Single quotes escaped with a backslash can appear within single quotes.",
+      "B. Single quotes cannot appear within single quotes.",
+      "C. Variables within single quotes are invalid.",
+      "D. Any character within single quotes will be output as is."
+    ],
+    "answer": "A",
+    "explanation": "The statement that 'Single quotes escaped with a backslash can appear within single quotes' is false because strings enclosed in single quotation marks cannot contain extra single quotation marks, even if escape characters are used for them [9]. The sources confirm that any characters within single quotation marks are output without any changes (D) [9], and variables within single quotes are invalid (C) [9]. Consequently, single quotes cannot appear within single quotes (B) [9].",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 3 （16 Points）",
+    "question": "In openEuler, what is the maximum number of primary partitions allowed on a drive?",
+    "choices": [
+      "A. Three",
+      "B. Unlimited",
+      "C. One",
+      "D. Four"
+    ],
+    "answer": "D",
+    "explanation": "When partitioning a drive using the Master Boot Record (MBR) scheme, which is a traditional partitioning scheme discussed in the context of openEuler storage, the total number of primary partitions and extended partitions cannot exceed four [10]. Specifically, a drive can have a maximum of **four primary partitions** [11-13].",
+    "questionType": "single"
+  },
+  {
+    "title": "Question 4 （16 Points）",
+    "question": "Which statement is false about the \"kill\" command?",
+    "choices": [
+      "A. \"kill -19\" pauses the process.",
+      "B. \"kill -15\" unconditionally stops the process without terminating it.",
+      "C. \"kill -1\" suspends the process.",
+      "D. \"kill -9\" forcibly terminates the process."
+    ],
+    "answer": "B",
+    "explanation": "The statement is false because signal 15 (TERM) is a **Termination** signal [14, 15]. Unlike signal 9 (KILL), which forcibly terminates a process (D) [14-16], signal 15 can be caught or ignored by processes [16], meaning it is **not unconditional**. Furthermore, termination implies stopping the process and exiting. Signal 1 is HUP (Hangup) [14, 15], which is not suspension (C). Signal 19 is described as CONT (Continue executing, if stopped) in one source [14] (making A false) or STOP in another [15] (making A true, as stopping is a form of pausing), but B is definitively false regarding its unconditional nature and goal.",
+    "questionType": "single"
+  }
+]
