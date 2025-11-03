@@ -8,7 +8,7 @@
       "C. \"umount\" is used to unmount devices.",
       "D. \"fdisk -l\" displays drive partition details."
     ],
-    "answer": "B, C, D",
+    "answer": "BCD",
     "explanation": "The `mount` command mounts devices, `umount` unmounts them, and `fdisk -l` lists partition information. The `du` command shows **disk usage**, not drive usage, so option A is incorrect.",
     "questionType": "multiple"
   },
