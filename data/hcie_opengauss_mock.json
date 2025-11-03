@@ -6,9 +6,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第四章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 2 （15 Points）",
@@ -17,9 +17,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第四章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 3 （15 Points）",
@@ -28,9 +28,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第五章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 4 （15 Points）",
@@ -39,9 +39,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第一章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 5 （15 Points）",
@@ -50,9 +50,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第一章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 6 （15 Points）",
@@ -61,9 +61,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第二章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 7 （15 Points）",
@@ -72,9 +72,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第二章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 8 （15 Points）",
@@ -83,9 +83,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第六章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 9 （15 Points）",
@@ -94,9 +94,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第八章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 10 （15 Points）",
@@ -105,9 +105,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第三章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 11 （15 Points）",
@@ -116,9 +116,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第三章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 12 （15 Points）",
@@ -127,9 +127,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第三章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 13 （15 Points）",
@@ -138,9 +138,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第三章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 14 （15 Points）",
@@ -149,9 +149,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第三章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 15 （15 Points）",
@@ -160,9 +160,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第三章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 16 （15 Points）",
@@ -171,9 +171,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第七章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 17 （15 Points）",
@@ -182,9 +182,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第七章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 18 （15 Points）",
@@ -193,9 +193,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第七章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 19 （15 Points）",
@@ -204,9 +204,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "True",
+        "explanation": "第七章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 20 （15 Points）",
@@ -215,9 +215,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第七章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 21 （15 Points）",
@@ -226,9 +226,9 @@
             "True",
             "False"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "False",
+        "explanation": "第七章",
+        "questionType": "true_false"
     },
     {
         "title": "Question 22 （15 Points）",
@@ -239,8 +239,8 @@
             "C. Append",
             "D. Hash join"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "B",
+        "explanation": "第四章",
         "questionType": "single"
     },
     {
@@ -252,8 +252,8 @@
             "C. Local Redistribute",
             "D. Local Gather"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "A",
+        "explanation": "第四章",
         "questionType": "single"
     },
     {
@@ -265,8 +265,8 @@
             "C. SortAgg",
             "D. PlainAgg"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "B",
+        "explanation": "第五章",
         "questionType": "single"
     },
     {
@@ -278,8 +278,8 @@
             "C. SeqScan > IndexOnlyScan > IndexScan > BitmapScan",
             "D. BitmapScan > IndexOnlyScan > IndexScan > SeqScan"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "D",
+        "explanation": "第五章",
         "questionType": "single"
     },
     {
@@ -291,8 +291,8 @@
             "C. Convert NOT EXISTS to NOT IN.",
             "D. Use HashAgg."
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "C",
+        "explanation": "第五章",
         "questionType": "single"
     },
     {
@@ -304,8 +304,8 @@
             "C. Implicit type conversion of the index column",
             "D. Performing calculations on the index column"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "B",
+        "explanation": "第五章",
         "questionType": "single"
     },
     {
@@ -317,8 +317,8 @@
             "C. If a table contains a large amount of data, conduct table partitioning or splitting.",
             "D. Avoid using foreign keys."
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "A",
+        "explanation": "第五章",
         "questionType": "single"
     },
     {
@@ -330,8 +330,8 @@
             "C. deadlock_timeout",
             "D. lockwait_timeout"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "D",
+        "explanation": "第一章",
         "questionType": "single"
     },
     {
@@ -343,8 +343,8 @@
             "C. enable_online_ddl_waitlock",
             "D. lockwait_timeout"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "B",
+        "explanation": "第一章",
         "questionType": "single"
     },
     {
@@ -356,8 +356,8 @@
             "C. Operations such as VACUUM and ANALYZE",
             "D. DDL statements"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "D",
+        "explanation": "第一章",
         "questionType": "single"
     },
     {
@@ -369,8 +369,8 @@
             "C. A regular lock has a wait queue but does not provide a deadlock detection mechanism.",
             "D. Regular locks are used to lock database objects accessed by services."
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "C",
+        "explanation": "第一章",
         "questionType": "single"
     },
     {
@@ -382,8 +382,8 @@
             "C. chunk_data",
             "D. chunk_type"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "A",
+        "explanation": "第二章",
         "questionType": "single"
     },
     {
@@ -395,8 +395,8 @@
             "C. For data that uses the PLAIN and MAIN policies, the TOAST data is deleted together with the tuple. No extra processing is required.",
             "D. For data that uses the EXTERNAL policy, in addition to deleting tuples, you also need to delete data stored out of line."
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "B",
+        "explanation": "第二章",
         "questionType": "single"
     },
     {
@@ -408,8 +408,8 @@
             "C. ThreadPoolControler",
             "D. ThreadPoolListener"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "D",
+        "explanation": "第二章",
         "questionType": "single"
     },
     {
@@ -421,8 +421,8 @@
             "C. -F",
             "D. -p"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "C",
+        "explanation": "第六章",
         "questionType": "single"
     },
     {
@@ -434,8 +434,8 @@
             "C. vmstat 1 3",
             "D. sysctl -a"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "B",
+        "explanation": "第八章",
         "questionType": "single"
     },
     {
@@ -447,8 +447,8 @@
             "C. 4 MB",
             "D. 32 MB"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "A",
+        "explanation": "第三章",
         "questionType": "single"
     },
     {
@@ -460,8 +460,8 @@
             "C. Resource pooling architecture",
             "D. synchronize_seqscans"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "C",
+        "explanation": "第七章",
         "questionType": "single"
     },
     {
@@ -473,8 +473,8 @@
             "C. archived",
             "D. purged"
         ],
-        "answer": "",
-        "explanation": "",
+        "answer": "A",
+        "explanation": "第七章",
         "questionType": "single"
     },
     {
@@ -486,9 +486,9 @@
             "C. Astore partitioned table",
             "D. Ustore partitioned table"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "CD",
+        "explanation": "第四章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 42 （20 Points）",
@@ -499,9 +499,9 @@
             "C. The sizes of the two tables are similar.",
             "D. Two tables are joined by equality, except in a range query."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "BC",
+        "explanation": "第四章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 43 （20 Points）",
@@ -512,9 +512,9 @@
             "C. Query that contains aggregation operation",
             "D. Simple query of a single table"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABC",
+        "explanation": "第五章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 44 （20 Points）",
@@ -525,9 +525,9 @@
             "C. Index scan",
             "D. Queries that contain the median operation"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABCD",
+        "explanation": "第五章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 45 （20 Points）",
@@ -538,9 +538,9 @@
             "C. OR statement in the WHERE condition",
             "D. Using fuzzy match conditions on the index column"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABCD",
+        "explanation": "第五章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 46 （20 Points）",
@@ -551,9 +551,9 @@
             "C. Distinct values",
             "D. Column types"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABC",
+        "explanation": "第五章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 47 （20 Points）",
@@ -564,9 +564,9 @@
             "C. pg_class",
             "D. pg_ctl"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABC",
+        "explanation": "第一章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 48 （20 Points）",
@@ -577,9 +577,9 @@
             "C. ROW EXCLUSIVE",
             "D. ACCESS EXCLUSIVE"
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "CD",
+        "explanation": "第一章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 49 （20 Points）",
@@ -590,9 +590,9 @@
             "C. Among DDL statements, only CREATE TABLE, DROP TABLE, and TRUNCATE TABLE are supported.",
             "D. PSort index and B-tree index are not supported."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABC",
+        "explanation": "第二章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 50 （20 Points）",
@@ -603,9 +603,9 @@
             "C. The FSM blocks at layer 1 are used to store the idle values of each table block.",
             "D. Multiple FSM blocks at layer 2, which are child nodes of the FSM blocks at layer 1, are used to store the idle values of each table block."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABD",
+        "explanation": "第二章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 51 （20 Points）",
@@ -616,9 +616,9 @@
             "C. gs_basebackup supports only hot backup but does not support compressed backup.",
             "D. To remotely use gs_basebackup, you need to use the system administrator account."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABD",
+        "explanation": "第六章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 52 （20 Points）",
@@ -629,9 +629,9 @@
             "C. It supports incremental backup and periodic backup but does not support remote backup.",
             "D. It supports settings on the backup retention policy."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "BD",
+        "explanation": "第六章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 53 （20 Points）",
@@ -642,9 +642,9 @@
             "C. Queries the DR status of the primary and standby database instances.",
             "D. Upgrades the primary and standby database instances in the DR state, but only during a major version upgrade."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABC",
+        "explanation": "第六章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 54 （20 Points）",
@@ -655,9 +655,9 @@
             "C. Check if the peer listening port is normal.",
             "D. Check if the peer process exists."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABCD",
+        "explanation": "第八章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 55 （20 Points）",
@@ -668,9 +668,9 @@
             "C. The permission on the directory corresponding to the disk is abnormal. To check your permission, run the ls –l command.",
             "D. The disks have bad blocks, and the OS protects the file system."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "ABCD",
+        "explanation": "第八章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 56 （20 Points）",
@@ -681,9 +681,9 @@
             "C. The WAL buffer is filled with tuples.",
             "D. The WAL writer process periodically writes data."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "BCD",
+        "explanation": "第三章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 57 （20 Points）",
@@ -694,16 +694,16 @@
             "C. DSS supports a thread pool, allowing server CPUs to be utilized and scaled on demand and configured as needed.",
             "D. DSS uses black box logs to locate DSS Server faults, which enhances the DFX capability."
         ],
-        "answer": "",
-        "explanation": "",
-        "questionType": "single"
+        "answer": "BCD",
+        "explanation": "第七章",
+        "questionType": "multiple"
     },
     {
         "title": "Question 58 （20 Points）",
         "question": "When you use the EXPLAIN statement to print the SQL execution plan, you can use the ______ parameter (in lowercase) to specify the output format.",
         "choices": [],
         "answer": "",
-        "explanation": "",
+        "explanation": "第四章",
         "questionType": "single"
     },
     {
@@ -711,7 +711,7 @@
         "question": "If all network packets to be transmitted are large, you need to increase the MTU. The default MTU is 1500 bytes. The maximum MTU is ______ bytes (in numeric format).",
         "choices": [],
         "answer": "",
-        "explanation": "",
+        "explanation": "第五章",
         "questionType": "single"
     },
     {
@@ -719,7 +719,7 @@
         "question": "Before creating a Ustore table, you need to set undo_zone_count to ______ (in numeric format) in the postgresql.conf file. After the setting, restart the database.",
         "choices": [],
         "answer": "",
-        "explanation": "",
+        "explanation": "第五章",
         "questionType": "single"
     }
 ]
