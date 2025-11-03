@@ -1,0 +1,752 @@
+[
+    {
+        "title": "Question 1 （16 Points）",
+        "question": "Which command is used to view open files in openEuler?",
+        "choices": [
+            "A. find",
+            "B. lsof",
+            "C. ls",
+            "D. mount"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 2 （16 Points）",
+        "question": "Which statement is false about single quotes in shell scripting?",
+        "choices": [
+            "A. Single quotes escaped with a backslash can appear within single quotes.",
+            "B. Single quotes cannot appear within single quotes.",
+            "C. Variables within single quotes are invalid.",
+            "D. Any character within single quotes will be output as is."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 3 （16 Points）",
+        "question": "In openEuler, what is the maximum number of primary partitions allowed on a drive?",
+        "choices": [
+            "A. Three",
+            "B. Unlimited",
+            "C. One",
+            "D. Four"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 4 （16 Points）",
+        "question": "Which statement is false about the \"kill\" command?",
+        "choices": [
+            "A. \"kill -19\" pauses the process.",
+            "B. \"kill -15\" unconditionally stops the process without terminating it.",
+            "C. \"kill -1\" suspends the process.",
+            "D. \"kill -9\" forcibly terminates the process."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 5 （16 Points）",
+        "question": "Which option displays the default shell of the current user?",
+        "choices": [
+            "A. cat /etc/shells",
+            "B. echo $PATH",
+            "C. echo $SHELL",
+            "D. echo $0"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 6 （16 Points）",
+        "question": "Which of the following statements is false about the commands?",
+        "choices": [
+            "A. \"touch\" creates files or directories.",
+            "B. \"cp\" copies files or directories.",
+            "C. \"rm\" deletes files or directories.",
+            "D. \"mv\" moves files or directories."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 7 （16 Points）",
+        "question": "Which of the following openGauss commands is used to delete rows from a table?",
+        "choices": [
+            "A. DROP",
+            "B. DELETE",
+            "C. UPDATE",
+            "D. TRUNCATE"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 8 （16 Points）",
+        "question": "Which of the following openGauss commands is used to create a schema?",
+        "choices": [
+            "A. GENERATE SCHEMA",
+            "B. NEW SCHEMA",
+            "C. CREATE SCHEMA",
+            "D. ADD SCHEMA"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 9 （16 Points）",
+        "question": "Compared with other open-source databases, openGauss has many new technical features. Which of the following statements is false?",
+        "choices": [
+            "A. It adopts the Mulan Permissive Software License, allowing code to be freely modified, used, and referenced.",
+            "B. It provides the Ustore for frequent update scenarios.",
+            "C. It provides AI-based parameter tuning and index recommendations and automatically recommends AI parameters.",
+            "D. It provides the Sstore engine for frequent query scenarios."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 10 （16 Points）",
+        "question": "Which of the following statements is true about the openGauss database architecture?",
+        "choices": [
+            "A. openGauss uses the client/server architecture. The client and server run in the same process.",
+            "B. openGauss uses the multi-process and multi-thread architecture.",
+            "C. openGauss uses the single-process and multi-thread architecture. All database operations are performed in the same process as threads.",
+            "D. openGauss uses the multi-process architecture. Each database connection corresponds to an independent process."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 11 （16 Points）",
+        "question": "In the field of integrated circuits (IC), \"die\" refers to a single, unpackaged integrated circuit chip. In the Huawei-designed Kunpeng 920 processor, what is the maximum number of cores that can be integrated into a single CPU die?",
+        "choices": [
+            "A. 32",
+            "B. 64",
+            "C. 48",
+            "D. 16"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 12 （16 Points）",
+        "question": "When you build open source software for the Kunpeng platform using Maven repositories, which of the following statements is false?",
+        "choices": [
+            "A. The local Maven repository is first queried.",
+            "B. Maven repositories can be configured with proxy settings to accelerate dependency downloads from remote repositories.",
+            "C. Maven repositories provide all external dependency libraries, including versions specifically optimized for the Kunpeng platform.",
+            "D. When the required components are not present in the local repository, Maven downloads them from remote repositories."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 13 （16 Points）",
+        "question": "When you optimize the performance of the CPU and memory subsystems on the Kunpeng platform, if the CPU usage remains high, which of the following measures is not an effective operation to reduce CPU usage and improve performance?",
+        "choices": [
+            "A. Optimizing software algorithms and code to reduce unnecessary CPU calculations",
+            "B. Upgrading to a more powerful CPU model or expanding memory capacity",
+            "C. Using tools like strace to analyze system calls and process behavior",
+            "D. Fine-tuning memory channel configuration to match CPU capabilities for optimal bandwidth utilization"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 14 （16 Points）",
+        "question": "After successfully x86-based software is ported to the Kunpeng architecture, a series of tests is required to ensure that the ported software meets expectations in terms of performance, stability, and compatibility. In this context, which of the following statements is the most inaccurate about the core objective of the post-porting performance testing or the characteristics of the tools and methods employed during its execution?",
+        "choices": [
+            "A. Advanced performance testing tools, such as LoadRunner, can simulate large-scale concurrent user activity to accurately evaluate the performance of ported software under high pressure on the Kunpeng architecture, thereby identifying potential bottlenecks.",
+            "B. The core objective of performance testing is to ensure comprehensive functional coverage of the ported software and verify that each function point executes without errors on the Kunpeng architecture, guaranteeing the completeness and correctness of the software functions.",
+            "C. The core of performance testing lies in measuring the response time, throughput, and stability of the ported software under high load or peak usage scenarios on the Kunpeng architecture to ensure it meets the demands of real-world application scenarios.",
+            "D. Employing standardized models like PTGM and GAME(A) during performance testing helps systematically plan, execute, and effectively analyze the test results, providing guidance for performance optimization."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 15 （16 Points）",
+        "question": "For the C or C++ source code \"c = a + b;\", which of the following statements is true about the difference in assembly code between the Kunpeng processor and the x86 processor?",
+        "choices": [
+            "A. The Kunpeng processor uses two \"mov\" instructions to load data, one \"add\" instruction for addition, and one \"str\" instruction to save the result. The x86 processor uses two \"ldr\" instructions to load data, one \"add\" instruction for addition, and one \"mov\" instruction to save the result.",
+            "B. Both use two \"ldr\" instructions to load data, one \"add\" instruction for addition, and one \"str\" instruction to save the result.",
+            "C. Both use two \"mov\" instructions to load data, one \"add\" instruction for addition, and one \"mov\" instruction to save the result.",
+            "D. The Kunpeng processor uses two \"ldr\" instructions to load data, one \"add\" instruction for addition, and one \"str\" instruction to save the result. The x86 processor uses two \"mov\" instructions to load data, one \"add\" instruction for addition, and one \"mov\" instruction to save the result."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 16 （16 Points）",
+        "question": "In openEuler, which \"rpm\" command is used to install application software?",
+        "choices": [
+            "A. rpm -qi xxx.rpm",
+            "B. rpm -ql xxx.rpm",
+            "C. rpm -e xxx.rpm",
+            "D. rpm -ivh xxx.rpm"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 17 （16 Points）",
+        "question": "While you edit a text file using Vim in openEuler, which command can be used in normal mode to forcibly save and exit the file?",
+        "choices": [
+            "A. :wq.force",
+            "B. :wq-f",
+            "C. :wq",
+            "D. :wq!"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 18 （16 Points）",
+        "question": "In openEuler, configuration files are used to manage network information for network devices. Where are these configuration files stored by default?",
+        "choices": [
+            "A. /etc/profile",
+            "B. /etc/passwd",
+            "C. /etc/sysconfig/network-scripts",
+            "D. /etc/systemd"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 19 （16 Points）",
+        "question": "Which of the following statements about partitioned tables in openGauss is true?",
+        "choices": [
+            "A. Partitioned tables cannot be joined with ordinary tables.",
+            "B. Tables can be partitioned only by range.",
+            "C. A partitioned table is a large table divided into multiple small and independent physical blocks based on a certain rule for storage. The physical blocks are logically considered whole.",
+            "D. After a partitioned table is created, partitions cannot be added to or deleted from the table."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 20 （16 Points）",
+        "question": "Which of the following gsql meta-commands can be used to list all databases in an openGauss cluster?",
+        "choices": [
+            "A. \\dn",
+            "B. \\s",
+            "C. \\l",
+            "D. \\d"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 21 （16 Points）",
+        "question": "If a database administrator wants to interrupt a query that has been running for a long time, which of the following views can be used to obtain the process ID of the session to help the database administrator perform this operation?",
+        "choices": [
+            "A. PG_STAT_USER",
+            "B. PG_USER",
+            "C. PG_STATS",
+            "D. PG_STAT_ACTIVITY"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 22 （16 Points）",
+        "question": "Which of the following files is used to set the openGauss client authentication policy?",
+        "choices": [
+            "A. pg_hba.conf",
+            "B. postgresql.conf",
+            "C. pg_ident.conf",
+            "D. pg_ctl.conf"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 23 （16 Points）",
+        "question": "In Linux, which of the following statements is true about the function of the \"chown\" command?",
+        "choices": [
+            "A. Modifies the default home directory of a user.",
+            "B. Modifies the read, write, and execute permissions on a file or directory.",
+            "C. Modifies the link attributes of a file or directory, specifying if it is a hard or soft link.",
+            "D. Modifies the user and user group to which a file or directory belongs."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 24 （16 Points）",
+        "question": "A virtual machine (VM) has 2 GB of memory. What is the recommended swap partition size when openEuler is installed on the VM?",
+        "choices": [
+            "A. 512 MB",
+            "B. 1 GB",
+            "C. 2 GB",
+            "D. 4 GB"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 25 （16 Points）",
+        "question": "Which of the following is the default listening port of the OpenSSH service?",
+        "choices": [
+            "A. 23",
+            "B. 21",
+            "C. 22",
+            "D. 20"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 26 （18 Points）",
+        "question": "In openEuler, which of the following commands can be used to query drive information?",
+        "choices": [
+            "A. parted -v",
+            "B. fdisk -l",
+            "C. df -h",
+            "D. mkfs -t"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 27 （18 Points）",
+        "question": "In openEuler, which of the following commands can be used to view network device configurations?",
+        "choices": [
+            "A. ip addr",
+            "B. ifconfig -a",
+            "C. ip link show",
+            "D. nmcli device status"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 28 （18 Points）",
+        "question": "Which of the following statements are true about switching to the \"root\" user?",
+        "choices": [
+            "A. The \"sudo\" command allows common users to execute commands that only the \"root\" user can execute.",
+            "B. The \"su -\" command only switches the user identity to \"root\", but the shell environment remains that of the common user.",
+            "C. When the \"su\" command is used, both the user identity and shell environment are switched to the \"root\" user.",
+            "D. Configuring \"NOPASSWD\" in \"/etc/sudoers\" allows the \"sudo\" command to bypass the \"root\" password prompt."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 29 （18 Points）",
+        "question": "Which of the following statements are true about file access control lists (ACLs)?",
+        "choices": [
+            "A. The \"getfacl\" command is used to retrieve the ACL of a file.",
+            "B. ACLs can be used to manage permissions of a file for specific users and user groups.",
+            "C. The \"setfacl\" command is used to set the ACL of a file.",
+            "D. The \"chacl\" command is used to modify the ACL of a file."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 30 （18 Points）",
+        "question": "Which of the following statements are true about the \"touch\" command?",
+        "choices": [
+            "A. The \"touch\" command can be used to modify file timestamps.",
+            "B. The \"touch\" command can be used to create empty files.",
+            "C. The \"touch\" command can be used to clear file contents.",
+            "D. The \"touch\" command can be used to modify the file inodes."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 31 （18 Points）",
+        "question": "Which of the following statements are true about schemas in openGauss?",
+        "choices": [
+            "A. Schemas help multiple users operate the same database without interference.",
+            "B. By default, each database has a schema named \"public.\"",
+            "C. When a user is created, the system automatically creates a schema with the same name as the user.",
+            "D. Database objects with the same name can exist in different schemas of the same database without causing conflicts."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 32 （18 Points）",
+        "question": "Which of the following statements are true about the advantages of tablespaces?",
+        "choices": [
+            "A. If the partition or volume where the database is located is full and cannot be scaled out, you can create tablespaces in other partitions until the system space is reconfigured.",
+            "B. Tablespaces enable administrators to arrange storage locations based on object usage modes, optimizing performance. For example, frequently used indexes or tables are stored in SSDs, whereas less frequently used or lower-performance tables are stored in HDDs.",
+            "C. Any table in the database can have multiple tablespaces. You can specify the tablespaces to be used.",
+            "D. A tablespace corresponds to a file system directory; you must have the read and write permissions on an empty directory."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 33 （18 Points）",
+        "question": "Which of the following system catalogs or views can be used to query permission information in a database?",
+        "choices": [
+            "A. pg_authid",
+            "B. pg_shdepend",
+            "C. pg_user",
+            "D. information_schema.table_privileges"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 34 （18 Points）",
+        "question": "Which of the following statements are true about common performance testing methods?",
+        "choices": [
+            "A. Load testing is to measure the capacity of a system by continuously increasing the load until the system performance bottlenecks or resources are saturated.",
+            "B. Benchmark testing is to quantitatively and comparatively test a performance metric of a test object by designing scientific test methods, test tools, and test systems.",
+            "C. Stress testing is to test the processing capacity of the system under a certain saturated state, usually set to a high CPU and memory usage rate to test the stability of the system.",
+            "D. Reliability testing is to load a certain service pressure and run continuously for a period of time to test whether the system can run stably, focusing on the instantaneous pressure capacity of the system."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 35 （18 Points）",
+        "question": "In drive I/O subsystem tuning, which of the following options are key tuning strategies?",
+        "choices": [
+            "A. File system and block device management: Choose a high-performance file system and adjust block device parameters to improve I/O efficiency.",
+            "B. Memory and cache optimization: Reasonably allocate memory for caching to reduce drive access frequency.",
+            "C. Network storage configuration: Optimize network storage configurations such as the number of connections and bandwidth allocation to improve remote data access speed.",
+            "D. I/O scheduling and prefetch strategy: Choose an appropriate I/O scheduling algorithm and implement a file prefetch strategy to improve drive access order and efficiency."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 36 （18 Points）",
+        "question": "The \"-march\" option plays a crucial role for the GCC compiler on the Kunpeng platform (based on ARM architecture). Which of the following are functions of the \"-march\" option?",
+        "choices": [
+            "A. Defines the range of instructions that the compiler should generate.",
+            "B. Determines whether to generate address-independent code.",
+            "C. Optimizes the code to match the features of a specific processor.",
+            "D. Specifies the architecture version of the target processor."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 37 （18 Points）",
+        "question": "A user is trying to port programs written in C, C++, and Go from the x86 architecture to Kunpeng. Which of the following statements are true about this process?",
+        "choices": [
+            "A. The generated machine language programs can directly load instructions and data into the CPU cache at runtime.",
+            "B. Source code needs to be converted into machine instructions by a compiler and an assembler.",
+            "C. Programs written in compiled languages need to be recompiled to adapt to the instruction set of Kunpeng processors.",
+            "D. Machine language programs can run directly on any processor without additional processing."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 38 （18 Points）",
+        "question": "Which of the following modes are supported by Linux Virtual Server (LVS)?",
+        "choices": [
+            "A. TUN mode",
+            "B. DR mode",
+            "C. KONG mode",
+            "D. NAT mode"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 39 （18 Points）",
+        "question": "In openEuler, Vim is in normal mode and the cursor is at line 5 of a file. Which of the following commands move the cursor to the first line?",
+        "choices": [
+            "A. 1G",
+            "B. gg",
+            "C. 4k",
+            "D. G"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 40 （18 Points）",
+        "question": "Which of the following software package installation methods are available in openEuler?",
+        "choices": [
+            "A. \"rpm\"",
+            "B. \"yum\" or \"dnf\"",
+            "C. Directly executing binary installation files",
+            "D. Source code compilation"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 41 （18 Points）",
+        "question": "Which of the following openGauss tools can export data from the database?",
+        "choices": [
+            "A. gs_check",
+            "B. gs_dumpall",
+            "C. gs_restore",
+            "D. gs_dump"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 42 （18 Points）",
+        "question": "Which of the following are Data Manipulation Language (DML) statements in SQL?",
+        "choices": [
+            "A. INSERT",
+            "B. DELETE",
+            "C. ALTER",
+            "D. UPDATE"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 43 （18 Points）",
+        "question": "Which of the following statements are true about the single-node database architecture?",
+        "choices": [
+            "A. If the single-node architecture is faulty, data loss may occur.",
+            "B. In the single-node architecture, applications may preempt database resources, which cannot be resolved.",
+            "C. The single-node architecture has performance bottlenecks.",
+            "D. The single-node architecture is not scalable and cannot cope with increasing service requirements."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 44 （18 Points）",
+        "question": "Which of the following statements are true about the Samba file sharing service?",
+        "choices": [
+            "A. On Windows, Samba uses the NetBIOS protocol.",
+            "B. A Samba server can serve as a file sharing server and a Samba client.",
+            "C. Samba can be used for file sharing between Linux and Windows systems, as well as between Linux systems.",
+            "D. Samba is a piece of software that enables Linux to use the Server Message Block (SMB) network communication protocol."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 45 （18 Points）",
+        "question": "Which of the following statements are true about Linux commands?",
+        "choices": [
+            "A. \"du\" displays the drive usage of a specified directory.",
+            "B. \"mount\" is used to mount devices.",
+            "C. \"umount\" is used to unmount devices.",
+            "D. \"fdisk -l\" displays drive partition details."
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 46 （16 Points）",
+        "question": "Cron scheduled tasks usually include \">/dev/null 2>&1\" at the end.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 47 （16 Points）",
+        "question": "A user group can have multiple users, but a user can only belong to a single user group.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 48 （16 Points）",
+        "question": "PXE booting or virtual CD-ROM drives are common methods for batch installation of openEuler.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 49 （16 Points）",
+        "question": "In the openGauss database, the primary and standby mode is automatically configured by default to ensure high data availability and fault recovery capabilities.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 50 （16 Points）",
+        "question": "In the openGauss database, when the GRANT statement is used to grant permissions, the granted user can immediately grant the obtained permissions to other users, provided that \"WITH GRANT OPTION\" is specified during the authorization.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 51 （16 Points）",
+        "question": "A-Tune is an AI-powered automatic optimization system that uses intrusive system profiling to sense service workload. It matches the optimal resource model for each service and responds to service changes in real time.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 52 （16 Points）",
+        "question": "When using the system performance analysis tool provided by the Kunpeng DevKit to analyze the performance of C or C++ applications, you can view the function source code, assembly code, and the control flow graph of basic blocks of function assembly code.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 53 （16 Points）",
+        "question": "The Kunpeng 920 processor features a powerful 64-core design and integrates eight advanced DDR4 memory controllers, enabling support for up to eight DDR4 memory slots to meet high-performance computing demands.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 54 （16 Points）",
+        "question": "In openEuler, the \"ps -ef | grep xxx\" command can be used to find processes that contain \"xxx\" within their process information.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 55 （16 Points）",
+        "question": "In Vim normal mode of Vim in openEuler, pasting content copied by pressing \"yy\" will insert the content below the current line.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 56 （16 Points）",
+        "question": "openEuler can be installed using various methods, including CD-ROM, USB flash drives, and virtual CD-ROM drives.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 57 （16 Points）",
+        "question": "In the character type VARCHAR(n), \"n\" indicates the number of bytes instead of characters.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 58 （16 Points）",
+        "question": "The \"commit\" command is used to commit a transaction to a database.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 59 （16 Points）",
+        "question": "You can use the \"route\" command to add routing configurations. The added routing configurations are stored in the memory and remain valid after a reboot.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    },
+    {
+        "title": "Question 60 （16 Points）",
+        "question": "In Linux, processes with higher priority are executed preferentially. A higher PRI value indicates a higher process priority.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": "",
+        "explanation": "",
+        "questionType": "single"
+    }
+]
