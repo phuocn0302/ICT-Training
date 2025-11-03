@@ -8,9 +8,9 @@
       "C. Programs written in compiled languages need to be recompiled to adapt to the instruction set of Kunpeng processors.",
       "D. Machine language programs can run directly on any processor without additional processing."
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "B, C",
+    "explanation": "When porting applications from x86 to Kunpeng (ARM architecture), **source code must be compiled and assembled** into machine instructions (B). Since compiled languages depend on CPU instruction sets, **programs must be recompiled** for the Kunpeng architecture (C). Machine code (D) is CPU-specific, and (A) is not accurate about compilation behavior.",
+    "questionType": "multiple"
   },
   {
     "title": "Question 38 （18 Points）",
@@ -21,9 +21,9 @@
       "C. KONG mode",
       "D. NAT mode"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "A, B, D",
+    "explanation": "LVS (Linux Virtual Server) supports **three forwarding modes**: NAT (Network Address Translation), DR (Direct Routing), and TUN (IP Tunneling). 'KONG mode' does not exist.",
+    "questionType": "multiple"
   },
   {
     "title": "Question 39 （18 Points）",
@@ -34,9 +34,9 @@
       "C. 4k",
       "D. G"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "A, B",
+    "explanation": "In Vim normal mode, `gg` and `1G` both move the cursor to the **first line**. The command `4k` moves the cursor up four lines, and `G` moves to the **last line** of the file.",
+    "questionType": "multiple"
   },
   {
     "title": "Question 40 （18 Points）",
@@ -47,8 +47,9 @@
       "C. Directly executing binary installation files",
       "D. Source code compilation"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "A, B, D",
+    "explanation": "openEuler supports multiple installation methods: **rpm** for manual package management, **yum/dnf** for automatic dependency resolution, and **source code compilation** for custom builds. Option C is not typical since most software in Linux is not installed by directly executing binaries.",
+    "questionType": "multiple"
   }
 ]
+

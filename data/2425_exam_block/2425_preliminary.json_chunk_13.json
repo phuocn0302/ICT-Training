@@ -6,9 +6,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "False",
+    "explanation": "In openGauss, primary/standby mode is **not automatically configured by default**. It must be manually set up by administrators to enable data synchronization and high availability. By default, openGauss runs as a standalone database instance.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 50 （16 Points）",
@@ -17,9 +17,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "In openGauss, using the `GRANT` statement with the `WITH GRANT OPTION` clause allows the recipient user to **further grant those permissions** to other users. Without this option, the permissions are not transferable.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 51 （16 Points）",
@@ -28,9 +28,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "A-Tune is an AI-based automatic system optimization tool developed by openEuler. It collects system metrics, identifies workloads through profiling, and dynamically tunes system parameters for optimal performance in real time.",
+    "questionType": "true_false"
   },
   {
     "title": "Question 52 （16 Points）",
@@ -39,8 +39,9 @@
       "True",
       "False"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "True",
+    "explanation": "The performance analysis tool in the Kunpeng DevKit provides in-depth analysis for C/C++ programs, allowing developers to view **source code, assembly code**, and **control flow graphs** of function-level assembly to identify performance bottlenecks.",
+    "questionType": "true_false"
   }
 ]
+

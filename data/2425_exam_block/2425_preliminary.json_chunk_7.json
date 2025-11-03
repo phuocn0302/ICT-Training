@@ -8,8 +8,8 @@
       "C. 22",
       "D. 20"
     ],
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "The default port for OpenSSH is 22, which is used for secure shell (SSH) connections. Port 21 is used for FTP, and port 23 is for Telnet.",
     "questionType": "single"
   },
   {
@@ -21,9 +21,9 @@
       "C. df -h",
       "D. mkfs -t"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "B,C",
+    "explanation": "`fdisk -l` lists all drives and partitions, while `df -h` shows mounted drive usage and available space. `parted -v` only shows version info, and `mkfs -t` is for creating file systems.",
+    "questionType": "multiple"
   },
   {
     "title": "Question 27 （18 Points）",
@@ -34,9 +34,9 @@
       "C. ip link show",
       "D. nmcli device status"
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "A,B,C,D",
+    "explanation": "All listed commands can display network interface configurations. `ip addr` and `ip link show` are part of the `iproute2` suite, `ifconfig -a` shows all interfaces, and `nmcli device status` lists devices managed by NetworkManager.",
+    "questionType": "multiple"
   },
   {
     "title": "Question 28 （18 Points）",
@@ -47,8 +47,9 @@
       "C. When the \"su\" command is used, both the user identity and shell environment are switched to the \"root\" user.",
       "D. Configuring \"NOPASSWD\" in \"/etc/sudoers\" allows the \"sudo\" command to bypass the \"root\" password prompt."
     ],
-    "answer": "",
-    "explanation": "",
-    "questionType": "single"
+    "answer": "A,D",
+    "explanation": "`sudo` lets authorized users run root commands (A). `NOPASSWD` removes the password prompt (D). `su -` changes both user and environment; `su` changes user but keeps the same shell environment, not the reverse.",
+    "questionType": "multiple"
   }
 ]
+
