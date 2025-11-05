@@ -138,7 +138,7 @@
 			"C. 48",
 			"D. 16"
 		],
-		"answer": "B",
+		"answer": "A",
 		"explanation": "The sources explicitly mention the specifications of the Kunpeng 920 processor in the context of openGauss performance testing. The Kunpeng 920 CPU is listed as having **64 cores** and 64 threads [21, 22]. In a typical multi-core Kunpeng CPU architecture, two such chips (CPUs) together feature 128 cores [23, 24], confirming that a single processor unit (die/CPU) integrates 64 cores.",
 		"questionType": "single"
 	},
@@ -609,8 +609,8 @@
 			"True",
 			"False"
 		],
-		"answer": "True",
-		"explanation": "For batch deployment of openEuler, administrators commonly use **PXE network boot** or **virtual CD-ROM drives** in virtualized environments for automated installation.",
+		"answer": "False",
+		"explanation": "",
 		"questionType": "true_false"
 	},
 	{
@@ -642,8 +642,8 @@
 			"True",
 			"False"
 		],
-		"answer": "True",
-		"explanation": "A-Tune is an AI-based automatic system optimization tool developed by openEuler. It collects system metrics, identifies workloads through profiling, and dynamically tunes system parameters for optimal performance in real time.",
+		"answer": "False",
+		"explanation": "Can't explain why",
 		"questionType": "true_false"
 	},
 	{
@@ -664,8 +664,8 @@
 			"True",
 			"False"
 		],
-		"answer": "True",
-		"explanation": "The Kunpeng 920 processor, developed by Huawei, features up to 64 cores and integrates eight DDR4 memory controllers. This design allows high memory bandwidth and supports up to eight DDR4 memory slots, ideal for high-performance computing workloads.",
+		"answer": "False",
+		"explanation": "The Kunpeng 920 processor, developed by Huawei, features up to 64 cores and integrates eight DDR4 memory controllers. This design allows high memory bandwidth and supports up to 32 DDR4 memory slots, ideal for high-performance computing workloads.",
 		"questionType": "true_false"
 	},
 	{
