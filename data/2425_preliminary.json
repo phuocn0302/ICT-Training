@@ -342,7 +342,7 @@
 			"C. ip link show",
 			"D. nmcli device status"
 		],
-		"answer": "ACD",
+		"answer": "AD",
 		"explanation": "All listed commands can display network interface configurations. `ip addr` and `ip link show` are part of the `iproute2` suite, `ifconfig -a` shows all interfaces but on Windows, and `nmcli device status` lists devices managed by NetworkManager.",
 		"questionType": "multiple"
 	},
@@ -355,7 +355,7 @@
 			"C. When the \"su\" command is used, both the user identity and shell environment are switched to the \"root\" user.",
 			"D. Configuring \"NOPASSWD\" in \"/etc/sudoers\" allows the \"sudo\" command to bypass the \"root\" password prompt."
 		],
-		"answer": "ACD",
+		"answer": "AD",
 		"explanation": "`sudo` lets authorized users run root commands (A). `NOPASSWD` removes the password prompt (D). `su -` changes both user and environment; `su` is the same",
 		"questionType": "multiple"
 	},
@@ -420,7 +420,7 @@
 			"C. pg_user",
 			"D. information_schema.table_privileges"
 		],
-		"answer": "D",
+		"answer": "AD",
 		"explanation": "The view `information_schema.table_privileges` contains detailed information about table-level privileges granted to users or roles. `pg_authid` stores authentication information (roles and passwords), `pg_shdepend` stores shared dependencies, and `pg_user` shows user account info but not privileges directly.",
 		"questionType": "multiple"
 	},
@@ -498,7 +498,7 @@
 			"C. 4k",
 			"D. G"
 		],
-		"answer": "AB",
+		"answer": "ABC",
 		"explanation": "In Vim normal mode, `gg` and `1G` both move the cursor to the **first line**. The command `4k` moves the cursor up four lines, and `G` moves to the **last line** of the file.",
 		"questionType": "multiple"
 	},
@@ -511,7 +511,7 @@
 			"C. Directly executing binary installation files",
 			"D. Source code compilation"
 		],
-		"answer": "ABD",
+		"answer": "ABCD",
 		"explanation": "openEuler supports multiple installation methods: **rpm** for manual package management, **yum/dnf** for automatic dependency resolution, and **source code compilation** for custom builds. Option C is not typical since most software in Linux is not installed by directly executing binaries.",
 		"questionType": "multiple"
 	},
@@ -550,7 +550,7 @@
 			"C. The single-node architecture has performance bottlenecks.",
 			"D. The single-node architecture is not scalable and cannot cope with increasing service requirements."
 		],
-		"answer": "ACD",
+		"answer": "AC",
 		"explanation": "In a single-node architecture, **a single database instance handles all requests**, which means faults may cause **data loss (A)**, the system can encounter **performance bottlenecks (C)**, and it is **not easily scalable (D)**. Option B is incorrect since resource contention can be mitigated through tuning.",
 		"questionType": "multiple"
 	},
@@ -563,7 +563,7 @@
 			"C. Samba can be used for file sharing between Linux and Windows systems, as well as between Linux systems.",
 			"D. Samba is a piece of software that enables Linux to use the Server Message Block (SMB) network communication protocol."
 		],
-		"answer": "ACD",
+		"answer": "ABCD",
 		"explanation": "Samba implements the **SMB (Server Message Block)** protocol, enabling **file and printer sharing** between Linux and Windows systems. It uses **NetBIOS** for communication with Windows systems. Option B is incorrect because a Samba server and client are separate configurations, not roles performed simultaneously by one instance.",
 		"questionType": "multiple"
 	},
@@ -576,7 +576,7 @@
 			"C. \"umount\" is used to unmount devices.",
 			"D. \"fdisk -l\" displays drive partition details."
 		],
-		"answer": "BCD",
+		"answer": "ABCD",
 		"explanation": "The `mount` command mounts devices, `umount` unmounts them, and `fdisk -l` lists partition information. The `du` command shows **disk usage**, not drive usage, so option A is incorrect.",
 		"questionType": "multiple"
 	},
