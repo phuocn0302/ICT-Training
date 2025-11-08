@@ -8,7 +8,7 @@
             "C. After decompressing the openGauss installation package, you can directly run the installation program without worrying about the OS version compatibility.",
             "D. During the openGauss installation, you do not need to configure any network parameters. It automatically obtains the network configuration."
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -21,7 +21,7 @@
             "C. The openGauss community supports only enterprise users and does not open resources to individual developers.",
             "D. The activities of the openGauss community are limited to online activities. There are no offline communication activities."
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -34,7 +34,7 @@
             "C. hostssl   testdb   admin   192.168.1.100/32   sha256",
             "D. hostssl   testdb   admin   192.168.1.100/32   md5"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -47,7 +47,7 @@
             "C. GaussMaster",
             "D. Log Writer"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -60,7 +60,7 @@
             "C. Multi-thread parallel replay",
             "D. Serial log flushing"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -73,7 +73,7 @@
             "C. Monitor database connection pool status and provide optimization suggestions.",
             "D. Analyze source code-level performance bottlenecks and provide optimization suggestions."
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -86,7 +86,7 @@
             "C. When the \"inline\" keyword is used, the compiler will inline the corresponding functions.",
             "D. The \"always_inline\" attribute ensures the compiler forcibly inlines specified functions during compilation."
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -99,7 +99,7 @@
             "C. Disable the transparent huge page function at the OS layer to reduce the memory management overhead.",
             "D. Upgrade the GCC compiler to the latest version for better compilation performance."
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -112,7 +112,7 @@
             "C. The Maven version of the build tool is too early.",
             "D. The compiler configurations are not adapted to the target platform, such as the instruction set or processor."
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -125,7 +125,7 @@
             "C. The Kunpeng BoostKit significantly reduces code modification and improves performance through simple configurations.",
             "D. The Kunpeng BoostKit second-order optimizer reduces computing complexity and accelerates model training."
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -138,7 +138,7 @@
             "C. Minimize the non-uniform memory access (NUMA) across nodes in applications.",
             "D. Adjust the maximum payload of transaction layer packet (TLP) of the PCIe bus."
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -151,7 +151,7 @@
             "C. To measure the maximum capacity of the system, identify bottlenecks, and improve system performance.",
             "D. To design and perform quantitative and comparable methods on a specific performance metric."
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -164,7 +164,7 @@
             "C. Execution and memory access",
             "D. Memory access and execution"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -177,7 +177,7 @@
             "C. i",
             "D. u"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -190,7 +190,7 @@
             "C. Undo the previous operation",
             "D. Redo the previous operation"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -203,7 +203,7 @@
             "C. nmb",
             "D. smb"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -216,7 +216,7 @@
             "C. source /etc/profile",
             "D. cat /etc/hosts"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -229,7 +229,7 @@
             "C. IPADDR",
             "D. BROADCAST"
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -242,7 +242,7 @@
             "C. rw-r--r--",
             "D. rwxr--rw-"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -255,7 +255,7 @@
             "C. grep '^A' file",
             "D. wc -l A < file"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -268,7 +268,7 @@
             "C. /root",
             "D. /bin"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -281,7 +281,7 @@
             "C. /etc/fstba",
             "D. /etc/fstba.conf"
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -294,7 +294,7 @@
             "C. while",
             "D. go"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -307,7 +307,7 @@
             "C. ps aux",
             "D. free"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -320,7 +320,7 @@
             "C. pg_log",
             "D. pg_audit"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -333,7 +333,7 @@
             "C. Cluster HA",
             "D. Scale-out"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -346,7 +346,7 @@
             "C. line(box)",
             "D. point(box)"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -359,7 +359,7 @@
             "C. pg_index",
             "D. pg_partition"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -372,7 +372,7 @@
             "C. The RESTRICT attribute does not take effect when an index is deleted because the index is a separate part of the database object and is not restricted by the dependencies of other objects.",
             "D. When deleting an index, you can explicitly specify the RESTRICT attribute to ensure that no other objects (such as views and triggers) depend on the index."
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -385,7 +385,7 @@
             "C. gs_check",
             "D. gs_guc"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -398,7 +398,7 @@
             "C. DELETE FROM students ON age<7;",
             "D. DELETE * FROM students WHERE age<7;"
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -411,7 +411,7 @@
             "C. df",
             "D. top"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -424,7 +424,7 @@
             "C. Standard output is redirected to standard error output.",
             "D. Standard input is redirected to error output."
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -437,7 +437,7 @@
             "C. A-Ops",
             "D. iSulad"
         ],
-        "answer": "",
+        "answer": "A",
         "explanation": "",
         "questionType": "single"
     },
@@ -450,7 +450,7 @@
             "C. rpm -q --changelog *.rpm",
             "D. rpm -qpil *.rpm"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -463,7 +463,7 @@
             "C. \":\" indicates a string reference.",
             "D. \"!\" indicates negation."
         ],
-        "answer": "",
+        "answer": "B",
         "explanation": "",
         "questionType": "single"
     },
@@ -476,7 +476,7 @@
             "C. Run \"cat /etc/shells\" to query the default shells installed in the system after you log in to openEuler.",
             "D. Run \"echo $?\" to view the current shell."
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -489,7 +489,7 @@
             "C. head -n 99 file1 | tail -1",
             "D. tail -n 99 file1 | head -1"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -502,7 +502,7 @@
             "C. /etc/skel/.bashrc",
             "D. ~/.bash_profile"
         ],
-        "answer": "",
+        "answer": "D",
         "explanation": "",
         "questionType": "single"
     },
@@ -515,7 +515,7 @@
             "C. 3260",
             "D. 25"
         ],
-        "answer": "",
+        "answer": "C",
         "explanation": "",
         "questionType": "single"
     },
@@ -528,9 +528,9 @@
             "C. The multi-thread architecture uses multiple CPUs to execute multiple closely related tasks in parallel, improving performance.",
             "D. Inter-thread communication in the multi-thread architecture is faster and more convenient than inter-process communication."
         ],
-        "answer": "",
+        "answer": "ACD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 42 （12 Points）",
@@ -541,9 +541,9 @@
             "C. An SQL interpreter parses SQL statements entered by users into computing models.",
             "D. The computing engine is mainly responsible for query computing and data processing."
         ],
-        "answer": "",
+        "answer": "BCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 43 （12 Points）",
@@ -554,9 +554,9 @@
             "C. When creating a tablespace, you need to specify the location of the corresponding file system.",
             "D. Tablespaces can be used to organize and manage physical storage in a database."
         ],
-        "answer": "",
+        "answer": "BCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 44 （12 Points）",
@@ -567,9 +567,9 @@
             "C. delete",
             "D. alter"
         ],
-        "answer": "",
+        "answer": "BC",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 45 （12 Points）",
@@ -580,9 +580,9 @@
             "C. App stores: Release the compiled application to open source app stores and define the usage and scope of the application.",
             "D. Limited open source: Create a private repository on GitHub and invite specific developers or teams to share some code and development progress."
         ],
-        "answer": "",
+        "answer": "ABD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 46 （12 Points）",
@@ -593,9 +593,9 @@
             "C. Increases the network interface bandwidth from 25 Gbit/s to 100 Gbit/s.",
             "D. Upgrades the PCIe standard from 3.0 to 4.0 to double the transmission rate."
         ],
-        "answer": "",
+        "answer": "BCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 47 （12 Points）",
@@ -606,9 +606,9 @@
             "C. Analyzes and optimizes the performance of x86-based applications.",
             "D. Cannot perform calculation precision analysis which requires cross-platform support."
         ],
-        "answer": "",
+        "answer": "AB",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 48 （12 Points）",
@@ -619,9 +619,9 @@
             "C. Kunpeng GCC CFGO",
             "D. Gazelle network optimization"
         ],
-        "answer": "",
+        "answer": "BCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 49 （12 Points）",
@@ -632,9 +632,9 @@
             "C. Inclusive ecosystem. Big data components such as openLooKeng, Spark, Hive, and Flink are integrated as acceleration libraries, and development in multiple languages is supported, streamlining the development process.",
             "D. Efficient data processing. OmniData facilitates storage-compute collaboration and accelerates data filtering and preprocessing, reducing data transmission overhead."
         ],
-        "answer": "",
+        "answer": "ACD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 50 （12 Points）",
@@ -645,9 +645,9 @@
             "C. Kunpeng BoostKit integrates high-performance open source components optimized for the Kunpeng platform to improve overall performance.",
             "D. Kunpeng BoostKit is a full-stack solution designed for the Kunpeng platform, containing optimization features for hardware, base software, and application software."
         ],
-        "answer": "",
+        "answer": "CD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 51 （12 Points）",
@@ -658,9 +658,9 @@
             "C. Currently, a single server supports up to 512 physical cores.",
             "D. A single processor includes two CPU dies and one I/O die, with each CPU die supporting up to 32 cores."
         ],
-        "answer": "",
+        "answer": "ABD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 52 （12 Points）",
@@ -671,9 +671,9 @@
             "C. Council",
             "D. QA SIG"
         ],
-        "answer": "",
+        "answer": "ABCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 53 （12 Points）",
@@ -684,9 +684,9 @@
             "C. The Bash shell does not support command aliases.",
             "D. The Bash shell supports command history."
         ],
-        "answer": "",
+        "answer": "BD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 54 （12 Points）",
@@ -697,9 +697,9 @@
             "C. :wq",
             "D. :we"
         ],
-        "answer": "",
+        "answer": "BC",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 55 （12 Points）",
@@ -710,9 +710,9 @@
             "C. *",
             "D. /"
         ],
-        "answer": "",
+        "answer": "ABCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 56 （12 Points）",
@@ -723,9 +723,9 @@
             "C. Modifying the \"/etc/hostname\" file",
             "D. hostnamectl set-hostname <new-name>"
         ],
-        "answer": "",
+        "answer": "CD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 57 （12 Points）",
@@ -736,9 +736,9 @@
             "C. The access to the file sharing server is restricted due to user expiration.",
             "D. The file sharing server cannot be started due to incorrect configuration."
         ],
-        "answer": "",
+        "answer": "ABCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 58 （12 Points）",
@@ -749,9 +749,9 @@
             "C. jon",
             "D. head"
         ],
-        "answer": "",
+        "answer": "ABD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 59 （12 Points）",
@@ -762,9 +762,9 @@
             "C. raw",
             "D. input"
         ],
-        "answer": "",
+        "answer": "ABC",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 60 （12 Points）",
@@ -775,9 +775,9 @@
             "C. PLAN_TABLE",
             "D. PLAN_VIEWS"
         ],
-        "answer": "",
+        "answer": "ABC",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 61 （12 Points）",
@@ -788,9 +788,9 @@
             "C. Statistics collection",
             "D. Cost estimation"
         ],
-        "answer": "",
+        "answer": "ABD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 62 （12 Points）",
@@ -801,9 +801,9 @@
             "C. Archive thread",
             "D. Log writer thread"
         ],
-        "answer": "",
+        "answer": "ABCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 63 （12 Points）",
@@ -814,9 +814,9 @@
             "C. The SQL execution plan is a node tree, which displays detailed procedures when openGauss runs an SQL statement.",
             "D. The EXPLAIN ANALYZE statement generates an execution plan and also executes the SQL statement and displays the execution summary."
         ],
-        "answer": "",
+        "answer": "ACD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 64 （12 Points）",
@@ -827,9 +827,9 @@
             "C. Hash partitioning",
             "D. Range partitioning"
         ],
-        "answer": "",
+        "answer": "ACD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 65 （12 Points）",
@@ -840,9 +840,9 @@
             "C. dnf  list installed | grep <package>",
             "D. rpm -qw <package>"
         ],
-        "answer": "",
+        "answer": "AC",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 66 （12 Points）",
@@ -853,9 +853,9 @@
             "C. Maintainer",
             "D. Committer"
         ],
-        "answer": "",
+        "answer": "ABCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 67 （12 Points）",
@@ -866,9 +866,9 @@
             "C. \"find /home -user lisi\" searches for all files and directories in the \"home\" directory owned by \"lisi\".",
             "D. 'find /home -name \"class*\"' searches for all files and directories in the \"home\" directory that start with \"class\"."
         ],
-        "answer": "",
+        "answer": "BCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 68 （12 Points）",
@@ -879,9 +879,9 @@
             "C. Parent and child processes share the same address space.",
             "D. If the parent process has ended but the child process is still running, the child process is an orphan process and will be adopted by the init process."
         ],
-        "answer": "",
+        "answer": "BCD",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 69 （12 Points）",
@@ -892,9 +892,9 @@
             "C. find . -name \"*.c\"  | xargs rm",
             "D. find . -name \"*.c\" -maxdepth 1 | xargs rm"
         ],
-        "answer": "",
+        "answer": "BC",
         "explanation": "",
-        "questionType": "single"
+        "questionType": "multiple"
     },
     {
         "title": "Question 70 （12 Points）",
@@ -905,7 +905,7 @@
             "C. \"$!\" represents the ID of the process that runs the script.",
             "D. \"$$\" represents the ID of the last process running in the background."
         ],
-        "answer": "",
+        "answer": "AB",
         "explanation": "",
         "questionType": "single"
     },
@@ -916,7 +916,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -927,7 +927,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -938,7 +938,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -949,7 +949,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -960,7 +960,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -971,7 +971,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -982,7 +982,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -993,7 +993,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -1004,7 +1004,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -1015,7 +1015,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -1026,7 +1026,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -1037,7 +1037,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -1048,7 +1048,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -1059,7 +1059,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -1070,7 +1070,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -1081,7 +1081,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -1092,7 +1092,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -1103,7 +1103,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     },
@@ -1114,7 +1114,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "True",
         "explanation": "",
         "questionType": "single"
     },
@@ -1125,7 +1125,7 @@
             "True",
             "False"
         ],
-        "answer": "",
+        "answer": "False",
         "explanation": "",
         "questionType": "single"
     }
